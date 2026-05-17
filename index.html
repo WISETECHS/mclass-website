@@ -1,256 +1,468 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>mclass.in — India's Middle Class Platform | Finance, Jobs, Career</title>
-<meta name="description" content="Free tools for India's middle class — 8th Pay Commission Calculator, Salary Comparison, Govt Jobs Feed, Happy Meter, Focus Test, Career Guide.">
-<meta name="keywords" content="8th pay commission calculator,middle class india,salary comparison,government jobs,happy meter,focus test,genz india,career options,govt jobs 2026">
+<title>mclass.in — India's Middle Class Platform | Jobs, 8th CPC, AI Career, Finance</title>
+<meta name="description" content="Free tools for India's middle class. 8th Pay Commission Calculator, Govt Jobs updated 3x daily, AI Career Guide, Tax Saver, EMI Calculator. Free forever.">
+<meta name="keywords" content="8th pay commission calculator,middle class india,govt jobs 2026,10th pass jobs,AI career india,salary calculator,tax calculator india">
 <meta property="og:title" content="mclass.in — India's Middle Class Platform">
-<meta property="og:description" content="Calculate your 8th CPC salary, find govt jobs, compare jobs, check happiness score. Free for India.">
+<meta property="og:description" content="Your salary comes once a month. Make every rupee count. Free tools for India's middle class.">
 <meta property="og:url" content="https://www.mclass.in">
 <link rel="canonical" href="https://www.mclass.in">
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800;900&family=Tiro+Devanagari+Hindi&display=swap" rel="stylesheet">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T8YTMQE390"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-T8YTMQE390');</script>
+
 <style>
-:root{--ink:#0b0d10;--ink2:#111419;--ink3:#181d24;--ink4:#1e2530;--or:#ff6200;--or2:#ff8533;--or3:rgba(255,98,0,0.12);--go:#e8a000;--go2:#ffc840;--go3:rgba(232,160,0,0.1);--gr:#16a34a;--gr2:#22c55e;--gr3:rgba(22,163,74,0.1);--bl:#1d6fbb;--bl2:#3b9eff;--bl3:rgba(29,111,187,0.1);--pu:#6d28d9;--pu2:#a855f7;--pu3:rgba(109,40,217,0.1);--pi:#be185d;--pi2:#ec4899;--pi3:rgba(190,24,93,0.1);--te:#0f766e;--te2:#14b8a6;--te3:rgba(15,118,110,0.1);--t1:#f0ebe3;--t2:#b0a090;--t3:#6a5e50;--b:rgba(255,255,255,0.06);--b2:rgba(255,255,255,0.03);--r:14px;--sh:0 4px 24px rgba(0,0,0,0.35);}
-*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
-body{font-family:'Sora',sans-serif;background:var(--ink);color:var(--t1);overflow-x:hidden;background-image:radial-gradient(ellipse 80% 50% at 15% -5%,rgba(255,98,0,0.07) 0%,transparent 55%),radial-gradient(ellipse 60% 40% at 85% 105%,rgba(232,160,0,0.05) 0%,transparent 55%);}
-::-webkit-scrollbar{width:4px;}::-webkit-scrollbar-track{background:var(--ink2);}::-webkit-scrollbar-thumb{background:var(--or);border-radius:2px;}
-.nav{background:rgba(11,13,16,0.96);border-bottom:1px solid var(--b);padding:0 4%;height:62px;display:flex;align-items:center;position:sticky;top:0;z-index:500;backdrop-filter:blur(24px);}
-.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0;margin-right:28px;}
+/* ══════════════════════════════════════════
+   THEME SYSTEM
+══════════════════════════════════════════ */
+:root{
+  --or:#ff6200;--or2:#ff8533;--or3:rgba(255,98,0,0.12);
+  --go:#e8a000;--go2:#ffc840;--go3:rgba(232,160,0,0.1);
+  --gr:#16a34a;--gr2:#22c55e;--gr3:rgba(22,163,74,0.1);
+  --bl:#1d6fbb;--bl2:#3b9eff;--bl3:rgba(29,111,187,0.1);
+  --pu:#6d28d9;--pu2:#a855f7;--pu3:rgba(109,40,217,0.1);
+  --rd:#dc2626;--rd2:#f87171;--rd3:rgba(220,38,38,0.1);
+  --te:#0f766e;--te2:#14b8a6;--te3:rgba(15,118,110,0.1);
+  --r:14px;--tr:all 0.3s ease;
+}
+[data-theme="dark"]{
+  --bg:#0b0d10;--bg2:#111419;--bg3:#181d24;--bg4:#1e2530;
+  --t1:#f0ebe3;--t2:#b0a090;--t3:#6a5e50;
+  --bd:rgba(255,255,255,0.06);--bd2:rgba(255,255,255,0.03);
+  --sh:0 4px 24px rgba(0,0,0,0.4);
+  --nav-bg:rgba(11,13,16,0.96);
+  --hero-grad:radial-gradient(ellipse 80% 50% at 15% -5%,rgba(255,98,0,0.08) 0%,transparent 55%),radial-gradient(ellipse 60% 40% at 85% 105%,rgba(232,160,0,0.05) 0%,transparent 55%);
+}
+[data-theme="light"]{
+  --bg:#f4efe8;--bg2:#ffffff;--bg3:#faf7f3;--bg4:#f0ebe0;
+  --t1:#1a0f00;--t2:#5a4030;--t3:#9a7860;
+  --bd:rgba(0,0,0,0.08);--bd2:rgba(0,0,0,0.04);
+  --sh:0 4px 24px rgba(0,0,0,0.08);
+  --nav-bg:rgba(255,255,255,0.96);
+  --hero-grad:radial-gradient(ellipse 80% 50% at 15% -5%,rgba(255,98,0,0.05) 0%,transparent 55%),radial-gradient(ellipse 60% 40% at 85% 105%,rgba(232,160,0,0.04) 0%,transparent 55%);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Sora',sans-serif;background:var(--bg);color:var(--t1);overflow-x:hidden;background-image:var(--hero-grad);transition:background 0.3s,color 0.3s;}
+::-webkit-scrollbar{width:4px;}::-webkit-scrollbar-track{background:var(--bg2);}::-webkit-scrollbar-thumb{background:var(--or);border-radius:2px;}
+a{text-decoration:none;color:inherit;}
+
+/* ══════════════════════════════════════════
+   NAV
+══════════════════════════════════════════ */
+.nav{background:var(--nav-bg);border-bottom:1px solid var(--bd);padding:0 4%;height:62px;display:flex;align-items:center;position:sticky;top:0;z-index:500;backdrop-filter:blur(24px);transition:var(--tr);}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0;margin-right:20px;}
 .tri{display:flex;flex-direction:column;width:4px;height:36px;border-radius:2px;overflow:hidden;}
-.t1{background:#FF9933;flex:1}.t2{background:#fff;flex:1}.t3{background:#138808;flex:1}
-.logo-main{font-size:22px;font-weight:900;color:#fff;letter-spacing:-0.04em;}.logo-main em{color:var(--or);font-style:normal;}
+.ts{background:#FF9933;flex:1}.tw{background:#fff;flex:1}.ti{background:#138808;flex:1}
+[data-theme="light"] .tw{background:#333;}
+.logo-main{font-size:22px;font-weight:900;color:var(--t1);letter-spacing:-0.04em;transition:color 0.3s;}
+.logo-main em{color:var(--or);font-style:normal;}
 .logo-sub{font-size:9px;color:var(--t3);letter-spacing:0.12em;text-transform:uppercase;margin-top:2px;}
 .nav-links{display:flex;align-items:center;gap:2px;flex:1;}
 .nav-item{position:relative;}
-.nav-link{display:flex;align-items:center;gap:5px;color:var(--t2);text-decoration:none;font-size:13px;font-weight:500;padding:6px 12px;border-radius:8px;transition:all 0.2s;white-space:nowrap;cursor:pointer;background:none;border:none;font-family:'Sora',sans-serif;}
-.nav-link:hover{color:var(--t1);background:rgba(255,255,255,0.06);}
-.dropdown{position:absolute;top:calc(100% + 8px);left:0;background:var(--ink2);border:1px solid var(--b);border-radius:12px;padding:8px;min-width:220px;box-shadow:0 20px 60px rgba(0,0,0,0.5);opacity:0;visibility:hidden;transform:translateY(-8px);transition:all 0.2s ease;z-index:600;}
+.nav-link{display:flex;align-items:center;gap:5px;color:var(--t2);font-size:13px;font-weight:500;padding:6px 11px;border-radius:8px;transition:var(--tr);white-space:nowrap;cursor:pointer;background:none;border:none;font-family:'Sora',sans-serif;}
+.nav-link:hover,.nav-link.on{color:var(--or);background:var(--or3);}
+.dropdown{position:absolute;top:calc(100% + 8px);left:0;background:var(--bg2);border:1px solid var(--bd);border-radius:12px;padding:8px;min-width:230px;box-shadow:var(--sh);opacity:0;visibility:hidden;transform:translateY(-8px);transition:all 0.2s ease;z-index:600;}
 .nav-item:hover .dropdown{opacity:1;visibility:visible;transform:translateY(0);}
-.dd-item{display:flex;align-items:center;gap:10px;padding:9px 12px;border-radius:8px;color:var(--t2);text-decoration:none;font-size:13px;font-weight:500;transition:all 0.2s;}
-.dd-item:hover{background:var(--ink3);color:var(--t1);}
+.dd-item{display:flex;align-items:center;gap:10px;padding:9px 12px;border-radius:8px;color:var(--t2);font-size:13px;transition:all 0.2s;}
+.dd-item:hover{background:var(--bg3);color:var(--t1);}
 .dd-icon{font-size:16px;width:24px;text-align:center;flex-shrink:0;}
 .dd-name{font-weight:600;color:var(--t1);font-size:12px;}.dd-desc{font-size:10px;color:var(--t3);margin-top:1px;}
 .dd-badge{font-size:9px;font-weight:700;padding:1px 6px;border-radius:4px;margin-left:auto;flex-shrink:0;}
-.db-hot{background:rgba(255,98,0,0.15);color:var(--or2);}.db-soon{background:rgba(109,40,217,0.15);color:var(--pu2);}.db-new{background:rgba(232,160,0,0.15);color:var(--go2);}.db-live{background:rgba(22,163,74,0.15);color:var(--gr2);}
-.dd-sep{height:1px;background:var(--b);margin:4px 0;}
+.db-hot{background:rgba(255,98,0,0.15);color:var(--or2);}.db-soon{background:rgba(109,40,217,0.15);color:var(--pu2);}.db-live{background:rgba(22,163,74,0.15);color:var(--gr2);}.db-new{background:rgba(232,160,0,0.15);color:var(--go2);}
+.dd-sep{height:1px;background:var(--bd);margin:4px 0;}
 .nav-right{display:flex;align-items:center;gap:8px;margin-left:auto;}
-.lang-btn{background:var(--ink3);border:1px solid var(--b);color:var(--t2);padding:5px 12px;border-radius:20px;font-size:11px;font-weight:700;cursor:pointer;font-family:'Sora',sans-serif;transition:all 0.2s;}
-.lang-btn:hover{border-color:rgba(255,98,0,0.4);color:var(--or);}
-.nav-cta{background:linear-gradient(135deg,var(--or),#c84000);color:#fff;border:none;border-radius:9px;padding:8px 18px;font-family:'Sora',sans-serif;font-size:13px;font-weight:700;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:transform 0.2s,box-shadow 0.2s;white-space:nowrap;}
+
+/* THEME TOGGLE */
+.theme-btn{
+  display:flex;align-items:center;gap:6px;
+  background:var(--bg3);border:1px solid var(--bd);
+  border-radius:20px;padding:5px 12px;
+  cursor:pointer;font-size:12px;font-weight:600;
+  color:var(--t2);font-family:'Sora',sans-serif;
+  transition:var(--tr);flex-shrink:0;
+}
+.theme-btn:hover{border-color:rgba(255,98,0,0.4);color:var(--or);}
+
+.nav-cta{background:linear-gradient(135deg,var(--or),#c84000);color:#fff;border:none;border-radius:9px;padding:8px 16px;font-family:'Sora',sans-serif;font-size:13px;font-weight:700;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:transform 0.2s,box-shadow 0.2s;white-space:nowrap;}
 .nav-cta:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(255,98,0,0.4);}
-.ham{display:none;background:none;border:none;color:var(--t1);font-size:22px;cursor:pointer;margin-left:8px;}
-.breaking{background:linear-gradient(90deg,var(--or),var(--go));padding:7px 4%;display:flex;align-items:center;gap:12px;font-size:12px;font-weight:600;color:#fff;overflow:hidden;}
-.brk-tag{background:rgba(0,0,0,0.25);padding:2px 8px;border-radius:4px;font-size:10px;font-weight:800;letter-spacing:0.06em;flex-shrink:0;}
-.brk-scroll{flex:1;overflow:hidden;}.brk-track{display:flex;gap:60px;animation:brkMove 30s linear infinite;white-space:nowrap;}.brk-item{flex-shrink:0;}
-@keyframes brkMove{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
-.hero-wrap{max-width:1300px;margin:0 auto;padding:60px 4% 50px;display:grid;grid-template-columns:1fr 460px;gap:48px;align-items:center;}
-.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,98,0,0.12);border:1px solid rgba(255,98,0,0.25);border-radius:30px;padding:6px 16px;font-size:11px;font-weight:700;color:var(--or2);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:20px;}
-.pulse{width:7px;height:7px;border-radius:50%;background:var(--or);animation:pulse 2s infinite;}
+.ham{display:none;background:none;border:none;color:var(--t1);font-size:22px;cursor:pointer;margin-left:6px;}
+.mob-menu{display:none;position:fixed;top:62px;left:0;right:0;bottom:0;background:var(--bg2);z-index:400;padding:20px 4%;overflow-y:auto;}
+.mob-menu.open{display:block;}
+.mm-it{padding:14px 0;border-bottom:1px solid var(--bd);font-size:15px;font-weight:600;color:var(--t2);text-decoration:none;display:flex;align-items:center;justify-content:space-between;cursor:pointer;}
+.mm-it:hover{color:var(--or);}
+.mm-sub{padding:8px 0 4px 16px;display:flex;flex-direction:column;gap:8px;display:none;}
+.mm-sub a{font-size:13px;color:var(--t3);text-decoration:none;padding:4px 0;}
+.mm-sub a:hover{color:var(--or);}
+
+/* ══════════════════════════════════════════
+   ALERT STRIP
+══════════════════════════════════════════ */
+.alert-strip{background:linear-gradient(90deg,rgba(255,98,0,0.08),rgba(232,160,0,0.05));border-bottom:1px solid rgba(255,98,0,0.15);padding:7px 4%;display:flex;align-items:center;gap:12px;font-size:12px;font-weight:500;color:var(--t2);overflow:hidden;}
+.alert-tag{background:var(--or);color:#fff;padding:2px 10px;border-radius:20px;font-size:10px;font-weight:800;flex-shrink:0;letter-spacing:0.04em;}
+.alert-scroll{flex:1;overflow:hidden;}
+.alert-track{display:flex;gap:60px;animation:alertMove 40s linear infinite;white-space:nowrap;}
+.alert-item{flex-shrink:0;}
+.alert-item a{color:var(--or);font-weight:600;}
+@keyframes alertMove{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* ══════════════════════════════════════════
+   HERO
+══════════════════════════════════════════ */
+.hero{max-width:1300px;margin:0 auto;padding:52px 4% 44px;}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:var(--or3);border:1px solid rgba(255,98,0,0.2);border-radius:30px;padding:6px 16px;font-size:11px;font-weight:700;color:var(--or2);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:20px;}
+.pulse{width:7px;height:7px;border-radius:50%;background:var(--or);animation:pulse 2s infinite;display:inline-block;}
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.5;transform:scale(1.6)}}
-.hero-h1{font-size:clamp(32px,4.5vw,58px);font-weight:900;line-height:1.08;letter-spacing:-0.04em;margin-bottom:12px;color:#fff;}
-.grad{background:linear-gradient(135deg,var(--or) 0%,var(--go) 40%,var(--or2) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
-.hero-hindi{font-family:'Tiro Devanagari Hindi',serif;font-size:clamp(15px,1.8vw,20px);color:var(--t2);margin-bottom:14px;}
-.hero-sub{font-size:clamp(14px,1.5vw,17px);color:var(--t2);line-height:1.7;font-weight:300;max-width:520px;margin-bottom:28px;}
-.hero-btns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:32px;}
-.btn-hero{background:linear-gradient(135deg,var(--or),#c84000);color:#fff;border:none;border-radius:11px;padding:14px 26px;font-family:'Sora',sans-serif;font-size:15px;font-weight:800;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:8px;animation:btnGlow 3s infinite;}
-@keyframes btnGlow{0%,100%{box-shadow:0 6px 24px rgba(255,98,0,0.35)}50%{box-shadow:0 6px 40px rgba(255,98,0,0.6)}}
-.btn-hero:hover{transform:translateY(-2px);}
-.btn-ghost{background:rgba(255,255,255,0.06);color:var(--t1);border:1px solid var(--b);border-radius:11px;padding:14px 22px;font-family:'Sora',sans-serif;font-size:14px;font-weight:600;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:all 0.2s;}
-.btn-ghost:hover{border-color:rgba(255,98,0,0.4);background:rgba(255,98,0,0.06);}
-.hero-stats{display:flex;gap:24px;flex-wrap:wrap;}
-.hs-val{font-size:20px;font-weight:900;color:var(--or);letter-spacing:-0.03em;}.hs-lbl{font-size:10px;color:var(--t3);font-weight:500;text-transform:uppercase;letter-spacing:0.06em;margin-top:2px;}
-.hero-card{background:linear-gradient(135deg,var(--ink2),var(--ink3));border:1px solid rgba(255,98,0,0.2);border-radius:20px;padding:26px;box-shadow:0 20px 60px rgba(0,0,0,0.4),0 0 40px rgba(255,98,0,0.06);position:relative;overflow:hidden;}
-.hero-card::before{content:'';position:absolute;top:-30px;right:-30px;width:120px;height:120px;border-radius:50%;background:radial-gradient(circle,rgba(255,98,0,0.15),transparent);pointer-events:none;}
-.hcard-tag{font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:0.1em;color:var(--or);margin-bottom:10px;display:flex;align-items:center;gap:6px;}
-.hcard-title{font-size:18px;font-weight:800;color:#fff;margin-bottom:5px;letter-spacing:-0.02em;line-height:1.2;}
-.hcard-sub{font-size:11px;color:var(--t3);margin-bottom:16px;}
-.hcard-nums{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px;}
-.hcn{background:var(--ink3);border:1px solid var(--b);border-radius:10px;padding:12px;text-align:center;}
-.hcn-val{font-size:16px;font-weight:800;}.hcn-lbl{font-size:9px;color:var(--t3);margin-top:2px;text-transform:uppercase;}
-.hcn.curr .hcn-val{color:var(--t2);}.hcn.rev .hcn-val{color:var(--or);}.hcn.gain .hcn-val{color:var(--gr2);}.hcn.arr .hcn-val{color:var(--go2);}
-.hcard-levels{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:14px;}
-.hlv{font-size:10px;padding:3px 8px;border-radius:5px;background:rgba(255,98,0,0.1);color:var(--or2);border:1px solid rgba(255,98,0,0.2);font-weight:600;}
-.hcard-cta{width:100%;background:linear-gradient(135deg,var(--or),#c84000);color:#fff;border:none;border-radius:10px;padding:13px;font-family:'Sora',sans-serif;font-size:14px;font-weight:800;cursor:pointer;text-decoration:none;display:flex;align-items:center;justify-content:center;gap:8px;transition:transform 0.2s,box-shadow 0.2s;margin-bottom:8px;}
-.hcard-cta:hover{transform:translateY(-1px);box-shadow:0 8px 24px rgba(255,98,0,0.4);}
-.hcard-note{font-size:10px;color:var(--t3);text-align:center;}
-.stats-strip{background:var(--ink2);border-top:1px solid var(--b);border-bottom:1px solid var(--b);padding:20px 4%;display:flex;justify-content:center;gap:0;}
-.stat{flex:1;max-width:200px;text-align:center;padding:0 24px;border-right:1px solid var(--b);}
-.stat:last-child{border-right:none;}
-.stat-val{font-size:24px;font-weight:900;color:var(--or);letter-spacing:-0.03em;}
-.stat-lbl{font-size:10px;color:var(--t3);font-weight:500;text-transform:uppercase;letter-spacing:0.08em;margin-top:3px;}
-.section{padding:70px 4%;max-width:1300px;margin:0 auto;}
-.sec-eyebrow{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;color:var(--or);margin-bottom:10px;display:flex;align-items:center;gap:8px;}
-.sec-eyebrow::before{content:'';width:20px;height:2px;background:var(--or);border-radius:2px;}
-.sec-title{font-size:clamp(24px,3vw,38px);font-weight:900;letter-spacing:-0.03em;color:#fff;margin-bottom:8px;line-height:1.15;}
+.hero-grid{display:grid;grid-template-columns:1fr 440px;gap:48px;align-items:center;}
+.hero-tagline{font-size:clamp(28px,4vw,54px);font-weight:900;line-height:1.08;letter-spacing:-0.04em;color:var(--t1);margin-bottom:12px;}
+.hero-tagline .grad{background:linear-gradient(135deg,var(--or) 0%,var(--go) 40%,var(--or2) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.hero-hindi{font-family:'Tiro Devanagari Hindi',serif;font-size:16px;color:var(--t2);margin-bottom:10px;}
+.hero-sub{font-size:15px;color:var(--t2);line-height:1.7;font-weight:300;margin-bottom:28px;max-width:500px;}
+.hero-btns{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:28px;}
+.btn-prime{background:linear-gradient(135deg,var(--or),#c84000);color:#fff;border:none;border-radius:11px;padding:13px 24px;font-family:'Sora',sans-serif;font-size:14px;font-weight:800;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:8px;animation:glow 3s infinite;}
+@keyframes glow{0%,100%{box-shadow:0 6px 24px rgba(255,98,0,0.35)}50%{box-shadow:0 6px 40px rgba(255,98,0,0.6)}}
+.btn-prime:hover{transform:translateY(-2px);}
+.btn-sec{background:var(--bg3);color:var(--t1);border:1px solid var(--bd);border-radius:11px;padding:13px 20px;font-family:'Sora',sans-serif;font-size:14px;font-weight:600;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:var(--tr);}
+.btn-sec:hover{border-color:rgba(255,98,0,0.4);color:var(--or);}
+.hero-stats{display:flex;gap:20px;flex-wrap:wrap;}
+.hstat{text-align:left;}
+.hstat-val{font-size:20px;font-weight:900;color:var(--or);letter-spacing:-0.03em;}
+.hstat-lbl{font-size:10px;color:var(--t3);font-weight:500;text-transform:uppercase;letter-spacing:0.06em;margin-top:2px;}
+
+/* ══════════════════════════════════════════
+   MINI 8th CPC CALCULATOR (HERO CARD)
+══════════════════════════════════════════ */
+.calc-card{
+  background:var(--bg2);
+  border:1px solid rgba(255,98,0,0.25);
+  border-radius:20px;padding:26px;
+  box-shadow:0 20px 60px rgba(0,0,0,0.2),0 0 40px rgba(255,98,0,0.06);
+  position:relative;overflow:hidden;
+}
+.calc-card::before{content:'';position:absolute;top:-40px;right:-40px;width:140px;height:140px;border-radius:50%;background:radial-gradient(circle,rgba(255,98,0,0.12),transparent);pointer-events:none;}
+.calc-tag{font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:0.1em;color:var(--or);margin-bottom:10px;display:flex;align-items:center;gap:6px;}
+.calc-title{font-size:18px;font-weight:800;color:var(--t1);margin-bottom:4px;letter-spacing:-0.02em;}
+.calc-sub{font-size:11px;color:var(--t3);margin-bottom:18px;}
+.calc-fields{display:flex;flex-direction:column;gap:10px;margin-bottom:14px;}
+.calc-field label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--t3);display:block;margin-bottom:4px;}
+.calc-select,.calc-input{
+  width:100%;background:var(--bg3);
+  border:1px solid var(--bd);border-radius:9px;
+  padding:10px 14px;color:var(--t1);
+  font-family:'Sora',sans-serif;font-size:13px;
+  outline:none;transition:border-color 0.2s;
+  -webkit-appearance:none;
+}
+.calc-select:focus,.calc-input:focus{border-color:var(--or);}
+[data-theme="light"] .calc-select option{background:#fff;color:#1a0f00;}
+[data-theme="dark"] .calc-select option{background:#181d24;color:#f0ebe3;}
+.calc-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.calc-btn{width:100%;background:linear-gradient(135deg,var(--or),#c84000);color:#fff;border:none;border-radius:10px;padding:13px;font-family:'Sora',sans-serif;font-size:14px;font-weight:800;cursor:pointer;transition:transform 0.2s,box-shadow 0.2s;margin-bottom:10px;}
+.calc-btn:hover{transform:translateY(-1px);box-shadow:0 8px 24px rgba(255,98,0,0.4);}
+.calc-result{display:none;background:linear-gradient(135deg,rgba(22,163,74,0.1),rgba(22,163,74,0.05));border:1px solid rgba(22,163,74,0.2);border-radius:10px;padding:14px;}
+.calc-result.show{display:block;}
+.cr-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+.cr-item{text-align:center;}
+.cr-val{font-size:15px;font-weight:900;letter-spacing:-0.02em;}
+.cr-lbl{font-size:9px;color:var(--t3);text-transform:uppercase;letter-spacing:0.06em;margin-top:2px;}
+.cr-curr .cr-val{color:var(--t2);}
+.cr-new .cr-val{color:var(--or);}
+.cr-gain .cr-val{color:var(--gr2);}
+.cr-arr .cr-val{color:var(--go2);}
+.calc-full-link{display:block;text-align:center;font-size:11px;color:var(--t3);padding-top:8px;}
+.calc-full-link a{color:var(--or);font-weight:600;}
+
+/* ══════════════════════════════════════════
+   STATS STRIP
+══════════════════════════════════════════ */
+.stats-strip{background:var(--bg2);border-top:1px solid var(--bd);border-bottom:1px solid var(--bd);padding:18px 4%;display:flex;justify-content:center;gap:0;}
+.st{flex:1;max-width:200px;text-align:center;padding:0 20px;border-right:1px solid var(--bd);}
+.st:last-child{border-right:none;}
+.st-val{font-size:22px;font-weight:900;color:var(--or);letter-spacing:-0.03em;}
+.st-lbl{font-size:10px;color:var(--t3);font-weight:500;text-transform:uppercase;letter-spacing:0.08em;margin-top:3px;}
+
+/* ══════════════════════════════════════════
+   EARN vs SAVE SECTION
+══════════════════════════════════════════ */
+.earn-save{max-width:1300px;margin:0 auto;padding:60px 4%;}
+.sec-eye{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;color:var(--or);margin-bottom:10px;display:flex;align-items:center;gap:8px;}
+.sec-eye::before{content:'';width:20px;height:2px;background:var(--or);border-radius:2px;}
+.sec-title{font-size:clamp(24px,3vw,38px);font-weight:900;letter-spacing:-0.03em;color:var(--t1);margin-bottom:8px;line-height:1.15;}
 .sec-title span{color:var(--or);}
-.sec-sub{font-size:15px;color:var(--t2);font-weight:300;line-height:1.7;max-width:500px;margin-bottom:40px;}
-.cat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
-.cat-card{background:var(--ink2);border:1px solid var(--b);border-radius:var(--r);padding:24px;text-decoration:none;display:block;transition:transform 0.3s,border-color 0.3s,box-shadow 0.3s;position:relative;overflow:hidden;cursor:pointer;}
-.cat-card:hover{transform:translateY(-4px);}
-.cc-or{border-top:3px solid var(--or);}.cc-or:hover{border-color:rgba(255,98,0,0.4);box-shadow:0 20px 50px rgba(255,98,0,0.08);}
-.cc-gr{border-top:3px solid var(--gr);}.cc-gr:hover{border-color:rgba(22,163,74,0.4);box-shadow:0 20px 50px rgba(22,163,74,0.08);}
-.cc-bl{border-top:3px solid var(--bl);}.cc-bl:hover{border-color:rgba(29,111,187,0.4);box-shadow:0 20px 50px rgba(29,111,187,0.08);}
-.cc-pu{border-top:3px solid var(--pu);}.cc-pu:hover{border-color:rgba(109,40,217,0.4);box-shadow:0 20px 50px rgba(109,40,217,0.08);}
-.cc-pi{border-top:3px solid var(--pi);}.cc-pi:hover{border-color:rgba(190,24,93,0.4);box-shadow:0 20px 50px rgba(190,24,93,0.08);}
-.cc-te{border-top:3px solid var(--te);}.cc-te:hover{border-color:rgba(15,118,110,0.4);box-shadow:0 20px 50px rgba(15,118,110,0.08);}
-.cat-icon{width:44px;height:44px;border-radius:11px;display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:14px;}
-.cc-or .cat-icon{background:var(--or3);}.cc-gr .cat-icon{background:var(--gr3);}.cc-bl .cat-icon{background:var(--bl3);}.cc-pu .cat-icon{background:var(--pu3);}.cc-pi .cat-icon{background:var(--pi3);}.cc-te .cat-icon{background:var(--te3);}
-.cat-tag{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--t3);margin-bottom:6px;}
-.cat-title{font-size:17px;font-weight:800;color:#fff;letter-spacing:-0.02em;margin-bottom:6px;line-height:1.3;}
-.cat-desc{font-size:12px;color:var(--t3);line-height:1.6;font-weight:300;margin-bottom:14px;}
-.cat-tools{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:14px;}
-.ct{font-size:10px;padding:3px 8px;border-radius:5px;background:rgba(255,255,255,0.05);color:var(--t3);border:1px solid var(--b);font-weight:500;}
-.cat-cta{font-size:12px;font-weight:700;display:flex;align-items:center;gap:4px;transition:gap 0.2s;}
-.cat-card:hover .cat-cta{gap:8px;}
-.cc-or .cat-cta{color:var(--or);}.cc-gr .cat-cta{color:var(--gr2);}.cc-bl .cat-cta{color:var(--bl2);}.cc-pu .cat-cta{color:var(--pu2);}.cc-pi .cat-cta{color:var(--pi2);}.cc-te .cat-cta{color:var(--te2);}
-.cat-badge{position:absolute;top:14px;right:14px;font-size:9px;font-weight:700;padding:3px 8px;border-radius:10px;}
-.cb-live{background:rgba(22,163,74,0.15);color:var(--gr2);border:1px solid rgba(22,163,74,0.25);}
-.cb-soon{background:rgba(109,40,217,0.15);color:var(--pu2);border:1px solid rgba(109,40,217,0.25);}
-.cb-hot{background:rgba(255,98,0,0.15);color:var(--or2);border:1px solid rgba(255,98,0,0.25);}
-.cb-new{background:rgba(232,160,0,0.15);color:var(--go2);border:1px solid rgba(232,160,0,0.25);}
-.trending-section{background:var(--ink2);border-top:1px solid var(--b);border-bottom:1px solid var(--b);padding:60px 4%;}
+.sec-sub{font-size:14px;color:var(--t2);font-weight:300;line-height:1.7;margin-bottom:36px;}
+.es-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+.es-block{background:var(--bg2);border:1px solid var(--bd);border-radius:20px;overflow:hidden;}
+.es-header{padding:20px 24px 16px;}
+.es-earn .es-header{background:linear-gradient(135deg,rgba(255,98,0,0.08),rgba(232,160,0,0.04));border-bottom:1px solid rgba(255,98,0,0.12);}
+.es-save .es-header{background:linear-gradient(135deg,rgba(29,111,187,0.08),rgba(22,163,74,0.04));border-bottom:1px solid rgba(29,111,187,0.12);}
+.es-icon{font-size:28px;margin-bottom:8px;}
+.es-head-title{font-size:20px;font-weight:900;color:var(--t1);letter-spacing:-0.02em;}
+.es-earn .es-head-title span{color:var(--or);}
+.es-save .es-head-title span{color:var(--bl2);}
+.es-head-sub{font-size:12px;color:var(--t3);margin-top:3px;}
+.es-items{padding:16px;}
+.es-item{
+  display:flex;align-items:center;gap:12px;
+  padding:12px 14px;border-radius:10px;
+  margin-bottom:8px;text-decoration:none;
+  border:1px solid var(--bd);
+  background:var(--bg3);
+  transition:transform 0.18s,border-color 0.18s,box-shadow 0.18s;
+}
+.es-item:last-child{margin-bottom:0;}
+.es-earn .es-item:hover{border-color:rgba(255,98,0,0.3);box-shadow:0 4px 16px rgba(255,98,0,0.08);transform:translateX(4px);}
+.es-save .es-item:hover{border-color:rgba(29,111,187,0.3);box-shadow:0 4px 16px rgba(29,111,187,0.08);transform:translateX(4px);}
+.es-item-icon{font-size:20px;width:36px;height:36px;border-radius:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.es-earn .es-item-icon{background:rgba(255,98,0,0.1);}
+.es-save .es-item-icon{background:rgba(29,111,187,0.1);}
+.es-item-name{font-size:13px;font-weight:700;color:var(--t1);}
+.es-item-desc{font-size:11px;color:var(--t3);margin-top:2px;}
+.es-item-badge{margin-left:auto;font-size:9px;font-weight:700;padding:2px 8px;border-radius:8px;flex-shrink:0;}
+.badge-live{background:rgba(22,163,74,0.15);color:var(--gr2);}
+.badge-hot{background:rgba(255,98,0,0.15);color:var(--or2);}
+.badge-soon{background:rgba(109,40,217,0.15);color:var(--pu2);}
+.badge-new{background:rgba(232,160,0,0.15);color:var(--go2);}
+.es-cta{display:flex;align-items:center;justify-content:center;gap:6px;margin:16px 16px 16px;padding:11px;border-radius:10px;font-weight:800;font-size:13px;font-family:'Sora',sans-serif;transition:var(--tr);text-decoration:none;}
+.es-earn .es-cta{background:linear-gradient(135deg,var(--or),#c84000);color:#fff;}
+.es-save .es-cta{background:linear-gradient(135deg,var(--bl),#0d4a8a);color:#fff;}
+.es-earn .es-cta:hover,.es-save .es-cta:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(0,0,0,0.2);}
+
+/* ══════════════════════════════════════════
+   JOBS PREVIEW
+══════════════════════════════════════════ */
+.jobs-section{background:var(--bg2);border-top:1px solid var(--bd);border-bottom:1px solid var(--bd);padding:60px 4%;}
+.jobs-inner{max-width:1300px;margin:0 auto;}
+.jobs-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:28px;flex-wrap:wrap;gap:16px;}
+.live-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(22,163,74,0.12);border:1px solid rgba(22,163,74,0.25);border-radius:20px;padding:4px 12px;font-size:10px;font-weight:700;color:var(--gr2);letter-spacing:0.06em;}
+.jobs-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:24px;}
+.jp-card{background:var(--bg3);border:1px solid var(--bd);border-radius:var(--r);padding:18px;text-decoration:none;display:flex;flex-direction:column;gap:10px;transition:transform 0.2s,border-color 0.2s;}
+.jp-card:hover{transform:translateY(-3px);border-color:rgba(255,98,0,0.3);}
+.jp-title{font-size:13px;font-weight:700;color:var(--t1);line-height:1.4;}
+.jp-org{font-size:11px;color:var(--t3);margin-top:3px;}
+.jp-tags{display:flex;gap:5px;flex-wrap:wrap;}
+.jp-tag{font-size:9px;font-weight:600;padding:2px 7px;border-radius:5px;}
+.jp-edu{background:var(--go3);color:var(--go2);}
+.jp-dept{background:var(--bl3);color:var(--bl2);}
+.jp-salary{font-size:17px;font-weight:900;color:var(--or);letter-spacing:-0.02em;}
+.jp-dl{display:flex;justify-content:space-between;align-items:center;padding:6px 10px;border-radius:7px;background:rgba(255,98,0,0.07);border:1px solid rgba(255,98,0,0.15);}
+.jp-dl.urg{background:rgba(220,38,38,0.08);border-color:rgba(220,38,38,0.2);}
+.jp-dt{font-size:10px;color:var(--or2);font-weight:600;}
+.jp-dl.urg .jp-dt{color:var(--rd2);}
+.jp-dtag{font-size:9px;font-weight:700;background:var(--or);color:#fff;padding:1px 7px;border-radius:8px;}
+.jp-dl.urg .jp-dtag{background:var(--rd);}
+.jp-apply{font-size:11px;font-weight:700;color:var(--or);display:flex;align-items:center;gap:4px;transition:gap 0.2s;}
+.jp-card:hover .jp-apply{gap:8px;}
+.jp-loader{grid-column:1/-1;text-align:center;padding:40px;color:var(--t3);font-size:13px;}
+.jp-spin{width:24px;height:24px;border:2px solid var(--bd);border-top-color:var(--or);border-radius:50%;animation:spin 0.7s linear infinite;margin:0 auto 12px;}
+@keyframes spin{to{transform:rotate(360deg)}}
+.jobs-footer{text-align:center;}
+
+/* BUCKET PILLS */
+.bucket-pills{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px;}
+.bp{padding:6px 14px;border-radius:20px;border:1px solid var(--bd);background:var(--bg3);font-size:11px;font-weight:600;cursor:pointer;color:var(--t2);font-family:'Sora',sans-serif;transition:var(--tr);text-decoration:none;}
+.bp:hover,.bp.on{background:var(--or);border-color:var(--or);color:#fff;}
+
+/* ══════════════════════════════════════════
+   AI SECTION
+══════════════════════════════════════════ */
+.ai-section{max-width:1300px;margin:0 auto;padding:60px 4%;}
+.ai-alert{background:linear-gradient(135deg,rgba(109,40,217,0.1),rgba(29,111,187,0.06));border:1px solid rgba(109,40,217,0.2);border-radius:16px;padding:20px 24px;margin-bottom:32px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;}
+.ai-alert-icon{font-size:32px;flex-shrink:0;}
+.ai-alert-text h3{font-size:16px;font-weight:800;color:var(--t1);margin-bottom:4px;}
+.ai-alert-text p{font-size:13px;color:var(--t3);font-weight:300;}
+.ai-alert-text strong{color:var(--pu2);}
+.ai-alert-btn{margin-left:auto;background:linear-gradient(135deg,var(--pu),#4c1d95);color:#fff;border:none;border-radius:9px;padding:10px 20px;font-family:'Sora',sans-serif;font-size:13px;font-weight:700;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:6px;white-space:nowrap;transition:var(--tr);}
+.ai-alert-btn:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(109,40,217,0.3);}
+.ai-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+.ai-card{background:var(--bg2);border:1px solid var(--bd);border-radius:var(--r);padding:24px;text-decoration:none;display:block;transition:transform 0.2s,border-color 0.2s,box-shadow 0.2s;position:relative;overflow:hidden;}
+.ai-news{border-top:3px solid var(--pu);}
+.ai-tools{border-top:3px solid var(--bl);}
+.ai-career{border-top:3px solid var(--gr);}
+.ai-news:hover{border-color:rgba(109,40,217,0.4);box-shadow:0 16px 40px rgba(109,40,217,0.08);}
+.ai-tools:hover{border-color:rgba(29,111,187,0.4);box-shadow:0 16px 40px rgba(29,111,187,0.08);}
+.ai-career:hover{border-color:rgba(22,163,74,0.4);box-shadow:0 16px 40px rgba(22,163,74,0.08);}
+.ai-card:hover{transform:translateY(-4px);}
+.ai-card-icon{font-size:28px;margin-bottom:12px;}
+.ai-card-tag{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--t3);margin-bottom:6px;}
+.ai-card-title{font-size:17px;font-weight:800;color:var(--t1);margin-bottom:6px;letter-spacing:-0.02em;}
+.ai-card-desc{font-size:12px;color:var(--t3);line-height:1.6;margin-bottom:16px;font-weight:300;}
+.ai-card-stat{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px;}
+.ai-stat{font-size:10px;padding:3px 8px;border-radius:5px;font-weight:600;}
+.ai-news .ai-stat{background:var(--pu3);color:var(--pu2);}
+.ai-tools .ai-stat{background:var(--bl3);color:var(--bl2);}
+.ai-career .ai-stat{background:var(--gr3);color:var(--gr2);}
+.ai-card-cta{font-size:12px;font-weight:700;display:flex;align-items:center;gap:4px;transition:gap 0.2s;}
+.ai-card:hover .ai-card-cta{gap:8px;}
+.ai-news .ai-card-cta{color:var(--pu2);}
+.ai-tools .ai-card-cta{color:var(--bl2);}
+.ai-career .ai-card-cta{color:var(--gr2);}
+
+/* SALARY TABLE */
+.ai-salary-table{margin-top:32px;background:var(--bg2);border:1px solid var(--bd);border-radius:var(--r);overflow:hidden;}
+.ast-header{background:linear-gradient(135deg,rgba(109,40,217,0.08),rgba(29,111,187,0.04));padding:20px 24px;border-bottom:1px solid var(--bd);}
+.ast-header h3{font-size:16px;font-weight:800;color:var(--t1);}
+.ast-header p{font-size:12px;color:var(--t3);margin-top:3px;}
+.ast-table{width:100%;border-collapse:collapse;}
+.ast-table th{background:var(--bg3);padding:10px 16px;text-align:left;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--t3);border-bottom:1px solid var(--bd);}
+.ast-table td{padding:12px 16px;font-size:13px;border-bottom:1px solid var(--bd);color:var(--t2);}
+.ast-table tr:last-child td{border-bottom:none;}
+.ast-table tr:hover td{background:var(--bg3);}
+.ast-role{font-weight:700;color:var(--t1);}
+.ast-fresh{color:var(--gr2);font-weight:600;}
+.ast-senior{color:var(--or);font-weight:600;}
+.ast-demand{padding:2px 8px;border-radius:10px;font-size:10px;font-weight:700;}
+.dem-high{background:rgba(22,163,74,0.15);color:var(--gr2);}
+.dem-very{background:rgba(255,98,0,0.15);color:var(--or2);}
+.dem-med{background:rgba(232,160,0,0.15);color:var(--go2);}
+
+/* ══════════════════════════════════════════
+   TRENDING
+══════════════════════════════════════════ */
+.trending{background:var(--bg2);border-top:1px solid var(--bd);border-bottom:1px solid var(--bd);padding:60px 4%;}
 .trending-inner{max-width:1300px;margin:0 auto;}
-.trending-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;}
-.trend-card{background:var(--ink3);border:1px solid var(--b);border-radius:var(--r);padding:18px 16px;text-decoration:none;display:block;transition:transform 0.2s,border-color 0.2s;position:relative;overflow:hidden;}
-.trend-card:hover{transform:translateY(-3px);border-color:rgba(255,98,0,0.3);}
-.trend-num{font-size:32px;font-weight:900;color:rgba(255,98,0,0.12);position:absolute;top:10px;right:12px;}
-.trend-cat{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;padding:2px 8px;border-radius:4px;margin-bottom:10px;display:inline-block;}
-.tc-finance{background:rgba(22,163,74,0.15);color:var(--gr2);}
-.tc-jobs{background:rgba(29,111,187,0.15);color:var(--bl2);}
-.tc-genz{background:rgba(109,40,217,0.15);color:var(--pu2);}
+.trending-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+.tr-card{background:var(--bg3);border:1px solid var(--bd);border-radius:var(--r);padding:20px;text-decoration:none;display:block;transition:transform 0.2s,border-color 0.2s;position:relative;overflow:hidden;}
+.tr-card:hover{transform:translateY(-3px);border-color:rgba(255,98,0,0.3);}
+.tr-num{font-size:40px;font-weight:900;color:rgba(255,98,0,0.08);position:absolute;top:10px;right:14px;}
+.tr-cat{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;padding:2px 8px;border-radius:4px;margin-bottom:10px;display:inline-block;}
 .tc-govt{background:rgba(255,98,0,0.15);color:var(--or2);}
-.tc-career{background:rgba(232,160,0,0.15);color:var(--go2);}
-.trend-title{font-size:13px;font-weight:700;color:var(--t1);line-height:1.4;margin-bottom:6px;}
-.trend-hook{font-size:11px;color:var(--t3);line-height:1.5;margin-bottom:10px;font-weight:300;}
-.trend-meta{font-size:10px;color:var(--t3);display:flex;align-items:center;gap:6px;}
-.trend-dot{width:3px;height:3px;border-radius:50%;background:var(--t3);}
-.hook-banner{background:linear-gradient(135deg,rgba(255,98,0,0.1),rgba(232,160,0,0.06));border:1px solid rgba(255,98,0,0.2);border-radius:20px;padding:48px;text-align:center;margin:60px auto;max-width:1300px;position:relative;overflow:hidden;}
-.hook-banner::before{content:'40 CRORE';position:absolute;font-size:160px;font-weight:900;opacity:0.03;top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;color:var(--or);white-space:nowrap;}
-.hook-title{font-size:clamp(24px,3.5vw,42px);font-weight:900;letter-spacing:-0.03em;color:#fff;margin-bottom:8px;line-height:1.1;}
+.tc-fin{background:rgba(22,163,74,0.15);color:var(--gr2);}
+.tc-ai{background:rgba(109,40,217,0.15);color:var(--pu2);}
+.tc-job{background:rgba(29,111,187,0.15);color:var(--bl2);}
+.tc-car{background:rgba(232,160,0,0.15);color:var(--go2);}
+.tr-title{font-size:14px;font-weight:700;color:var(--t1);line-height:1.4;margin-bottom:6px;}
+.tr-hook{font-size:12px;color:var(--t3);line-height:1.5;margin-bottom:10px;font-weight:300;}
+.tr-meta{font-size:10px;color:var(--t3);display:flex;align-items:center;gap:6px;}
+.tr-dot{width:3px;height:3px;border-radius:50%;background:var(--t3);}
+
+/* ══════════════════════════════════════════
+   VIRAL HOOK
+══════════════════════════════════════════ */
+.hook{max-width:1300px;margin:60px auto;padding:0 4%;}
+.hook-inner{background:linear-gradient(135deg,rgba(255,98,0,0.08),rgba(232,160,0,0.04));border:1px solid rgba(255,98,0,0.15);border-radius:20px;padding:52px;text-align:center;position:relative;overflow:hidden;}
+.hook-inner::before{content:'₹';position:absolute;font-size:200px;font-weight:900;opacity:0.03;top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;color:var(--or);}
+.hook-title{font-size:clamp(24px,3.5vw,42px);font-weight:900;letter-spacing:-0.03em;color:var(--t1);margin-bottom:8px;line-height:1.1;}
 .hook-title span{color:var(--or);}
 .hook-hindi{font-family:'Tiro Devanagari Hindi',serif;font-size:18px;color:var(--t2);margin-bottom:12px;}
-.hook-sub{font-size:15px;color:var(--t2);margin-bottom:24px;font-weight:300;}
-.hook-stats{display:flex;gap:24px;justify-content:center;flex-wrap:wrap;margin-bottom:24px;}
-.hstat{font-size:12px;color:var(--t3);display:flex;align-items:center;gap:6px;}
-.hstat-dot{width:6px;height:6px;border-radius:50%;background:var(--or);}
-.sub-section{padding:70px 4%;max-width:1300px;margin:0 auto;}
+.hook-sub{font-size:15px;color:var(--t2);margin-bottom:28px;font-weight:300;}
+.hook-pills{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:28px;}
+.hook-pill{font-size:12px;color:var(--t3);display:flex;align-items:center;gap:6px;}
+.hp-dot{width:6px;height:6px;border-radius:50%;background:var(--or);}
+
+/* ══════════════════════════════════════════
+   SUBSCRIBE
+══════════════════════════════════════════ */
+.subscribe{max-width:1300px;margin:0 auto;padding:60px 4%;}
 .sub-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;}
-.sub-eyebrow{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;color:var(--or);margin-bottom:10px;}
-.sub-title{font-size:clamp(22px,3vw,34px);font-weight:900;letter-spacing:-0.03em;color:#fff;margin-bottom:10px;line-height:1.15;}
-.sub-title span{color:var(--or);}
-.sub-points{display:flex;flex-direction:column;gap:8px;margin-bottom:20px;}
-.sp{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--t2);}
-.sp-dot{width:6px;height:6px;border-radius:50%;background:var(--or);flex-shrink:0;}
-.sub-note{font-size:11px;color:var(--t3);padding:10px 12px;background:rgba(255,98,0,0.05);border:1px solid rgba(255,98,0,0.12);border-radius:8px;}
-.sub-form-wrap{background:var(--ink2);border:1px solid var(--b);border-radius:18px;padding:30px;position:relative;overflow:hidden;}
+.sub-form-wrap{background:var(--bg2);border:1px solid var(--bd);border-radius:18px;padding:30px;position:relative;overflow:hidden;}
 .sub-form-wrap::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--or),var(--go));}
-.sub-form-title{font-size:18px;font-weight:800;color:#fff;margin-bottom:4px;}
+.sub-form-title{font-size:18px;font-weight:800;color:var(--t1);margin-bottom:4px;}
 .sub-form-sub{font-size:12px;color:var(--t3);margin-bottom:20px;}
 .sf{display:flex;flex-direction:column;gap:10px;}
-.sf-input,.sf-select{width:100%;background:var(--ink3);border:1px solid var(--b);border-radius:9px;padding:11px 14px;color:var(--t1);font-family:'Sora',sans-serif;font-size:13px;outline:none;transition:border-color 0.2s;}
+.sf-input,.sf-select{width:100%;background:var(--bg3);border:1px solid var(--bd);border-radius:9px;padding:11px 14px;color:var(--t1);font-family:'Sora',sans-serif;font-size:13px;outline:none;transition:border-color 0.2s;}
 .sf-input:focus,.sf-select:focus{border-color:var(--or);}
 .sf-select{color:var(--t2);}
-.sf-select option{background:var(--ink2);}
+[data-theme="light"] .sf-select option{background:#fff;}
+[data-theme="dark"] .sf-select option{background:#181d24;}
 .sf-btn{width:100%;background:linear-gradient(135deg,var(--or),#c84000);color:#fff;border:none;border-radius:9px;padding:13px;font-family:'Sora',sans-serif;font-size:14px;font-weight:800;cursor:pointer;transition:transform 0.2s,box-shadow 0.2s;}
 .sf-btn:hover{transform:translateY(-1px);box-shadow:0 8px 24px rgba(255,98,0,0.4);}
 .sf-success{display:none;text-align:center;padding:12px;background:rgba(22,163,74,0.1);border:1px solid rgba(22,163,74,0.25);border-radius:8px;font-size:13px;color:var(--gr2);}
 .sf-note{text-align:center;font-size:11px;color:var(--t3);}
-footer{background:var(--ink2);border-top:1px solid var(--b);padding:50px 4% 24px;}
+.sub-points{display:flex;flex-direction:column;gap:8px;margin:16px 0;}
+.sp{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--t2);}
+.sp-dot{width:6px;height:6px;border-radius:50%;background:var(--or);flex-shrink:0;}
+
+/* ══════════════════════════════════════════
+   DISCLAIMER BAR
+══════════════════════════════════════════ */
+.disclaimer{background:var(--bg3);border-top:1px solid var(--bd);padding:16px 4%;font-size:11px;color:var(--t3);line-height:1.8;}
+.disclaimer-inner{max-width:1300px;margin:0 auto;}
+.disclaimer strong{color:var(--t2);}
+.disclaimer a{color:var(--or);}
+
+/* ══════════════════════════════════════════
+   FOOTER
+══════════════════════════════════════════ */
+footer{background:var(--bg2);border-top:1px solid var(--bd);padding:50px 4% 24px;}
 .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr 1fr;gap:40px;max-width:1300px;margin:0 auto 36px;}
 .fb-desc{font-size:13px;color:var(--t3);line-height:1.7;font-weight:300;max-width:240px;margin-top:10px;}
 .fb-contact{font-size:12px;color:var(--t3);margin-top:8px;}
-.fb-contact a{color:var(--or);text-decoration:none;}
+.fb-contact a{color:var(--or);}
 .fc-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--t3);margin-bottom:14px;}
 .fc-links{list-style:none;display:flex;flex-direction:column;gap:8px;}
-.fc-links li a{font-size:13px;color:var(--t2);text-decoration:none;font-weight:300;transition:color 0.2s;display:flex;align-items:center;gap:6px;}
+.fc-links li a{font-size:13px;color:var(--t2);font-weight:300;transition:color 0.2s;display:flex;align-items:center;gap:6px;}
 .fc-links li a:hover{color:var(--or);}
-.new-tag{font-size:8px;font-weight:700;background:rgba(255,98,0,0.15);color:var(--or2);padding:1px 5px;border-radius:3px;}
-.footer-bottom{border-top:1px solid var(--b);padding-top:20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;max-width:1300px;margin:0 auto;}
+.nt{font-size:8px;font-weight:700;background:rgba(255,98,0,0.15);color:var(--or2);padding:1px 5px;border-radius:3px;}
+.footer-bottom{border-top:1px solid var(--bd);padding-top:20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;max-width:1300px;margin:0 auto;}
 .fb-copy{font-size:12px;color:var(--t3);}
 .fb-social{display:flex;gap:8px;}
-.fs{width:34px;height:34px;border-radius:8px;background:rgba(255,255,255,0.04);border:1px solid var(--b);display:flex;align-items:center;justify-content:center;font-size:14px;cursor:pointer;transition:all 0.2s;text-decoration:none;}
-.fs:hover{border-color:rgba(255,98,0,0.4);background:rgba(255,98,0,0.08);}
-.disc-bar{background:rgba(255,98,0,0.04);border-top:1px solid rgba(255,98,0,0.1);padding:10px 4%;font-size:11px;color:var(--t3);text-align:center;line-height:1.7;}
-.stt{position:fixed;bottom:24px;right:24px;width:42px;height:42px;border-radius:50%;background:var(--or);color:#fff;border:none;font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(255,98,0,0.4);transition:transform 0.2s,opacity 0.3s;opacity:0;z-index:300;}
-.stt.show{opacity:1;}.stt:hover{transform:scale(1.1) translateY(-2px);}
-.mobile-menu{display:none;position:fixed;top:62px;left:0;right:0;bottom:0;background:rgba(11,13,16,0.98);z-index:400;padding:20px 4%;overflow-y:auto;backdrop-filter:blur(20px);}
-.mobile-menu.open{display:block;}
-.mm-item{padding:14px 0;border-bottom:1px solid var(--b);font-size:15px;font-weight:600;color:var(--t2);text-decoration:none;display:flex;align-items:center;justify-content:space-between;cursor:pointer;}
-.mm-item:hover{color:var(--or);}
-.mm-sub{padding:8px 0 4px 16px;display:flex;flex-direction:column;gap:8px;}
-.mm-sub a{font-size:13px;color:var(--t3);text-decoration:none;padding:4px 0;}
-.mm-sub a:hover{color:var(--or);}
+.fsoc{width:34px;height:34px;border-radius:8px;background:rgba(255,255,255,0.04);border:1px solid var(--bd);display:flex;align-items:center;justify-content:center;font-size:14px;cursor:pointer;transition:all 0.2s;text-decoration:none;}
+.fsoc:hover{border-color:rgba(255,98,0,0.4);background:rgba(255,98,0,0.08);}
+
+/* ══════════════════════════════════════════
+   STICKY CALC BUTTON
+══════════════════════════════════════════ */
+.sticky-calc{position:fixed;bottom:24px;right:24px;z-index:300;display:flex;flex-direction:column;align-items:flex-end;gap:8px;}
+.sc-btn{background:linear-gradient(135deg,var(--or),#c84000);color:#fff;border:none;border-radius:12px;padding:10px 16px;font-family:'Sora',sans-serif;font-size:12px;font-weight:700;cursor:pointer;display:flex;align-items:center;gap:6px;box-shadow:0 4px 20px rgba(255,98,0,0.4);transition:transform 0.2s;white-space:nowrap;}
+.sc-btn:hover{transform:translateY(-2px);}
+.stt-btn{width:40px;height:40px;border-radius:50%;background:var(--bg2);border:1px solid var(--bd);color:var(--t1);font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:var(--sh);transition:transform 0.2s,opacity 0.3s;opacity:0;}
+.stt-btn.show{opacity:1;}
+.stt-btn:hover{transform:scale(1.1);}
+
+/* ══════════════════════════════════════════
+   REVEAL ANIMATION
+══════════════════════════════════════════ */
 .reveal{opacity:0;transform:translateY(20px);transition:opacity 0.6s ease,transform 0.6s ease;}
 .reveal.visible{opacity:1;transform:translateY(0);}
-body.lang-hi .en{display:none!important;}
-.hi{display:none;}
-body.lang-hi .hi{display:block!important;}
 
-/* ── JOBS PREVIEW SECTION (new) ── */
-.jobs-preview-section{background:var(--ink2);border-top:1px solid var(--b);border-bottom:1px solid var(--b);padding:60px 4%;}
-.jobs-preview-inner{max-width:1300px;margin:0 auto;}
-.jobs-preview-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:28px;flex-wrap:wrap;gap:16px;}
-.jobs-live-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(22,163,74,0.12);border:1px solid rgba(22,163,74,0.25);border-radius:20px;padding:4px 12px;font-size:10px;font-weight:700;color:var(--gr2);letter-spacing:0.06em;}
-.jobs-preview-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:24px;}
-.jp-card{background:var(--ink3);border:1px solid var(--b);border-radius:var(--r);padding:18px;text-decoration:none;display:flex;flex-direction:column;gap:10px;transition:transform 0.2s,border-color 0.2s;}
-.jp-card:hover{transform:translateY(-3px);border-color:rgba(255,98,0,0.3);}
-.jp-top{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;}
-.jp-title{font-size:13px;font-weight:700;color:var(--t1);line-height:1.4;}
-.jp-org{font-size:11px;color:var(--t3);margin-top:2px;}
-.jp-type{font-size:9px;font-weight:700;padding:2px 8px;border-radius:10px;white-space:nowrap;flex-shrink:0;text-transform:uppercase;}
-.jp-full{background:var(--gr3);color:var(--gr2);}.jp-part{background:var(--bl3);color:var(--bl2);}.jp-cont{background:var(--pu3);color:var(--pu2);}
-.jp-salary{font-size:16px;font-weight:900;color:var(--or);letter-spacing:-0.02em;}
-.jp-deadline{display:flex;justify-content:space-between;align-items:center;padding:6px 10px;border-radius:7px;background:rgba(255,98,0,0.07);border:1px solid rgba(255,98,0,0.15);}
-.jp-deadline.urgent{background:rgba(220,38,38,0.08);border-color:rgba(220,38,38,0.2);}
-.jp-dl-text{font-size:10px;color:var(--or2);font-weight:600;}
-.jp-deadline.urgent .jp-dl-text{color:#f87171;}
-.jp-dl-tag{font-size:9px;font-weight:700;background:var(--or);color:#fff;padding:1px 7px;border-radius:8px;}
-.jp-deadline.urgent .jp-dl-tag{background:#dc2626;}
-.jp-apply{font-size:11px;font-weight:700;color:var(--or);display:flex;align-items:center;gap:4px;transition:gap 0.2s;}
-.jp-card:hover .jp-apply{gap:8px;}
-.jobs-preview-footer{display:flex;justify-content:center;}
-.jp-loader{display:flex;align-items:center;gap:10px;justify-content:center;padding:40px;color:var(--t3);font-size:13px;}
-.jp-spin{width:20px;height:20px;border:2px solid var(--b);border-top-color:var(--or);border-radius:50%;animation:spin 0.7s linear infinite;}
-@keyframes spin{to{transform:rotate(360deg)}}
-
+/* ══════════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════════ */
 @media(max-width:1100px){
-  .hero-wrap{grid-template-columns:1fr;padding:40px 4%;}.hero-card{display:none;}
-  .cat-grid{grid-template-columns:repeat(2,1fr);}
-  .trending-grid{grid-template-columns:repeat(2,1fr);}
-  .footer-grid{grid-template-columns:1fr 1fr;gap:28px;}
+  .hero-grid{grid-template-columns:1fr;}.calc-card{display:none;}
+  .es-grid{grid-template-columns:1fr;}
+  .jobs-grid{grid-template-columns:repeat(2,1fr);}
+  .ai-grid{grid-template-columns:1fr 1fr;}
+  .trending-grid{grid-template-columns:1fr 1fr;}
   .sub-grid{grid-template-columns:1fr;}
-  .jobs-preview-grid{grid-template-columns:repeat(2,1fr);}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:28px;}
 }
 @media(max-width:700px){
   .nav-links{display:none;}.ham{display:block;}
-  .cat-grid{grid-template-columns:1fr;}
+  .jobs-grid{grid-template-columns:1fr;}
+  .ai-grid{grid-template-columns:1fr;}
   .trending-grid{grid-template-columns:1fr;}
-  .stats-strip{flex-wrap:wrap;}.stat{min-width:50%;}
-  .hook-banner{padding:28px 20px;}
+  .stats-strip{flex-wrap:wrap;}.st{min-width:50%;}
+  .hook-inner{padding:28px 20px;}
   .footer-grid{grid-template-columns:1fr;}
-  .hero-stats{gap:16px;}
-  .jobs-preview-grid{grid-template-columns:1fr;}
+  .hero-btns{flex-direction:column;}
+  .sc-btn{display:none;}
 }
 </style>
 </head>
 <body>
 
-<!-- BREAKING BAR -->
-<div class="breaking">
-  <span class="brk-tag">🔥 LIVE</span>
-  <div class="brk-scroll">
-    <div class="brk-track">
-      <span class="brk-item">8th Pay Commission deadline extended to May 31, 2026 — Submit your demands NOW &nbsp;•&nbsp; DA hits 60% from Jan 2026 — Calculate your revised salary &nbsp;•&nbsp; Fitment factor 3.83× demanded by NC-JCM — Check YOUR salary impact &nbsp;•&nbsp; 🔔 NEW: Govt Jobs Feed LIVE — Filter by Salary, Type, Last Date &nbsp;•&nbsp; AI & Cloud jobs paying 40%+ premium — Are you in the right career? &nbsp;•&nbsp; Tier-2 city salaries now at 82% of metro &nbsp;•&nbsp; 8वें वेतन आयोग की समय सीमा 31 मई 2026 — अभी अपनी मांग दर्ज करें &nbsp;•&nbsp; 8th Pay Commission deadline extended to May 31, 2026 — Submit your demands NOW &nbsp;•&nbsp; DA hits 60% from Jan 2026 — Calculate your revised salary &nbsp;•&nbsp;</span>
+<!-- ══════════════════════════════════════════
+     ALERT STRIP
+══════════════════════════════════════════ -->
+<div class="alert-strip">
+  <span class="alert-tag">🔥 LIVE</span>
+  <div class="alert-scroll">
+    <div class="alert-track">
+      <span class="alert-item">🏛️ 8th CPC deadline May 31, 2026 — Calculate your revised salary now &nbsp;•&nbsp; 🔔 Govt Jobs updated 3x daily — 10th Pass to Graduate &nbsp;•&nbsp; 🤖 AI jobs in India: Freshers earning ₹6-12 LPA — See roadmap &nbsp;•&nbsp; 💰 DA hits 60% from Jan 2026 — Check your arrears &nbsp;•&nbsp; 📄 450,000+ AI job openings in India right now &nbsp;•&nbsp; 🏛️ 8th CPC deadline May 31, 2026 — Calculate your revised salary now &nbsp;•&nbsp; 🔔 Govt Jobs updated 3x daily — 10th Pass to Graduate &nbsp;•&nbsp; 🤖 AI jobs in India: Freshers earning ₹6-12 LPA — See roadmap &nbsp;•&nbsp;</span>
     </div>
   </div>
 </div>
 
-<!-- NAV -->
+<!-- ══════════════════════════════════════════
+     NAV
+══════════════════════════════════════════ -->
 <nav class="nav">
   <a href="index.html" class="nav-logo">
-    <div class="tri"><div class="t1"></div><div class="t2"></div><div class="t3"></div></div>
+    <div class="tri"><div class="ts"></div><div class="tw"></div><div class="ti"></div></div>
     <div style="display:flex;flex-direction:column;line-height:1;">
       <span class="logo-main">m<em>class</em>.in</span>
       <span class="logo-sub">Middle Class India</span>
@@ -260,23 +472,35 @@ body.lang-hi .hi{display:block!important;}
     <div class="nav-item">
       <button class="nav-link">💰 Finance ▾</button>
       <div class="dropdown">
-        <a href="8th-pay-commission-calculator.html" class="dd-item"><span class="dd-icon">🏛️</span><div><div class="dd-name">8th CPC Calculator</div><div class="dd-desc">Revised salary and arrears</div></div><span class="dd-badge db-hot">🔥 HOT</span></a>
+        <a href="8th-pay-commission-calculator.html" class="dd-item"><span class="dd-icon">🏛️</span><div><div class="dd-name">8th CPC Calculator</div><div class="dd-desc">Revised salary + arrears</div></div><span class="dd-badge db-hot">🔥 HOT</span></a>
         <div class="dd-sep"></div>
-        <a href="salary-calculator.html" class="dd-item"><span class="dd-icon">💼</span><div><div class="dd-name">Salary Calculator</div><div class="dd-desc">Take-home pay estimator</div></div><span class="dd-badge db-soon">Soon</span></a>
-        <a href="tax-calculator.html" class="dd-item"><span class="dd-icon">📊</span><div><div class="dd-name">Tax Calculator</div><div class="dd-desc">New vs old regime</div></div><span class="dd-badge db-soon">Soon</span></a>
+        <a href="tax-calculator.html" class="dd-item"><span class="dd-icon">📊</span><div><div class="dd-name">Tax Calculator</div><div class="dd-desc">New vs old regime 2026</div></div><span class="dd-badge db-soon">Soon</span></a>
         <a href="emi-calculator.html" class="dd-item"><span class="dd-icon">🏠</span><div><div class="dd-name">EMI Calculator</div><div class="dd-desc">Home, car, personal loan</div></div><span class="dd-badge db-soon">Soon</span></a>
-        <a href="nps-calculator.html" class="dd-item"><span class="dd-icon">👴</span><div><div class="dd-name">NPS Calculator</div><div class="dd-desc">Retirement corpus</div></div><span class="dd-badge db-soon">Soon</span></a>
+        <a href="nps-calculator.html" class="dd-item"><span class="dd-icon">👴</span><div><div class="dd-name">NPS Calculator</div><div class="dd-desc">Retirement corpus planner</div></div><span class="dd-badge db-soon">Soon</span></a>
+        <a href="salary-calculator.html" class="dd-item"><span class="dd-icon">💼</span><div><div class="dd-name">Salary Calculator</div><div class="dd-desc">Take-home pay estimator</div></div><span class="dd-badge db-soon">Soon</span></a>
       </div>
     </div>
-    <!-- ── JOBS MENU — UPDATED ── -->
     <div class="nav-item">
       <button class="nav-link">💼 Jobs ▾</button>
       <div class="dropdown">
-        <a href="jobs.html" class="dd-item"><span class="dd-icon">🔔</span><div><div class="dd-name">Available Jobs</div><div class="dd-desc">Govt & private — updated 3x daily</div></div><span class="dd-badge db-live">● LIVE</span></a>
+        <a href="jobs.html" class="dd-item"><span class="dd-icon">🔔</span><div><div class="dd-name">Available Jobs</div><div class="dd-desc">Updated 3x daily · All depts</div></div><span class="dd-badge db-live">● LIVE</span></a>
         <div class="dd-sep"></div>
-        <a href="salary-comparison.html" class="dd-item"><span class="dd-icon">⚖️</span><div><div class="dd-name">Salary Comparison</div><div class="dd-desc">Compare across roles and sectors</div></div><span class="dd-badge db-soon">Soon</span></a>
-        <a href="career-options.html" class="dd-item"><span class="dd-icon">🗺️</span><div><div class="dd-name">Career Options</div><div class="dd-desc">Explore career paths</div></div><span class="dd-badge db-soon">Soon</span></a>
-        <a href="jobs.html" class="dd-item"><span class="dd-icon">🔍</span><div><div class="dd-name">Job Market Trends</div><div class="dd-desc">What is hot in 2026</div></div><span class="dd-badge db-new">New</span></a>
+        <a href="jobs.html?bucket=10th" class="dd-item"><span class="dd-icon">📄</span><div><div class="dd-name">10th Pass Jobs</div><div class="dd-desc">SSC, Railway, Police, Post</div></div></a>
+        <a href="jobs.html?bucket=graduate" class="dd-item"><span class="dd-icon">🎓</span><div><div class="dd-name">Graduate Jobs</div><div class="dd-desc">Officer, Engineer, Teacher</div></div></a>
+        <a href="jobs.html?bucket=urgency" class="dd-item"><span class="dd-icon">🔴</span><div><div class="dd-name">Closing Soon</div><div class="dd-desc">Apply before deadline</div></div></a>
+        <a href="jobs.html?bucket=railway" class="dd-item"><span class="dd-icon">🚂</span><div><div class="dd-name">Railway Jobs</div><div class="dd-desc">RRB, RRC recruitment</div></div></a>
+        <a href="jobs.html?bucket=bank" class="dd-item"><span class="dd-icon">🏦</span><div><div class="dd-name">Bank Jobs</div><div class="dd-desc">IBPS, SBI, RBI</div></div></a>
+        <div class="dd-sep"></div>
+        <a href="salary-comparison.html" class="dd-item"><span class="dd-icon">⚖️</span><div><div class="dd-name">Salary Comparison</div><div class="dd-desc">Compare across roles</div></div><span class="dd-badge db-soon">Soon</span></a>
+      </div>
+    </div>
+    <div class="nav-item">
+      <button class="nav-link">🤖 AI Career ▾</button>
+      <div class="dropdown">
+        <a href="ai-career.html" class="dd-item"><span class="dd-icon">🗺️</span><div><div class="dd-name">AI Career Roadmap</div><div class="dd-desc">0 to ₹1L/mo guide</div></div><span class="dd-badge db-new">New</span></a>
+        <a href="ai-career.html#salary" class="dd-item"><span class="dd-icon">💰</span><div><div class="dd-name">AI Salary Guide</div><div class="dd-desc">Role-wise salary data 2026</div></div></a>
+        <a href="ai-career.html#tools" class="dd-item"><span class="dd-icon">🛠️</span><div><div class="dd-name">Free AI Tools</div><div class="dd-desc">Tools to use today — free</div></div></a>
+        <a href="ai-career.html#news" class="dd-item"><span class="dd-icon">📰</span><div><div class="dd-name">AI News India</div><div class="dd-desc">Daily updated AI news</div></div></a>
       </div>
     </div>
     <a href="happy-meter.html" class="nav-link">😊 Happy Meter</a>
@@ -285,261 +509,423 @@ body.lang-hi .hi{display:block!important;}
     <a href="about.html" class="nav-link">About</a>
   </div>
   <div class="nav-right">
-    <button class="lang-btn" onclick="toggleLang()" id="langBtn">🇮🇳 हिंदी</button>
-    <a href="8th-pay-commission-calculator.html" class="nav-cta">⚡ 8th CPC Calculator</a>
-    <button class="ham" onclick="toggleMobile()">☰</button>
+    <button class="theme-btn" onclick="toggleTheme()" id="themeBtn">🌙 Dark</button>
+    <a href="8th-pay-commission-calculator.html" class="nav-cta">⚡ 8th CPC Calc</a>
+    <button class="ham" onclick="toggleMob()">☰</button>
   </div>
 </nav>
 
 <!-- MOBILE MENU -->
-<div class="mobile-menu" id="mobileMenu">
-  <a href="8th-pay-commission-calculator.html" class="mm-item" style="color:var(--or)">🏛️ 8th CPC Calculator 🔥</a>
-  <a href="jobs.html" class="mm-item" style="color:var(--gr2)">🔔 Available Jobs ● LIVE</a>
-  <div class="mm-item" onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='block'?'none':'block'">💰 Finance ▾</div>
-  <div class="mm-sub" style="display:none">
-    <a href="salary-calculator.html">Salary Calculator</a>
-    <a href="tax-calculator.html">Tax Calculator</a>
-    <a href="emi-calculator.html">EMI Calculator</a>
-    <a href="nps-calculator.html">NPS Calculator</a>
-  </div>
-  <div class="mm-item" onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='block'?'none':'block'">💼 Jobs ▾</div>
-  <div class="mm-sub" style="display:none">
-    <a href="jobs.html">🔔 Available Jobs (LIVE)</a>
-    <a href="salary-comparison.html">Salary Comparison</a>
-    <a href="career-options.html">Career Options</a>
-    <a href="jobs.html">Job Market Trends</a>
-  </div>
-  <a href="happy-meter.html" class="mm-item">😊 Happy Meter</a>
-  <a href="focus-test.html" class="mm-item">🧠 Focus Test</a>
-  <a href="trending.html" class="mm-item">🔥 Trending</a>
-  <a href="about.html" class="mm-item">About</a>
-  <div style="padding:16px 0;border-top:1px solid var(--b);margin-top:8px;">
-    <a href="8th-pay-commission-calculator.html" class="btn-hero" style="width:100%;justify-content:center;">⚡ Calculate My 8th CPC Salary</a>
+<div class="mob-menu" id="mobMenu">
+  <a href="8th-pay-commission-calculator.html" class="mm-it" style="color:var(--or)">🏛️ 8th CPC Calculator 🔥</a>
+  <a href="jobs.html" class="mm-it" style="color:var(--gr2)">🔔 Available Jobs ● LIVE</a>
+  <a href="ai-career.html" class="mm-it" style="color:var(--pu2)">🤖 AI Career Guide</a>
+  <div class="mm-it" onclick="toggleSub(this)">💰 Finance ▾</div>
+  <div class="mm-sub"><a href="tax-calculator.html">Tax Calculator</a><a href="emi-calculator.html">EMI Calculator</a><a href="nps-calculator.html">NPS Calculator</a></div>
+  <div class="mm-it" onclick="toggleSub(this)">💼 Jobs ▾</div>
+  <div class="mm-sub"><a href="jobs.html?bucket=10th">10th Pass Jobs</a><a href="jobs.html?bucket=graduate">Graduate Jobs</a><a href="jobs.html?bucket=urgency">Closing Soon</a><a href="jobs.html?bucket=railway">Railway Jobs</a><a href="jobs.html?bucket=bank">Bank Jobs</a></div>
+  <a href="happy-meter.html" class="mm-it">😊 Happy Meter</a>
+  <a href="focus-test.html" class="mm-it">🧠 Focus Test</a>
+  <a href="trending.html" class="mm-it">🔥 Trending</a>
+  <a href="about.html" class="mm-it">About</a>
+  <div style="padding:16px 0;border-top:1px solid var(--bd);margin-top:8px;">
+    <a href="8th-pay-commission-calculator.html" class="btn-prime" style="width:100%;justify-content:center;">⚡ Calculate My 8th CPC Salary</a>
   </div>
 </div>
 
-<!-- HERO -->
-<div class="hero-wrap">
-  <div>
-    <div class="hero-badge"><span class="pulse"></span> 🔥 TRENDING — 8th Pay Commission 2026</div>
-    <h1 class="hero-h1">
-      <span class="en">Your Salary is<br><span class="grad">Changing in 2026.</span><br>Are You Ready?</span>
-      <span class="hi" style="font-family:'Tiro Devanagari Hindi',serif;">आपकी सैलरी<br><span class="grad">2026 में बदलेगी।</span><br>क्या आप तैयार हैं?</span>
-    </h1>
-    <div class="hero-hindi en">अपनी नई सैलरी अभी कैलकुलेट करें — बिल्कुल फ्री</div>
-    <p class="hero-sub en">50 lakh Central Government employees are affected. Calculate your revised salary, arrears from January 2026, and find out exactly how much your pay changes. Free. No login. 2 minutes.</p>
-    <p class="hero-sub hi" style="font-family:'Tiro Devanagari Hindi',serif;display:none">50 लाख केंद्रीय सरकारी कर्मचारी प्रभावित होंगे। अपनी संशोधित सैलरी और बकाया जानें।</p>
-    <div class="hero-btns">
-      <a href="8th-pay-commission-calculator.html" class="btn-hero">⚡ Calculate My 8th CPC Salary</a>
-      <a href="jobs.html" class="btn-ghost">🔔 Browse Live Jobs</a>
+<!-- ══════════════════════════════════════════
+     HERO
+══════════════════════════════════════════ -->
+<div class="hero">
+  <div class="hero-grid">
+    <div>
+      <div class="hero-badge"><span class="pulse"></span> 🇮🇳 India's Middle Class Platform</div>
+      <h1 class="hero-tagline">
+        Your salary comes<br>once a month.<br>
+        <span class="grad">Make every rupee count.</span>
+      </h1>
+      <div class="hero-hindi">हर रुपये को मायने दीजिए। 🇮🇳</div>
+      <p class="hero-sub">Free tools for India's 40 crore middle class — 8th CPC salary, govt jobs, AI career guide, tax saver. No login. No cost. Always free.</p>
+      <div class="hero-btns">
+        <a href="8th-pay-commission-calculator.html" class="btn-prime">🏛️ Calculate 8th CPC Salary</a>
+        <a href="jobs.html" class="btn-sec">🔔 Browse Live Jobs</a>
+        <a href="ai-career.html" class="btn-sec">🤖 AI Career Guide</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hstat"><div class="hstat-val" id="calcCount">12,847</div><div class="hstat-lbl">Calculations Done</div></div>
+        <div class="hstat"><div class="hstat-val">50L+</div><div class="hstat-lbl">Employees Affected</div></div>
+        <div class="hstat"><div class="hstat-val" id="jobCount">52+</div><div class="hstat-lbl">Live Jobs Today</div></div>
+        <div class="hstat"><div class="hstat-val">Free</div><div class="hstat-lbl">Always</div></div>
+      </div>
     </div>
-    <div class="hero-stats">
-      <div class="hs"><div class="hs-val" id="calcCount">12,847</div><div class="hs-lbl">Calculations Done</div></div>
-      <div class="hs"><div class="hs-val">50L+</div><div class="hs-lbl">Employees Affected</div></div>
-      <div class="hs"><div class="hs-val" id="likeCount">23,847</div><div class="hs-lbl">People Liked</div></div>
-      <div class="hs"><div class="hs-val">Free</div><div class="hs-lbl">Always Free</div></div>
+
+    <!-- MINI 8th CPC CALCULATOR -->
+    <div class="calc-card">
+      <div class="calc-tag"><span class="pulse"></span> 8th PAY COMMISSION — LIVE CALCULATOR</div>
+      <div class="calc-title">Calculate Your New Salary</div>
+      <div class="calc-sub">Instant estimate · All levels · All cities</div>
+      <div class="calc-fields">
+        <div class="calc-row">
+          <div>
+            <label>Pay Level</label>
+            <select class="calc-select" id="miniLevel">
+              <option value="">Select Level</option>
+              <option value="1">Level 1 — ₹18,000</option>
+              <option value="2">Level 2 — ₹19,900</option>
+              <option value="3">Level 3 — ₹21,700</option>
+              <option value="4">Level 4 — ₹25,500</option>
+              <option value="5">Level 5 — ₹29,200</option>
+              <option value="6">Level 6 — ₹35,400</option>
+              <option value="7">Level 7 — ₹44,900</option>
+              <option value="8">Level 8 — ₹47,600</option>
+              <option value="9">Level 9 — ₹53,100</option>
+              <option value="10">Level 10 — ₹56,100</option>
+              <option value="11">Level 11 — ₹67,700</option>
+              <option value="12">Level 12 — ₹78,800</option>
+              <option value="13">Level 13 — ₹1,18,500</option>
+              <option value="14">Level 14 — ₹1,44,200</option>
+              <option value="15">Level 15 — ₹1,82,200</option>
+            </select>
+          </div>
+          <div>
+            <label>Fitment Factor</label>
+            <select class="calc-select" id="miniFit">
+              <option value="2.57">2.57× (Expected Min)</option>
+              <option value="2.86" selected>2.86× (Likely)</option>
+              <option value="3.00">3.00× (Moderate Ask)</option>
+              <option value="3.68">3.68× (Union Demand)</option>
+              <option value="3.83">3.83× (NC-JCM Ask)</option>
+            </select>
+          </div>
+        </div>
+        <div>
+          <label>Basic Pay (₹)</label>
+          <input type="number" class="calc-input" id="miniBasic" placeholder="e.g. 44900" min="18000" max="250000">
+        </div>
+      </div>
+      <button class="calc-btn" onclick="miniCalc()">⚡ Calculate My New Salary</button>
+      <div class="calc-result" id="miniResult">
+        <div class="cr-grid">
+          <div class="cr-item cr-curr"><div class="cr-val" id="cr-curr">—</div><div class="cr-lbl">Current Basic</div></div>
+          <div class="cr-item cr-new"><div class="cr-val" id="cr-new">—</div><div class="cr-lbl">Revised Basic</div></div>
+          <div class="cr-item cr-gain"><div class="cr-val" id="cr-gain">—</div><div class="cr-lbl">Monthly Gain</div></div>
+          <div class="cr-item cr-arr"><div class="cr-val" id="cr-arr">—</div><div class="cr-lbl">Est. Arrears</div></div>
+        </div>
+      </div>
+      <div class="calc-full-link">Want full breakdown with HRA, DA, NPS? <a href="8th-pay-commission-calculator.html">Full Calculator →</a></div>
     </div>
-  </div>
-  <div class="hero-card">
-    <div class="hcard-tag"><span class="pulse"></span> LIVE CALCULATOR PREVIEW</div>
-    <div class="hcard-title">8th Pay Commission<br>Salary Estimator</div>
-    <div class="hcard-sub">Sample — Level 9 · ₹63,300 Basic · Fitment 2.86×</div>
-    <div class="hcard-nums">
-      <div class="hcn curr"><div class="hcn-val">₹1,14,452</div><div class="hcn-lbl">Current Net</div></div>
-      <div class="hcn rev"><div class="hcn-val">₹1,87,000</div><div class="hcn-lbl">Revised Net</div></div>
-      <div class="hcn gain"><div class="hcn-val">+₹72,548</div><div class="hcn-lbl">Monthly Gain</div></div>
-      <div class="hcn arr"><div class="hcn-val">₹8.7L</div><div class="hcn-lbl">Est. Arrears</div></div>
-    </div>
-    <div class="hcard-levels">
-      <span class="hlv">All Levels 1–18</span><span class="hlv">All Cities</span><span class="hlv">NPS+CGHS</span><span class="hlv">Tax Breakup</span>
-    </div>
-    <a href="8th-pay-commission-calculator.html" class="hcard-cta">⚡ Calculate Your Salary Now</a>
-    <div class="hcard-note">✅ Free · No login · 2 minutes · PDF download</div>
   </div>
 </div>
 
 <!-- STATS STRIP -->
 <div class="stats-strip">
-  <div class="stat"><div class="stat-val" id="stat1">18,420</div><div class="stat-lbl">Salary Calculations</div></div>
-  <div class="stat"><div class="stat-val">50L+</div><div class="stat-lbl">Govt Employees Affected</div></div>
-  <div class="stat"><div class="stat-val">Jan 2026</div><div class="stat-lbl">8th CPC Effective Date</div></div>
-  <div class="stat"><div class="stat-val">1.92–3.83×</div><div class="stat-lbl">Fitment Factor Range</div></div>
-  <div class="stat"><div class="stat-val" id="stat2">4,231</div><div class="stat-lbl">Happy Meter Scores</div></div>
+  <div class="st"><div class="st-val" id="st1">18,420</div><div class="st-lbl">Salary Calculations</div></div>
+  <div class="st"><div class="st-val">50L+</div><div class="st-lbl">Employees Affected</div></div>
+  <div class="st"><div class="st-val">Jan 2026</div><div class="st-lbl">8th CPC Effective</div></div>
+  <div class="st"><div class="st-val">1.92–3.83×</div><div class="st-lbl">Fitment Range</div></div>
+  <div class="st"><div class="st-val" id="st2">4,231</div><div class="st-lbl">Happy Meter Scores</div></div>
 </div>
 
-<!-- ════════════════════════════════════════
-     JOBS PREVIEW — NEW SECTION
-════════════════════════════════════════ -->
-<div class="jobs-preview-section">
-  <div class="jobs-preview-inner">
-    <div class="jobs-preview-header reveal">
-      <div>
-        <div class="sec-eyebrow" style="margin-bottom:6px;">🔔 Available Jobs</div>
-        <div class="sec-title" style="margin-bottom:4px;">Latest <span>Govt & Private Jobs</span></div>
-        <p style="font-size:13px;color:var(--t3);font-weight:300;">Updated automatically 3 times daily · Filter by salary · Apply directly</p>
-      </div>
-      <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
-        <div class="jobs-live-badge"><span class="pulse" style="background:var(--gr2)"></span> LIVE — Auto Updated</div>
-        <a href="jobs.html" class="btn-ghost" style="padding:10px 20px;font-size:13px;">View All Jobs →</a>
-      </div>
-    </div>
-    <div class="jobs-preview-grid reveal" id="homeJobsGrid">
-      <div class="jp-loader"><div class="jp-spin"></div> Loading latest jobs...</div>
-    </div>
-    <div class="jobs-preview-footer reveal">
-      <a href="jobs.html" class="btn-hero" style="font-size:14px;padding:13px 32px;">🔔 Browse All Jobs with Filters →</a>
-    </div>
-  </div>
-</div>
-
-<!-- CATEGORY TOOLS -->
-<div class="section" id="tools">
+<!-- ══════════════════════════════════════════
+     EARN vs SAVE
+══════════════════════════════════════════ -->
+<div class="earn-save">
   <div class="reveal">
-    <div class="sec-eyebrow">Our Tools</div>
-    <div class="sec-title">Everything for <span>India's Middle Class</span></div>
-    <p class="sec-sub en">Finance tools, career guides, fun tests — all free, all in one place.</p>
-    <p class="sec-sub hi" style="font-family:'Tiro Devanagari Hindi',serif;display:none">फाइनेंस टूल्स, करियर गाइड — सब मुफ्त, एक ही जगह।</p>
+    <div class="sec-eye">The Middle Class Formula</div>
+    <div class="sec-title">Earn <span>More</span> · Save <span>More</span> · Grow <span>Faster</span></div>
+    <p class="sec-sub">Every middle class person thinks about two things — how to earn more and how to waste less. We have tools for both.</p>
   </div>
-  <div class="cat-grid">
-    <a href="8th-pay-commission-calculator.html" class="cat-card cc-or reveal">
-      <span class="cat-badge cb-hot">🔥 TRENDING</span>
-      <div class="cat-icon">💰</div>
-      <div class="cat-tag">Finance and Salary</div>
-      <div class="cat-title">8th Pay Commission and Finance Tools</div>
-      <div class="cat-desc">Calculate your revised salary under 8th CPC, tax liability, EMI, NPS corpus and more.</div>
-      <div class="cat-tools"><span class="ct">8th CPC ✅</span><span class="ct">Salary</span><span class="ct">Tax</span><span class="ct">EMI</span><span class="ct">NPS</span></div>
-      <div class="cat-cta">Explore Finance Tools →</div>
-    </a>
-    <a href="jobs.html" class="cat-card cc-gr reveal">
-      <span class="cat-badge cb-live">● LIVE</span>
-      <div class="cat-icon">🔔</div>
-      <div class="cat-tag">Jobs and Career</div>
-      <div class="cat-title">Available Jobs — Updated 3x Daily</div>
-      <div class="cat-desc">Govt and private jobs filtered by salary range, job type and last date. Auto-updated every day.</div>
-      <div class="cat-tools"><span class="ct">Govt Jobs ✅</span><span class="ct">Salary Filter</span><span class="ct">Last Date</span></div>
-      <div class="cat-cta">Browse Live Jobs →</div>
-    </a>
-    <a href="happy-meter.html" class="cat-card cc-pi reveal">
-      <span class="cat-badge cb-new">🆕 NEW</span>
-      <div class="cat-icon">😊</div>
-      <div class="cat-tag">Life Quality</div>
-      <div class="cat-title">Happy Meter — Score Your Life</div>
-      <div class="cat-desc">Answer 7 quick questions and get your Happiness Score. Most people are surprised by the result!</div>
-      <div class="cat-tools"><span class="ct">7 Questions</span><span class="ct">Score Card</span><span class="ct">Shareable</span></div>
-      <div class="cat-cta">Check Your Score →</div>
-    </a>
-    <a href="focus-test.html" class="cat-card cc-pu reveal">
-      <span class="cat-badge cb-new">⚡ GEN Z</span>
-      <div class="cat-icon">🧠</div>
-      <div class="cat-tag">Focus and Attention</div>
-      <div class="cat-title">Focus Test — Beat Your Friends</div>
-      <div class="cat-desc">How focused are you really? Take the 60-second test, get your score and challenge friends to beat it.</div>
-      <div class="cat-tools"><span class="ct">60 Seconds</span><span class="ct">Score Card</span><span class="ct">Challenge</span></div>
-      <div class="cat-cta">Take the Test →</div>
-    </a>
-    <a href="trending.html" class="cat-card cc-te reveal">
-      <span class="cat-badge cb-live">● LIVE</span>
-      <div class="cat-icon">🔥</div>
-      <div class="cat-tag">Trending Now</div>
-      <div class="cat-title">What Everyone is Reading Right Now</div>
-      <div class="cat-desc">Curated trending articles on finance, jobs, salary hikes, FOMO news and career tips updated daily.</div>
-      <div class="cat-tools"><span class="ct">Daily Updated</span><span class="ct">Finance</span><span class="ct">Career</span></div>
-      <div class="cat-cta">See What is Trending →</div>
-    </a>
-    <a href="career-options.html" class="cat-card cc-bl reveal">
-      <span class="cat-badge cb-soon">Coming Soon</span>
-      <div class="cat-icon">🗺️</div>
-      <div class="cat-tag">Career Planning</div>
-      <div class="cat-title">Career Options and Growth Paths</div>
-      <div class="cat-desc">Explore career paths, salary expectations, required skills and future scope across 100 plus roles in India.</div>
-      <div class="cat-tools"><span class="ct">100+ Roles</span><span class="ct">Salary Data</span><span class="ct">Skills Guide</span></div>
-      <div class="cat-cta">Explore Careers →</div>
-    </a>
+  <div class="es-grid reveal">
+
+    <!-- EARN BLOCK -->
+    <div class="es-block es-earn">
+      <div class="es-header">
+        <div class="es-icon">💰</div>
+        <div class="es-head-title">Earn <span>More</span></div>
+        <div class="es-head-sub">Jobs · Career · Skills · Investment · Govt Benefits</div>
+      </div>
+      <div class="es-items">
+        <a href="8th-pay-commission-calculator.html" class="es-item">
+          <div class="es-item-icon">🏛️</div>
+          <div><div class="es-item-name">8th CPC Calculator</div><div class="es-item-desc">Check your revised salary instantly</div></div>
+          <span class="es-item-badge badge-hot">🔥 HOT</span>
+        </a>
+        <a href="jobs.html" class="es-item">
+          <div class="es-item-icon">🔔</div>
+          <div><div class="es-item-name">Govt Jobs Feed</div><div class="es-item-desc">Updated 3x daily · All qualifications</div></div>
+          <span class="es-item-badge badge-live">● LIVE</span>
+        </a>
+        <a href="ai-career.html" class="es-item">
+          <div class="es-item-icon">🤖</div>
+          <div><div class="es-item-name">AI Career Guide</div><div class="es-item-desc">₹6-12 LPA for freshers · Free roadmap</div></div>
+          <span class="es-item-badge badge-new">NEW</span>
+        </a>
+        <a href="career-options.html" class="es-item">
+          <div class="es-item-icon">🗺️</div>
+          <div><div class="es-item-name">Career Options</div><div class="es-item-desc">100+ roles · Salary expectations</div></div>
+          <span class="es-item-badge badge-soon">Soon</span>
+        </a>
+        <a href="salary-comparison.html" class="es-item">
+          <div class="es-item-icon">📈</div>
+          <div><div class="es-item-name">Salary Comparison</div><div class="es-item-desc">Am I underpaid? Find out now</div></div>
+          <span class="es-item-badge badge-soon">Soon</span>
+        </a>
+      </div>
+      <a href="jobs.html" class="es-cta">Browse All Earning Tools →</a>
+    </div>
+
+    <!-- SAVE BLOCK -->
+    <div class="es-block es-save">
+      <div class="es-header">
+        <div class="es-icon">✂️</div>
+        <div class="es-head-title">Save <span>More</span></div>
+        <div class="es-head-sub">Tax · EMI · Insurance · Budget · Retirement</div>
+      </div>
+      <div class="es-items">
+        <a href="tax-calculator.html" class="es-item">
+          <div class="es-item-icon">📊</div>
+          <div><div class="es-item-name">Tax Calculator</div><div class="es-item-desc">Save ₹50k-₹1L · New vs old regime</div></div>
+          <span class="es-item-badge badge-soon">Soon</span>
+        </a>
+        <a href="emi-calculator.html" class="es-item">
+          <div class="es-item-icon">🏠</div>
+          <div><div class="es-item-name">EMI Calculator</div><div class="es-item-desc">Home · Car · Personal loan</div></div>
+          <span class="es-item-badge badge-soon">Soon</span>
+        </a>
+        <a href="nps-calculator.html" class="es-item">
+          <div class="es-item-icon">👴</div>
+          <div><div class="es-item-name">NPS / Retirement</div><div class="es-item-desc">How much corpus do you need?</div></div>
+          <span class="es-item-badge badge-soon">Soon</span>
+        </a>
+        <a href="insurance-guide.html" class="es-item">
+          <div class="es-item-icon">💊</div>
+          <div><div class="es-item-name">Insurance Guide</div><div class="es-item-desc">Term vs LIC · What to buy</div></div>
+          <span class="es-item-badge badge-soon">Soon</span>
+        </a>
+        <a href="budget-planner.html" class="es-item">
+          <div class="es-item-icon">📉</div>
+          <div><div class="es-item-name">Budget Planner</div><div class="es-item-desc">50-30-20 rule for your salary</div></div>
+          <span class="es-item-badge badge-soon">Soon</span>
+        </a>
+      </div>
+      <a href="tax-calculator.html" class="es-cta">Browse All Saving Tools →</a>
+    </div>
+
   </div>
 </div>
 
-<!-- TRENDING LINKS -->
-<div class="trending-section">
+<!-- ══════════════════════════════════════════
+     JOBS PREVIEW
+══════════════════════════════════════════ -->
+<div class="jobs-section">
+  <div class="jobs-inner">
+    <div class="jobs-header reveal">
+      <div>
+        <div class="sec-eye">🔔 Live Jobs Feed</div>
+        <div class="sec-title">Latest <span>Govt Jobs</span> by Qualification</div>
+        <p style="font-size:13px;color:var(--t3);font-weight:300;margin-top:4px;">Updated 3x daily · Filter by education · Apply directly</p>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+        <div class="live-pill"><span class="pulse" style="background:var(--gr2)"></span> AUTO UPDATED</div>
+        <a href="jobs.html" class="btn-sec" style="padding:8px 18px;font-size:13px;">View All Jobs →</a>
+      </div>
+    </div>
+
+    <!-- BUCKET PILLS -->
+    <div class="bucket-pills reveal">
+      <a href="jobs.html?bucket=urgency" class="bp">🔴 Closing Soon</a>
+      <a href="jobs.html?bucket=10th" class="bp">📄 10th Pass</a>
+      <a href="jobs.html?bucket=12th" class="bp">📋 12th Pass</a>
+      <a href="jobs.html?bucket=graduate" class="bp">🎓 Graduate</a>
+      <a href="jobs.html?bucket=railway" class="bp">🚂 Railway</a>
+      <a href="jobs.html?bucket=bank" class="bp">🏦 Bank</a>
+      <a href="jobs.html?bucket=police" class="bp">👮 Police</a>
+      <a href="jobs.html?bucket=noqualif" class="bp">✋ No Qualification</a>
+    </div>
+
+    <!-- FOMO NUMBERS -->
+    <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:0;background:linear-gradient(135deg,rgba(255,98,0,0.06),rgba(232,160,0,0.03));border:1px solid rgba(255,98,0,0.12);border-radius:14px;padding:16px 0;margin-bottom:24px;" class="reveal">
+      <div style="text-align:center;padding:0 16px;border-right:1px solid var(--bd);">
+        <div style="font-size:clamp(18px,2.5vw,28px);font-weight:900;color:var(--rd2);" id="f-closing">—</div>
+        <div style="font-size:9px;color:var(--t3);text-transform:uppercase;letter-spacing:0.07em;margin-top:3px;">🔴 Closing Today</div>
+      </div>
+      <div style="text-align:center;padding:0 16px;border-right:1px solid var(--bd);">
+        <div style="font-size:clamp(18px,2.5vw,28px);font-weight:900;color:var(--or);" id="f-week">—</div>
+        <div style="font-size:9px;color:var(--t3);text-transform:uppercase;letter-spacing:0.07em;margin-top:3px;">🟠 This Week</div>
+      </div>
+      <div style="text-align:center;padding:0 16px;border-right:1px solid var(--bd);">
+        <div style="font-size:clamp(18px,2.5vw,28px);font-weight:900;color:var(--go2);" id="f-total">—</div>
+        <div style="font-size:9px;color:var(--t3);text-transform:uppercase;letter-spacing:0.07em;margin-top:3px;">💼 Total Jobs</div>
+      </div>
+      <div style="text-align:center;padding:0 16px;border-right:1px solid var(--bd);">
+        <div style="font-size:clamp(18px,2.5vw,28px);font-weight:900;color:var(--gr2);" id="f-10th">—</div>
+        <div style="font-size:9px;color:var(--t3);text-transform:uppercase;letter-spacing:0.07em;margin-top:3px;">📄 10th Pass</div>
+      </div>
+      <div style="text-align:center;padding:0 16px;">
+        <div style="font-size:clamp(18px,2.5vw,28px);font-weight:900;color:var(--bl2);" id="f-grad">—</div>
+        <div style="font-size:9px;color:var(--t3);text-transform:uppercase;letter-spacing:0.07em;margin-top:3px;">🎓 Graduate</div>
+      </div>
+    </div>
+
+    <div class="jobs-grid" id="homeJobsGrid">
+      <div class="jp-loader"><div class="jp-spin"></div><p>Loading latest jobs...</p></div>
+    </div>
+    <div class="jobs-footer reveal">
+      <a href="jobs.html" class="btn-prime" style="font-size:14px;padding:13px 32px;">🔔 Browse All Jobs with Filters →</a>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     AI SECTION
+══════════════════════════════════════════ -->
+<div class="ai-section">
+  <div class="reveal">
+    <div class="sec-eye">🤖 AI Career & News</div>
+    <div class="sec-title">The AI Wave is Here. <span>Are You Ready?</span></div>
+    <p class="sec-sub">450,000+ AI jobs in India right now. Freshers earning ₹6-12 LPA. By 2030, every career needs AI skills. Start today — it's free.</p>
+  </div>
+
+  <div class="ai-alert reveal">
+    <div class="ai-alert-icon">⚡</div>
+    <div class="ai-alert-text">
+      <h3>AI is Changing Middle Class Careers Forever</h3>
+      <p>TCS training <strong>1 lakh employees</strong> in AI. Infosys AI package jumps to <strong>₹9 LPA for freshers</strong>. Your ₹30,000 job may transform — or disappear. Know which side you're on.</p>
+    </div>
+    <a href="ai-career.html" class="ai-alert-btn">See AI Career Roadmap →</a>
+  </div>
+
+  <div class="ai-grid reveal">
+    <a href="ai-career.html#news" class="ai-card ai-news">
+      <div class="ai-card-icon">📰</div>
+      <div class="ai-card-tag">Daily Updated</div>
+      <div class="ai-card-title">AI News India</div>
+      <div class="ai-card-desc">Latest AI jobs, salary hikes, company announcements, govt AI schemes — all India-specific, daily updated.</div>
+      <div class="ai-card-stat"><span class="ai-stat">Daily updates</span><span class="ai-stat">India focus</span></div>
+      <div class="ai-card-cta">Read Today's AI News →</div>
+    </a>
+    <a href="ai-career.html#tools" class="ai-card ai-tools">
+      <div class="ai-card-icon">🛠️</div>
+      <div class="ai-card-tag">Free to Use Now</div>
+      <div class="ai-card-title">Free AI Tools</div>
+      <div class="ai-card-desc">ChatGPT, Gemini, Copilot, Canva AI — tools every middle class professional should know. Use today. Cost zero.</div>
+      <div class="ai-card-stat"><span class="ai-stat">20+ free tools</span><span class="ai-stat">Hindi guide</span></div>
+      <div class="ai-card-cta">Explore Free AI Tools →</div>
+    </a>
+    <a href="ai-career.html" class="ai-card ai-career">
+      <div class="ai-card-icon">🗺️</div>
+      <div class="ai-card-tag">Step by Step</div>
+      <div class="ai-card-title">AI Career Roadmap</div>
+      <div class="ai-card-desc">From zero to ₹1 lakh/month. Week-by-week free learning path. No paid course needed to start.</div>
+      <div class="ai-card-stat"><span class="ai-stat">₹6-12 LPA fresher</span><span class="ai-stat">Free path</span></div>
+      <div class="ai-card-cta">Start AI Career Roadmap →</div>
+    </a>
+  </div>
+
+  <!-- AI SALARY TABLE -->
+  <div class="ai-salary-table reveal" style="margin-top:24px;">
+    <div class="ast-header">
+      <h3>🤖 AI Salary Guide 2026 — India</h3>
+      <p>Is AI worth learning? See what roles pay. Source: NASSCOM, Naukri, LinkedIn India.</p>
+    </div>
+    <div style="overflow-x:auto;">
+      <table class="ast-table">
+        <thead>
+          <tr>
+            <th>AI Role</th>
+            <th>Fresher Salary</th>
+            <th>5 Year Salary</th>
+            <th>Key Skill</th>
+            <th>Demand</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="ast-role">Prompt Engineer</td><td class="ast-fresh">₹6–12 LPA</td><td class="ast-senior">₹25–40 LPA</td><td>ChatGPT + Writing</td><td><span class="ast-demand dem-very">Very High</span></td></tr>
+          <tr><td class="ast-role">ML Engineer</td><td class="ast-fresh">₹8–12 LPA</td><td class="ast-senior">₹30–60 LPA</td><td>Python + TensorFlow</td><td><span class="ast-demand dem-very">Very High</span></td></tr>
+          <tr><td class="ast-role">Data Analyst</td><td class="ast-fresh">₹5–8 LPA</td><td class="ast-senior">₹15–25 LPA</td><td>Excel + SQL + Python</td><td><span class="ast-demand dem-high">High</span></td></tr>
+          <tr><td class="ast-role">AI Content Writer</td><td class="ast-fresh">₹4–7 LPA</td><td class="ast-senior">₹12–20 LPA</td><td>AI Tools + Writing</td><td><span class="ast-demand dem-high">High</span></td></tr>
+          <tr><td class="ast-role">GenAI Specialist</td><td class="ast-fresh">₹8–15 LPA</td><td class="ast-senior">₹30–50 LPA</td><td>LLMs + Python</td><td><span class="ast-demand dem-very">Very High</span></td></tr>
+          <tr><td class="ast-role">AI Consultant</td><td class="ast-fresh">₹10–20 LPA</td><td class="ast-senior">₹40–70 LPA</td><td>Business + AI</td><td><span class="ast-demand dem-med">Medium</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     TRENDING
+══════════════════════════════════════════ -->
+<div class="trending">
   <div class="trending-inner">
     <div class="reveal" style="margin-bottom:28px;">
-      <div class="sec-eyebrow">🔥 Trending Now</div>
-      <div class="sec-title">What India's Middle Class is Reading</div>
+      <div class="sec-eye">🔥 Trending Now</div>
+      <div class="sec-title">What Middle Class India is Reading</div>
     </div>
     <div class="trending-grid reveal">
-      <a href="https://www.zeebiz.com/personal-finance/news-good-news-for-govt-employees-8th-pay-commission-extends-deadline-to-may-31-what-it-means-for-salary-pension-394845" target="_blank" rel="noopener" class="trend-card">
-        <div class="trend-num">01</div>
-        <div class="trend-cat tc-govt">🏛️ Govt</div>
-        <div class="trend-title">8th CPC deadline extended to May 31 — What it means for your salary</div>
-        <div class="trend-hook">Employees now have more time. Fitment factor 3.83× is the hot demand.</div>
-        <div class="trend-meta"><span>ZeeBiz</span><span class="trend-dot"></span><span>2 weeks ago</span></div>
+      <a href="https://www.zeebiz.com/personal-finance/news-good-news-for-govt-employees-8th-pay-commission-extends-deadline-to-may-31-what-it-means-for-salary-pension-394845" target="_blank" rel="noopener" class="tr-card">
+        <div class="tr-num">01</div>
+        <div class="tr-cat tc-govt">🏛️ Govt</div>
+        <div class="tr-title">8th CPC deadline extended to May 31 — What it means for your salary</div>
+        <div class="tr-hook">Fitment factor 3.83× demanded by NC-JCM. Check your revised salary now.</div>
+        <div class="tr-meta"><span>ZeeBiz</span><span class="tr-dot"></span><span>2 weeks ago</span></div>
       </a>
-      <a href="https://cleartax.in/s/8th-pay-commission" target="_blank" rel="noopener" class="trend-card">
-        <div class="trend-num">02</div>
-        <div class="trend-cat tc-finance">💰 Finance</div>
-        <div class="trend-title">DA hits 60% from Jan 2026 — How it affects your arrears</div>
-        <div class="trend-hook">DA merger into basic pay on 8th CPC could change everything about your salary calculation.</div>
-        <div class="trend-meta"><span>ClearTax</span><span class="trend-dot"></span><span>2 weeks ago</span></div>
+      <a href="https://www.buildfastwithai.com/blogs/ai-jobs-india-salary-2026" target="_blank" rel="noopener" class="tr-card">
+        <div class="tr-num">02</div>
+        <div class="tr-cat tc-ai">🤖 AI Career</div>
+        <div class="tr-title">AI jobs India 2026 — Freshers earning ₹8-12 LPA. How to get there.</div>
+        <div class="tr-hook">The window is open now. Engineers who start learning AI today will dominate by 2027.</div>
+        <div class="tr-meta"><span>BuildFastWithAI</span><span class="tr-dot"></span><span>Mar 2026</span></div>
       </a>
-      <a href="https://unstop.com/blog/highest-paying-jobs-in-india" target="_blank" rel="noopener" class="trend-card">
-        <div class="trend-num">03</div>
-        <div class="trend-cat tc-jobs">💼 Jobs</div>
-        <div class="trend-title">Top 10 highest paying jobs in India 2026 — Are you in the right career?</div>
-        <div class="trend-hook">AI/ML, Investment Banking, Product Management topping salary charts. Is your career future-ready?</div>
-        <div class="trend-meta"><span>Unstop</span><span class="trend-dot"></span><span>2 days ago</span></div>
-      </a>
-      <a href="https://jobipo.com/blog/top-20-highest-paying-jobs-in-india-2026-with-salaries-skills-future-trends/" target="_blank" rel="noopener" class="trend-card">
-        <div class="trend-num">04</div>
-        <div class="trend-cat tc-career">⭐ Career</div>
-        <div class="trend-title">From 5 LPA to 50 LPA — The right career choice in 2026</div>
-        <div class="trend-hook">Python, Cloud, Data Analytics driving salary premiums across every industry right now.</div>
-        <div class="trend-meta"><span>JobIpo</span><span class="trend-dot"></span><span>Mar 2026</span></div>
-      </a>
-      <a href="https://taggd.in/whitepapers-and-ebooks/india-salary-forecast-2026/" target="_blank" rel="noopener" class="trend-card">
-        <div class="trend-num">05</div>
-        <div class="trend-cat tc-genz">⚡ Salary</div>
-        <div class="trend-title">Tier-2 city salaries now at 82% of metro level — WFH changed everything</div>
-        <div class="trend-hook">Jaipur, Kochi, Indore now paying near-metro salaries with 30% lower cost of living.</div>
-        <div class="trend-meta"><span>Taggd India</span><span class="trend-dot"></span><span>3 weeks ago</span></div>
+      <a href="https://unstop.com/blog/highest-paying-jobs-in-india" target="_blank" rel="noopener" class="tr-card">
+        <div class="tr-num">03</div>
+        <div class="tr-cat tc-job">💼 Career</div>
+        <div class="tr-title">Top 10 highest paying jobs in India 2026 — Is your career on the list?</div>
+        <div class="tr-hook">AI/ML, Investment Banking, Product Management topping salary charts in India.</div>
+        <div class="tr-meta"><span>Unstop</span><span class="tr-dot"></span><span>2 days ago</span></div>
       </a>
     </div>
     <div style="text-align:center;margin-top:20px;">
-      <a href="trending.html" class="btn-ghost" style="display:inline-flex;">See All Trending Articles →</a>
+      <a href="trending.html" class="btn-sec" style="display:inline-flex;">See All Trending Articles →</a>
     </div>
   </div>
 </div>
 
-<!-- VIRAL HOOK BANNER -->
-<div class="hook-banner reveal" style="padding:48px 4%;">
-  <div style="font-size:40px;margin-bottom:14px;">🤔</div>
-  <div class="hook-title en">Are You <span>Underpaid?</span><br>Find Out in 60 Seconds.</div>
-  <div class="hook-title hi" style="font-family:'Tiro Devanagari Hindi',serif;display:none">क्या आपकी <span>सैलरी कम</span> है?<br>60 सेकंड में जानें।</div>
-  <div class="hook-hindi en">क्या आप जानते हैं आपकी सैलरी कितनी होनी चाहिए?</div>
-  <div class="hook-sub en">Join <strong style="color:var(--or)" id="hookCount">12,847</strong> Indians who checked their salary this month. Central govt employees — your 8th CPC salary is waiting to be calculated.</div>
-  <div class="hook-stats">
-    <div class="hstat"><span class="hstat-dot"></span> 8th CPC Effective Jan 2026</div>
-    <div class="hstat"><span class="hstat-dot"></span> Arrears from Day 1</div>
-    <div class="hstat"><span class="hstat-dot"></span> Tax Impact Calculated</div>
-    <div class="hstat"><span class="hstat-dot"></span> PDF Download Free</div>
+<!-- ══════════════════════════════════════════
+     VIRAL HOOK
+══════════════════════════════════════════ -->
+<div class="hook reveal">
+  <div class="hook-inner">
+    <div style="font-size:40px;margin-bottom:14px;">🤔</div>
+    <div class="hook-title">Are You <span>Underpaid?</span><br>Find Out in 60 Seconds.</div>
+    <div class="hook-hindi">क्या आपकी सैलरी कितनी होनी चाहिए — जानते हैं?</div>
+    <p class="hook-sub">Join <strong style="color:var(--or)" id="hookCount">12,847</strong> Indians who checked their salary this month. Central govt employees — your 8th CPC salary is waiting to be calculated.</p>
+    <div class="hook-pills">
+      <div class="hook-pill"><span class="hp-dot"></span> 8th CPC Effective Jan 2026</div>
+      <div class="hook-pill"><span class="hp-dot"></span> Arrears from Day 1</div>
+      <div class="hook-pill"><span class="hp-dot"></span> Tax Impact Shown</div>
+      <div class="hook-pill"><span class="hp-dot"></span> PDF Download Free</div>
+    </div>
+    <a href="8th-pay-commission-calculator.html" class="btn-prime" style="margin:0 auto;">⚡ Calculate My Salary — Free</a>
   </div>
-  <a href="8th-pay-commission-calculator.html" class="btn-hero" style="margin:0 auto;display:inline-flex;">⚡ Calculate My Salary — It is Free</a>
 </div>
 
-<!-- SUBSCRIBE -->
-<div class="sub-section">
+<!-- ══════════════════════════════════════════
+     SUBSCRIBE
+══════════════════════════════════════════ -->
+<div class="subscribe">
   <div class="sub-grid">
     <div class="reveal">
-      <div class="sub-eyebrow">Stay Updated</div>
-      <div class="sub-title en">Get Notified When We <span>Launch New Tools</span></div>
-      <div class="sub-title hi" style="font-family:'Tiro Devanagari Hindi',serif;display:none">नए टूल्स पर <span>सूचना पाएं</span></div>
-      <p style="font-size:14px;color:var(--t2);font-weight:300;line-height:1.8;margin-bottom:20px;" class="en">New calculators, salary data, career guides and viral content — you will be the first to know.</p>
+      <div class="sec-eye">Stay Updated</div>
+      <div class="sec-title">Get Notified When We <span>Launch New Tools</span></div>
+      <p style="font-size:14px;color:var(--t2);font-weight:300;line-height:1.8;margin-bottom:12px;">New calculators, AI guides, salary data, career guides — you will be the first to know.</p>
       <div class="sub-points">
-        <div class="sp"><span class="sp-dot"></span>New calculator launches — GDS, Career Simulator, Tax planner</div>
         <div class="sp"><span class="sp-dot"></span>8th CPC updates and salary revision news</div>
-        <div class="sp"><span class="sp-dot"></span>DA revision alerts — January and July every year</div>
-        <div class="sp"><span class="sp-dot"></span>Trending career and finance articles weekly</div>
-        <div class="sp"><span class="sp-dot"></span>New govt job notifications — daily alerts</div>
+        <div class="sp"><span class="sp-dot"></span>New job notifications — daily alerts</div>
+        <div class="sp"><span class="sp-dot"></span>AI career tips and free tools weekly</div>
+        <div class="sp"><span class="sp-dot"></span>DA revision alerts — January and July</div>
+        <div class="sp"><span class="sp-dot"></span>Tax saving tips before March 31</div>
       </div>
-      <div class="sub-note">🔒 Your details are safe. No spam. Unsubscribe anytime.</div>
+      <div style="font-size:11px;color:var(--t3);padding:10px 12px;background:rgba(255,98,0,0.05);border:1px solid rgba(255,98,0,0.12);border-radius:8px;">🔒 Your details are safe. No spam. Unsubscribe anytime.</div>
     </div>
     <div class="reveal">
       <div class="sub-form-wrap">
@@ -552,21 +938,20 @@ body.lang-hi .hi{display:block!important;}
             <input type="text" name="name" class="sf-input" placeholder="Your Name" required>
             <input type="email" name="email" class="sf-input" placeholder="Your Email Address" required>
             <select name="department" class="sf-select">
-              <option value="">Select Your Department</option>
-              <option>Income Tax / CBDT</option>
-              <option>Postal / India Post</option>
-              <option>Central Secretariat</option>
-              <option>Railways</option>
-              <option>Defence Civilians</option>
-              <option>Customs / GST / CBIC</option>
-              <option>Audit and Accounts (IAAD)</option>
+              <option value="">Select Your Category</option>
+              <option>Central Govt Employee</option>
+              <option>State Govt Employee</option>
+              <option>Railway Employee</option>
+              <option>Bank Employee</option>
+              <option>Defence / Police</option>
               <option>Private Sector</option>
               <option>Student / Job Seeker</option>
+              <option>Business / Self Employed</option>
               <option>Other</option>
             </select>
             <button type="submit" class="sf-btn">🔔 Notify Me About New Tools</button>
             <div class="sf-success" id="subSuccess">✅ Thank you! You will be notified when we launch new tools.</div>
-            <div class="sf-note">No spam. Only useful updates for govt employees and job seekers.</div>
+            <div class="sf-note">No spam. Only useful updates. Unsubscribe anytime.</div>
           </div>
         </form>
       </div>
@@ -574,205 +959,279 @@ body.lang-hi .hi{display:block!important;}
   </div>
 </div>
 
-<!-- FOOTER -->
+<!-- ══════════════════════════════════════════
+     DISCLAIMER — LEGAL
+══════════════════════════════════════════ -->
+<div class="disclaimer">
+  <div class="disclaimer-inner">
+    <strong>⚠️ Important Disclaimers:</strong>
+    <br>
+    <strong>8th CPC Calculator:</strong> All salary calculations are estimates based on proposed fitment factors. The 8th Pay Commission has not yet submitted its final report. Actual salary revision will be officially notified by the Government of India. These figures are for reference only.
+    &nbsp;|&nbsp;
+    <strong>Job Listings:</strong> Job listings on mclass.in are aggregated from public sources. Always verify details and apply only through official government websites. mclass.in is not responsible for any discrepancies.
+    &nbsp;|&nbsp;
+    <strong>Financial Information:</strong> Content on this website is for informational purposes only and does not constitute financial, legal, or investment advice. Consult a qualified professional for decisions.
+    &nbsp;|&nbsp;
+    <strong>AI Salary Data:</strong> AI salary figures are sourced from NASSCOM, Naukri, and LinkedIn India reports. Actual salaries may vary based on skills, location, and employer.
+    &nbsp;|&nbsp;
+    Contact: <a href="mailto:admin@mclass.in">admin@mclass.in</a> &nbsp;|&nbsp; <a href="https://www.mclass.in">www.mclass.in</a>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════ -->
 <footer>
   <div class="footer-grid">
     <div>
       <a href="index.html" class="nav-logo" style="display:inline-flex;margin-bottom:12px;">
-        <div class="tri"><div class="t1"></div><div class="t2"></div><div class="t3"></div></div>
+        <div class="tri"><div class="ts"></div><div class="tw"></div><div class="ti"></div></div>
         <div style="display:flex;flex-direction:column;line-height:1;">
           <span class="logo-main">m<em>class</em>.in</span>
           <span class="logo-sub">Middle Class India</span>
         </div>
       </a>
-      <div class="fb-desc">Free tools and viral content for India's middle class — government employees, job seekers, Gen Z and everyone in between.</div>
+      <div class="fb-desc">Free tools and resources for India's 40 crore middle class — govt employees, job seekers, AI learners, students and families.</div>
       <div class="fb-contact">📧 <a href="mailto:admin@mclass.in">admin@mclass.in</a></div>
       <div class="fb-contact">🌐 <a href="https://www.mclass.in">www.mclass.in</a></div>
+      <div class="fb-contact" style="margin-top:12px;font-size:11px;">
+        <a href="#">Privacy Policy</a> &nbsp;·&nbsp;
+        <a href="#">Disclaimer</a> &nbsp;·&nbsp;
+        <a href="#">Terms of Use</a>
+      </div>
     </div>
     <div>
-      <div class="fc-title">Finance</div>
+      <div class="fc-title">Finance Tools</div>
       <ul class="fc-links">
-        <li><a href="8th-pay-commission-calculator.html">🏛️ 8th CPC Calculator <span class="new-tag">HOT</span></a></li>
-        <li><a href="salary-calculator.html">💼 Salary Calculator</a></li>
+        <li><a href="8th-pay-commission-calculator.html">🏛️ 8th CPC Calculator <span class="nt">HOT</span></a></li>
         <li><a href="tax-calculator.html">📊 Tax Calculator</a></li>
         <li><a href="emi-calculator.html">🏠 EMI Calculator</a></li>
         <li><a href="nps-calculator.html">👴 NPS Calculator</a></li>
+        <li><a href="salary-calculator.html">💼 Salary Calculator</a></li>
       </ul>
     </div>
     <div>
-      <div class="fc-title">Jobs and Career</div>
+      <div class="fc-title">Jobs</div>
       <ul class="fc-links">
-        <li><a href="jobs.html">🔔 Available Jobs <span class="new-tag">LIVE</span></a></li>
-        <li><a href="salary-comparison.html">⚖️ Salary Comparison</a></li>
-        <li><a href="career-options.html">🗺️ Career Options</a></li>
-        <li><a href="jobs.html">🔍 Job Trends 2026</a></li>
+        <li><a href="jobs.html">🔔 All Jobs <span class="nt">LIVE</span></a></li>
+        <li><a href="jobs.html?bucket=10th">📄 10th Pass Jobs</a></li>
+        <li><a href="jobs.html?bucket=graduate">🎓 Graduate Jobs</a></li>
+        <li><a href="jobs.html?bucket=urgency">🔴 Closing Soon</a></li>
+        <li><a href="jobs.html?bucket=railway">🚂 Railway Jobs</a></li>
+        <li><a href="jobs.html?bucket=bank">🏦 Bank Jobs</a></li>
       </ul>
-      <div class="fc-title" style="margin-top:20px;">Fun and Engage</div>
+    </div>
+    <div>
+      <div class="fc-title">AI Career</div>
+      <ul class="fc-links">
+        <li><a href="ai-career.html">🤖 AI Career Guide <span class="nt">NEW</span></a></li>
+        <li><a href="ai-career.html#salary">💰 AI Salary Guide</a></li>
+        <li><a href="ai-career.html#tools">🛠️ Free AI Tools</a></li>
+        <li><a href="ai-career.html#news">📰 AI News India</a></li>
+        <li><a href="career-options.html">🗺️ Career Options</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="fc-title">Explore</div>
       <ul class="fc-links">
         <li><a href="happy-meter.html">😊 Happy Meter</a></li>
         <li><a href="focus-test.html">🧠 Focus Test</a></li>
         <li><a href="trending.html">🔥 Trending</a></li>
-      </ul>
-    </div>
-    <div>
-      <div class="fc-title">Resources</div>
-      <ul class="fc-links">
-        <li><a href="#">7th CPC Pay Matrix</a></li>
-        <li><a href="#">DA Rates History</a></li>
-        <li><a href="#">8th CPC Latest News</a></li>
-        <li><a href="#">Income Tax Guide</a></li>
-      </ul>
-    </div>
-    <div>
-      <div class="fc-title">Company</div>
-      <ul class="fc-links">
-        <li><a href="about.html">About mclass.in</a></li>
-        <li><a href="mailto:admin@mclass.in">Contact Us</a></li>
-        <li><a href="#">Privacy Policy</a></li>
-        <li><a href="#">Disclaimer</a></li>
-        <li><a href="#subscribe">Subscribe</a></li>
+        <li><a href="about.html">ℹ️ About mclass.in</a></li>
+        <li><a href="mailto:admin@mclass.in">📧 Contact Us</a></li>
       </ul>
     </div>
   </div>
   <div class="footer-bottom">
-    <div class="fb-copy">© 2026 mclass.in · Made with ❤️ for India's Middle Class · All tools are free</div>
+    <div class="fb-copy">© 2026 mclass.in · Made with ❤️ for India's Middle Class · All tools are free · <a href="#">Privacy</a> · <a href="#">Disclaimer</a></div>
     <div class="fb-social">
-      <a href="#" class="fs" title="Twitter">🐦</a>
-      <a href="mailto:admin@mclass.in" class="fs" title="Email">📧</a>
-      <a href="#" class="fs" title="Telegram">✈️</a>
+      <a href="#" class="fsoc" title="Twitter/X">🐦</a>
+      <a href="https://t.me/mclassin" class="fsoc" title="Telegram">✈️</a>
+      <a href="mailto:admin@mclass.in" class="fsoc" title="Email">📧</a>
     </div>
   </div>
 </footer>
-<div class="disc-bar">⚠️ Disclaimer: All calculators on mclass.in provide estimated projections only. The 8th Pay Commission has not yet submitted its final report. Actual salary revision will be officially notified by the Government of India. Content is for informational purposes only. | Contact: admin@mclass.in | www.mclass.in</div>
-<button class="stt" id="sttBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 
+<!-- STICKY BUTTONS -->
+<div class="sticky-calc">
+  <a href="8th-pay-commission-calculator.html" class="sc-btn">🏛️ 8th CPC Calculator</a>
+  <button class="stt-btn" id="sttBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+</div>
+
+<!-- ══════════════════════════════════════════
+     JAVASCRIPT
+══════════════════════════════════════════ -->
 <script>
-// LANGUAGE TOGGLE
-let isHindi=false;
-function toggleLang(){
-  isHindi=!isHindi;
-  document.getElementById('langBtn').textContent=isHindi?'🇬🇧 English':'🇮🇳 हिंदी';
-  document.querySelectorAll('.en').forEach(el=>el.style.display=isHindi?'none':'');
-  document.querySelectorAll('.hi').forEach(el=>el.style.display=isHindi?'block':'none');
+// ── THEME TOGGLE ──────────────────────────
+const savedTheme = localStorage.getItem('mclass-theme') || 'dark';
+document.documentElement.setAttribute('data-theme', savedTheme);
+updateThemeBtn(savedTheme);
+
+function toggleTheme() {
+  const current = document.documentElement.getAttribute('data-theme');
+  const next = current === 'dark' ? 'light' : 'dark';
+  document.documentElement.setAttribute('data-theme', next);
+  localStorage.setItem('mclass-theme', next);
+  updateThemeBtn(next);
 }
-// MOBILE NAV
-let mOpen=false;
-function toggleMobile(){
-  mOpen=!mOpen;
-  document.getElementById('mobileMenu').classList.toggle('open',mOpen);
-  document.querySelector('.ham').textContent=mOpen?'✕':'☰';
+function updateThemeBtn(theme) {
+  const btn = document.getElementById('themeBtn');
+  if (btn) btn.textContent = theme === 'dark' ? '☀️ Light' : '🌙 Dark';
 }
-// SCROLL
-window.addEventListener('scroll',()=>{document.getElementById('sttBtn').classList.toggle('show',window.scrollY>400);});
-// REVEAL
-const obs=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}})},{threshold:0.08});
-document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
-// SMART COUNTERS
-function getCount(base,daily,startStr){
-  const days=Math.max(0,Math.floor((Date.now()-new Date(startStr))/86400000));
-  const dow=new Date().getDay();
-  const wf=(dow>=1&&dow<=5)?1.2:0.7;
-  const local=parseInt(localStorage.getItem('8cpc_ex')||'0');
-  return Math.floor(base+(days*daily*wf))+local;
+
+// ── MOBILE NAV ────────────────────────────
+let mOpen = false;
+function toggleMob() {
+  mOpen = !mOpen;
+  document.getElementById('mobMenu').classList.toggle('open', mOpen);
+  document.querySelector('.ham').textContent = mOpen ? '✕' : '☰';
 }
-window.addEventListener('load',()=>{
-  setTimeout(()=>{
-    const cc=getCount(12847,67,'2026-05-16');
-    const lc=getCount(23847,47,'2026-05-16');
-    const sc=getCount(18420,95,'2026-05-16');
-    const hc=getCount(4231,28,'2026-05-16');
-    function anim(id,target){
-      const el=document.getElementById(id);if(!el)return;
-      let c=0;const step=target/90;
-      const t=setInterval(()=>{c+=step;if(c>=target){c=target;clearInterval(t);}el.textContent=Math.floor(c).toLocaleString('en-IN');},16);
-    }
-    anim('calcCount',cc);anim('likeCount',lc);anim('stat1',sc);anim('stat2',hc);anim('hookCount',cc);
-  },500);
-});
-// NETLIFY FORM
-function handleSub(e){
-  e.preventDefault();
-  const form=document.getElementById('subForm');
-  const data=new FormData(form);
-  fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(data).toString()})
-    .then(()=>{form.reset();document.getElementById('subSuccess').style.display='block';})
-    .catch(()=>{form.reset();document.getElementById('subSuccess').style.display='block';});
+function toggleSub(el) {
+  const sub = el.nextElementSibling;
+  sub.style.display = sub.style.display === 'flex' ? 'none' : 'flex';
+  sub.style.flexDirection = 'column';
 }
-// Close mobile on outside click
-document.addEventListener('click',(e)=>{
-  const m=document.getElementById('mobileMenu');
-  const h=document.querySelector('.ham');
-  if(mOpen&&!m.contains(e.target)&&!h.contains(e.target)){mOpen=false;m.classList.remove('open');h.textContent='☰';}
+document.addEventListener('click', e => {
+  const m = document.getElementById('mobMenu');
+  const h = document.querySelector('.ham');
+  if (mOpen && !m.contains(e.target) && !h.contains(e.target)) {
+    mOpen = false; m.classList.remove('open'); h.textContent = '☰';
+  }
 });
 
-// ── HOMEPAGE JOBS PREVIEW ──────────────────────────
-const SHEET_CSV='https://docs.google.com/spreadsheets/d/e/2PACX-1vR3a4aLGlH3t0N3oy_kkEF_2N7D0UQIfWBU035EIUtttWFdFKe8GqZtXcphsFmo-jmw7BEd7kXy7SMs/pub?output=csv';
-const SAMPLE=[
-  {title:'Junior Clerk',organization:'India Post',salary_min:18000,salary_max:22000,job_type:'fulltime',last_date:'2026-06-15',apply_link:'https://indiapost.gov.in'},
-  {title:'Data Entry Operator',organization:'SSC',salary_min:9000,salary_max:10000,job_type:'fulltime',last_date:'2026-06-10',apply_link:'https://ssc.gov.in'},
-  {title:'Lab Assistant',organization:'AIIMS Delhi',salary_min:25000,salary_max:30000,job_type:'fulltime',last_date:'2026-05-25',apply_link:'https://aiims.edu'},
-  {title:'Project Associate',organization:'DRDO',salary_min:31000,salary_max:40000,job_type:'contract',last_date:'2026-06-18',apply_link:'https://drdo.gov.in'},
+// ── SCROLL ───────────────────────────────
+window.addEventListener('scroll', () => {
+  document.getElementById('sttBtn').classList.toggle('show', window.scrollY > 400);
+});
+
+// ── REVEAL ───────────────────────────────
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+}, { threshold: 0.08 });
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+// ── MINI 8th CPC CALCULATOR ──────────────
+const BASIC_PAY = {1:18000,2:19900,3:21700,4:25500,5:29200,6:35400,7:44900,8:47600,9:53100,10:56100,11:67700,12:78800,13:118500,14:144200,15:182200};
+function miniCalc() {
+  const level = document.getElementById('miniLevel').value;
+  const fit = parseFloat(document.getElementById('miniFit').value) || 2.86;
+  let basic = parseInt(document.getElementById('miniBasic').value) || 0;
+  if (!basic && level) basic = BASIC_PAY[level] || 0;
+  if (!basic) { alert('Please enter your basic pay or select a pay level'); return; }
+  const revised = Math.round(basic * fit / 100) * 100;
+  const gain = revised - basic;
+  const arrears = gain * 12;
+  const fmt = n => '₹' + n.toLocaleString('en-IN');
+  document.getElementById('cr-curr').textContent = fmt(basic);
+  document.getElementById('cr-new').textContent = fmt(revised);
+  document.getElementById('cr-gain').textContent = '+' + fmt(gain);
+  document.getElementById('cr-arr').textContent = fmt(arrears);
+  document.getElementById('miniResult').classList.add('show');
+  gtag('event', 'mini_calc_used', { level, fitment: fit, basic });
+}
+
+// ── COUNTERS ─────────────────────────────
+function getCount(base, daily, start) {
+  const days = Math.max(0, Math.floor((Date.now() - new Date(start)) / 86400000));
+  const wf = [1,2,3,4,5].includes(new Date().getDay()) ? 1.2 : 0.7;
+  return Math.floor(base + (days * daily * wf));
+}
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    const cc = getCount(12847, 67, '2026-05-16');
+    const sc = getCount(18420, 95, '2026-05-16');
+    const hc = getCount(4231, 28, '2026-05-16');
+    function anim(id, target) {
+      const el = document.getElementById(id); if (!el) return;
+      let c = 0; const step = target / 80;
+      const t = setInterval(() => { c += step; if (c >= target) { c = target; clearInterval(t); } el.textContent = Math.floor(c).toLocaleString('en-IN'); }, 16);
+    }
+    anim('calcCount', cc); anim('st1', sc); anim('st2', hc); anim('hookCount', cc);
+  }, 500);
+});
+
+// ── NETLIFY FORM ─────────────────────────
+function handleSub(e) {
+  e.preventDefault();
+  const form = document.getElementById('subForm');
+  fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams(new FormData(form)).toString() })
+    .then(() => { form.reset(); document.getElementById('subSuccess').style.display = 'block'; })
+    .catch(() => { form.reset(); document.getElementById('subSuccess').style.display = 'block'; });
+}
+
+// ── JOBS FROM GOOGLE SHEET ───────────────
+const SHEET_CSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vR3a4aLGlH3t0N3oy_kkEF_2N7D0UQIfWBU035EIUtttWFdFKe8GqZtXcphsFmo-jmw7BEd7kXy7SMs/pub?output=csv';
+const SAMPLE_JOBS = [
+  {title:'Junior Clerk',organization:'India Post',salary_min:18000,salary_max:22000,job_type:'fulltime',last_date:'2026-06-15',apply_link:'https://indiapost.gov.in',education:'10th',department:'postal'},
+  {title:'Constable GD',organization:'CRPF',salary_min:21700,salary_max:25000,job_type:'fulltime',last_date:'2026-05-18',apply_link:'https://crpf.gov.in',education:'10th',department:'police'},
+  {title:'Probationary Officer',organization:'SBI',salary_min:36000,salary_max:45000,job_type:'fulltime',last_date:'2026-05-24',apply_link:'https://sbi.co.in',education:'graduate',department:'bank'},
+  {title:'MTS',organization:'Indian Railways',salary_min:18000,salary_max:22000,job_type:'fulltime',last_date:'2026-06-20',apply_link:'https://indianrailways.gov.in',education:'none',department:'railway'},
 ];
-function fmtSalary(min,max){
-  const f=n=>n>=1000?`₹${(n/1000).toFixed(0)}k`:`₹${n}`;
-  if(!min&&!max)return'N/A';
-  return min===max?f(min)+'/mo':`${f(min)}–${f(max)}/mo`;
+
+function hDays(d) { if (!d) return null; return Math.ceil((new Date(d) - new Date()) / 86400000); }
+function hEdu(t, o) {
+  const s = (t + ' ' + o).toLowerCase();
+  if (/peon|mts|sweeper/i.test(s)) return 'No Qualification';
+  if (/constable|postman|ldc|10th/i.test(s)) return '10th Pass';
+  if (/steno|12th/i.test(s)) return '12th Pass';
+  return 'Graduate';
 }
-function dlInfo(d){
-  if(!d)return{t:'Date N/A',u:false,tag:''};
-  const days=Math.ceil((new Date(d)-new Date())/86400000);
-  if(days<0)return{t:'Closed',u:true,tag:'Expired'};
-  if(days===0)return{t:'Last Day!',u:true,tag:'TODAY'};
-  if(days<=3)return{t:`${days}d left!`,u:true,tag:`${days}d`};
-  return{t:`${days} days left`,u:false,tag:`${days}d`};
+function hSal(mn, mx) {
+  const f = n => n >= 1000 ? `₹${(n/1000).toFixed(0)}k` : `₹${n}`;
+  if (!mn && !mx) return 'N/A';
+  return +mn === +mx ? f(+mn) + '/mo' : `${f(+mn)}–${f(+mx)}/mo`;
 }
-function jpCard(j){
-  const dl=dlInfo(j.last_date);
-  const min=parseInt(j.salary_min)||0,max=parseInt(j.salary_max)||0;
-  const tc={fulltime:'jp-full',parttime:'jp-part',contract:'jp-cont'};
-  const tn={fulltime:'Full-time',parttime:'Part-time',contract:'Contract'};
-  return`<a href="jobs.html" class="jp-card">
-    <div class="jp-top">
-      <div><div class="jp-title">${j.title}</div><div class="jp-org">🏛️ ${j.organization||'Govt'}</div></div>
-      <span class="jp-type ${tc[j.job_type]||'jp-full'}">${tn[j.job_type]||'Full-time'}</span>
+function jpCard(j) {
+  const d = hDays(j.last_date);
+  const urg = d !== null && d >= 0 && d <= 3;
+  const dl = d === null ? 'Date N/A' : d < 0 ? 'Closed' : d === 0 ? 'Last Day!' : d <= 3 ? `${d}d left!` : `${d} days left`;
+  const edu = j.education === 'none' ? 'No Qualification' : j.education === '10th' ? '10th Pass' : j.education === '12th' ? '12th Pass' : j.education === 'graduate' ? 'Graduate' : hEdu(j.title || '', j.organization || '');
+  return `<a href="jobs.html" class="jp-card">
+    <div><div class="jp-title">${j.title}</div><div class="jp-org">🏛️ ${j.organization || 'Government'}</div></div>
+    <div class="jp-tags">
+      ${edu ? `<span class="jp-tag jp-edu">📄 ${edu}</span>` : ''}
+      <span class="jp-tag jp-dept">🇮🇳 All India</span>
     </div>
-    <div class="jp-salary">${fmtSalary(min,max)}</div>
-    <div class="jp-deadline${dl.u?' urgent':''}">
-      <span class="jp-dl-text">📅 ${dl.t}</span>
-      <span class="jp-dl-tag">${dl.tag}</span>
+    <div class="jp-salary">${hSal(j.salary_min, j.salary_max)}</div>
+    <div class="jp-dl${urg ? ' urg' : ''}">
+      <span class="jp-dt">📅 ${dl}</span>
+      <span class="jp-dtag">${d !== null && d >= 0 ? d + 'd' : ''}</span>
     </div>
     <div class="jp-apply">View & Apply →</div>
   </a>`;
 }
-function parseCSV(csv){
-  const lines=csv.trim().split('\n');
-  if(lines.length<2)return[];
-  const hdr=lines[0].split(',').map(h=>h.replace(/"/g,'').trim());
-  return lines.slice(1).map(line=>{
-    const vals=[];let cur='',inQ=false;
-    for(let i=0;i<line.length;i++){
-      if(line[i]==='"'){inQ=!inQ;}
-      else if(line[i]===','&&!inQ){vals.push(cur.trim());cur='';}
-      else cur+=line[i];
-    }
-    vals.push(cur.trim());
-    const o={};hdr.forEach((h,i)=>{o[h]=(vals[i]||'').replace(/"/g,'').trim();});
+function parseCSV(csv) {
+  const lines = csv.trim().split('\n');
+  if (lines.length < 2) return [];
+  const h = lines[0].split(',').map(x => x.replace(/"/g, '').trim());
+  return lines.slice(1).map(line => {
+    const v = []; let c = '', q = false;
+    for (let i = 0; i < line.length; i++) { if (line[i] === '"') { q = !q; } else if (line[i] === ',' && !q) { v.push(c.trim()); c = ''; } else c += line[i]; }
+    v.push(c.trim());
+    const o = {}; h.forEach((k, i) => { o[k] = (v[i] || '').replace(/"/g, '').trim(); });
     return o;
-  }).filter(j=>j.title&&j.title.length>2);
+  }).filter(j => j.title && j.title.length > 2);
 }
-async function loadHomeJobs(){
-  const grid=document.getElementById('homeJobsGrid');
-  try{
-    const res=await fetch(SHEET_CSV+'&t='+Date.now());
-    if(!res.ok)throw new Error();
-    const csv=await res.text();
-    let jobs=parseCSV(csv);
-    if(jobs.length===0)jobs=SAMPLE;
-    // Sort by last date, show top 4
-    jobs.sort((a,b)=>new Date(a.last_date||'9999')-new Date(b.last_date||'9999'));
-    grid.innerHTML=jobs.slice(0,4).map(jpCard).join('');
-  }catch(e){
-    grid.innerHTML=SAMPLE.map(jpCard).join('');
+async function loadHomeJobs() {
+  try {
+    const r = await fetch(SHEET_CSV + '&t=' + Date.now());
+    if (!r.ok) throw new Error();
+    const parsed = parseCSV(await r.text());
+    const jobs = parsed.length > 0 ? parsed : SAMPLE_JOBS;
+    // FOMO counts
+    const dOk = (j, max) => { const d = hDays(j.last_date); return d !== null && d >= 0 && d <= max; };
+    document.getElementById('f-closing').textContent = jobs.filter(j => dOk(j, 1)).length;
+    document.getElementById('f-week').textContent = jobs.filter(j => dOk(j, 7)).length;
+    document.getElementById('f-total').textContent = jobs.length;
+    document.getElementById('f-10th').textContent = jobs.filter(j => (j.education || '').includes('10')).length;
+    document.getElementById('f-grad').textContent = jobs.filter(j => j.education === 'graduate').length;
+    document.getElementById('jobCount').textContent = jobs.length + '+';
+    // Cards — top 4 by urgency
+    const preview = jobs.sort((a, b) => new Date(a.last_date || '9999') - new Date(b.last_date || '9999')).slice(0, 4);
+    document.getElementById('homeJobsGrid').innerHTML = preview.map(jpCard).join('');
+  } catch (e) {
+    document.getElementById('homeJobsGrid').innerHTML = SAMPLE_JOBS.map(jpCard).join('');
+    ['f-closing','f-week','f-total','f-10th','f-grad'].forEach(id => { document.getElementById(id).textContent = '—'; });
   }
 }
 loadHomeJobs();
