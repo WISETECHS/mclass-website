@@ -1,1267 +1,1418 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>8th Pay Commission Salary Calculator 2026 | mclass.in</title>
-<meta name="description" content="Calculate your 8th Pay Commission revised salary, arrears from January 2026, income tax and investment tips. Free tool for Central Government employees.">
+<title>8th Pay Commission Salary Calculator 2026 — mclass.in</title>
+<meta name="description" content="Calculate your 8th CPC revised salary, arrears, NPS and income tax. Free calculator for central govt employees. Monthly gain, total arrears, tax breakdown.">
+<meta name="keywords" content="8th pay commission calculator,8th CPC salary,central government salary 2026,fitment factor,arrears calculator">
+<link rel="canonical" href="https://www.mclass.in/8th-pay-commission-calculator.html">
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T8YTMQE390"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-T8YTMQE390');</script>
 <style>
-:root{--ink:#0b0d10;--ink2:#111419;--ink3:#181d24;--or:#ff6200;--or2:#ff8533;--or3:rgba(255,98,0,0.12);--go:#e8a000;--go2:#ffc840;--gr:#16a34a;--gr2:#22c55e;--rd:#c0392b;--bl:#2980b9;--bl2:#3b9eff;--t1:#f0ebe3;--t2:#b0a090;--t3:#6a5e50;--b:rgba(255,255,255,0.06);--b2:rgba(255,255,255,0.03);--r:14px;--sh:0 4px 20px rgba(0,0,0,0.35);}
-:root.g1{--or:#f06000;--go:#d4a010;}:root.g2{--ink:#110e08;--ink2:#1a1408;--ink3:#231c0a;--or:#ff6a00;--go:#e8b010;}:root.g3{--ink:#160f02;--ink2:#201500;--ink3:#2a1c00;--or:#ff7700;--go:#ffbe00;}:root.g4{--ink:#1a1000;--ink2:#261800;--ink3:#342100;--or:#ff8800;--go:#ffd000;}
-*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
-body{font-family:'Sora',sans-serif;background:var(--ink);color:var(--t1);min-height:100vh;background-image:radial-gradient(ellipse 70% 40% at 10% 0%,rgba(255,98,0,0.07) 0%,transparent 60%),radial-gradient(ellipse 50% 40% at 90% 100%,rgba(232,160,0,0.05) 0%,transparent 60%);}
-::-webkit-scrollbar{width:4px;}::-webkit-scrollbar-track{background:var(--ink2);}::-webkit-scrollbar-thumb{background:var(--or);border-radius:2px;}
-/* NAV */
-nav{background:rgba(11,13,16,0.96);border-bottom:1px solid var(--b);padding:0 4%;height:60px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:200;backdrop-filter:blur(20px);}
-.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
+/* ═══ THEME ═══ */
+:root{
+  --or:#ff6200;--or2:#ff8533;--or3:rgba(255,98,0,0.12);
+  --go:#e8a000;--go2:#ffc840;--go3:rgba(232,160,0,0.1);
+  --gr:#16a34a;--gr2:#22c55e;--gr3:rgba(22,163,74,0.1);
+  --bl:#1d6fbb;--bl2:#3b9eff;--bl3:rgba(29,111,187,0.1);
+  --rd:#dc2626;--rd2:#f87171;--rd3:rgba(220,38,38,0.1);
+  --pu:#6d28d9;--pu2:#a855f7;
+  --r:12px;
+}
+[data-theme="dark"]{
+  --bg:#0b0d10;--bg2:#111419;--bg3:#181d24;--bg4:#1e2530;
+  --t1:#f0ebe3;--t2:#b0a090;--t3:#6a5e50;
+  --bd:rgba(255,255,255,0.06);--bd2:rgba(255,255,255,0.03);
+  --sh:0 4px 24px rgba(0,0,0,0.4);
+  --inp-bg:#181d24;--inp-bd:rgba(255,255,255,0.08);
+}
+[data-theme="light"]{
+  --bg:#f4f0eb;--bg2:#ffffff;--bg3:#faf7f3;--bg4:#f0ebe0;
+  --t1:#1a0f00;--t2:#5a4030;--t3:#9a7860;
+  --bd:rgba(0,0,0,0.08);--bd2:rgba(0,0,0,0.04);
+  --sh:0 4px 24px rgba(0,0,0,0.08);
+  --inp-bg:#ffffff;--inp-bd:rgba(0,0,0,0.12);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Sora',sans-serif;background:var(--bg);color:var(--t1);overflow-x:hidden;transition:background .3s,color .3s;}
+::-webkit-scrollbar{width:4px;}::-webkit-scrollbar-track{background:var(--bg2);}::-webkit-scrollbar-thumb{background:var(--or);border-radius:2px;}
+a{text-decoration:none;color:inherit;}
+
+/* ═══ NAV ═══ */
+.nav{background:var(--bg2);border-bottom:1px solid var(--bd);padding:0 4%;height:60px;display:flex;align-items:center;position:sticky;top:0;z-index:500;backdrop-filter:blur(20px);transition:background .3s;}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0;margin-right:20px;}
 .tri{display:flex;flex-direction:column;width:4px;height:34px;border-radius:2px;overflow:hidden;}
-.t1{background:#FF9933;flex:1}.t2{background:#fff;flex:1}.t3{background:#138808;flex:1}
-.logo-main{font-size:20px;font-weight:900;color:#fff;letter-spacing:-0.04em;}.logo-main em{color:var(--or);font-style:normal;}
-.logo-sub{font-size:9px;color:var(--t3);letter-spacing:0.12em;text-transform:uppercase;margin-top:2px;}
-.nav-back{display:inline-flex;align-items:center;gap:6px;color:var(--t2);text-decoration:none;font-size:13px;font-weight:500;padding:6px 14px;border-radius:8px;border:1px solid var(--b);transition:all 0.2s;}
-.nav-back:hover{border-color:rgba(255,98,0,0.4);color:var(--or);}
-/* PROGRESS */
-.prog-wrap{background:var(--ink2);border-bottom:1px solid var(--b);padding:14px 4%;position:sticky;top:60px;z-index:100;}
-.prog-steps{display:flex;align-items:center;max-width:680px;margin:0 auto;}
-.ps{display:flex;flex-direction:column;align-items:center;flex-shrink:0;}
-.ps-dot{width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;border:2px solid var(--b);background:var(--ink3);color:var(--t3);transition:all 0.4s;position:relative;z-index:1;}
-.ps-dot.active{border-color:var(--or);background:var(--or);color:#fff;box-shadow:0 0 14px rgba(255,98,0,0.4);}
-.ps-dot.done{border-color:var(--gr2);background:var(--gr2);color:#fff;}
-.ps-label{font-size:9px;color:var(--t3);margin-top:4px;text-align:center;font-weight:500;white-space:nowrap;}
-.ps-label.active{color:var(--or);}
-.ps-line{flex:1;height:2px;background:var(--b);transition:background 0.4s;margin-top:-16px;}
-.ps-line.done{background:var(--gr2);}
-/* WIZARD */
-.wizard{max-width:680px;margin:0 auto;padding:40px 4% 80px;}
-.wstep{display:none;animation:fadeUp 0.4s ease;}
-.wstep.active{display:block;}
-@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
-/* STEP HEADER */
-.step-hdr{text-align:center;margin-bottom:30px;}
-.step-emoji{font-size:42px;margin-bottom:10px;}
-.step-title{font-size:clamp(22px,4vw,30px);font-weight:900;letter-spacing:-0.03em;color:#fff;margin-bottom:8px;}
-.step-title span{color:var(--or);}
-.step-sub{font-size:14px;color:var(--t2);font-weight:300;line-height:1.6;}
-/* FORM CARDS */
-.fcard{background:var(--ink2);border:1px solid var(--b);border-radius:var(--r);padding:22px;margin-bottom:14px;box-shadow:var(--sh);}
-.fcard-title{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--t3);margin-bottom:14px;display:flex;align-items:center;gap:6px;}
-.fcard-title::before{content:'';width:14px;height:2px;background:var(--or);border-radius:2px;}
-.fg{margin-bottom:12px;}
-.fl{font-size:11px;font-weight:600;color:var(--t2);margin-bottom:5px;display:flex;align-items:center;gap:6px;}
-.fl-hint{font-size:10px;color:var(--t3);font-weight:400;}
-.fi,.fsel{width:100%;background:var(--ink3);border:1px solid var(--b);border-radius:8px;padding:10px 13px;color:var(--t1);font-family:'Sora',sans-serif;font-size:13px;outline:none;transition:border-color 0.2s;}
-.fi:focus,.fsel:focus{border-color:var(--or);}
-.fsel option{background:var(--ink2);}
-.r2{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
-.tag-auto{font-size:9px;background:rgba(22,163,74,0.15);color:var(--gr2);border:1px solid rgba(22,163,74,0.25);padding:1px 7px;border-radius:8px;font-weight:600;}
-.tag-edit{font-size:9px;background:rgba(41,128,185,0.15);color:var(--bl2);border:1px solid rgba(41,128,185,0.25);padding:1px 7px;border-radius:8px;font-weight:600;}
-.tag-da{font-size:9px;background:rgba(232,160,0,0.15);color:var(--go2);border:1px solid rgba(232,160,0,0.25);padding:1px 7px;border-radius:8px;font-weight:600;}
-.auto-val{background:var(--ink3);border:1px solid rgba(22,163,74,0.3);border-radius:8px;padding:10px 13px;font-size:13px;color:var(--gr2);display:flex;justify-content:space-between;align-items:center;}
-.av-edit{font-size:10px;color:var(--t3);cursor:pointer;text-decoration:underline;}
-.city-hint{font-size:10px;color:var(--t3);padding:7px 10px;background:rgba(255,255,255,0.02);border-radius:6px;margin-top:5px;line-height:1.6;border-left:2px solid var(--b);}
-/* TOGGLE CARDS */
-.tgrid{display:flex;flex-direction:column;gap:8px;}
-.tcard{background:var(--ink3);border:1px solid var(--b);border-radius:10px;padding:12px 14px;display:flex;align-items:center;gap:12px;cursor:pointer;transition:border-color 0.2s,background 0.2s;}
-.tcard:hover{border-color:rgba(255,98,0,0.3);}
-.tcard.on{border-color:rgba(255,98,0,0.35);background:rgba(255,98,0,0.04);}
-.tchk{width:20px;height:20px;border-radius:5px;border:2px solid var(--b);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all 0.2s;}
-.tcard.on .tchk{background:var(--or);border-color:var(--or);}
-.tchk-ic{font-size:11px;color:#fff;display:none;}
-.tcard.on .tchk-ic{display:block;}
-.tcard-name{font-size:13px;font-weight:600;color:var(--t1);}
-.tcard-amt{font-size:11px;color:var(--or);font-weight:600;margin-top:2px;}
-.tcard-note{font-size:10px;color:var(--t3);margin-top:1px;}
-/* SLIDERS */
-.slb{background:var(--ink3);border:1px solid var(--b);border-radius:9px;padding:14px;margin-bottom:10px;}
-.slt{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;}
-.sln{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.04em;}
-.slc{display:flex;align-items:center;gap:6px;}
-.slp{font-size:12px;font-weight:800;padding:2px 10px;border-radius:10px;min-width:52px;text-align:center;}
-.slim{width:58px;background:var(--ink2);border:1px solid var(--b);border-radius:5px;padding:3px 6px;color:var(--t1);font-size:12px;font-weight:700;font-family:'Sora',sans-serif;text-align:center;outline:none;}
-.slsb{display:flex;justify-content:space-between;font-size:9px;color:var(--t3);margin-top:3px;}
-input[type=range]{width:100%;height:4px;-webkit-appearance:none;border-radius:2px;outline:none;cursor:pointer;}
-input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:16px;height:16px;border-radius:50%;cursor:pointer;box-shadow:0 0 0 3px rgba(255,255,255,0.08);}
-.sl-or input[type=range]{background:linear-gradient(to right,rgba(255,98,0,0.5),rgba(255,98,0,0.1));}
-.sl-or input[type=range]::-webkit-slider-thumb{background:var(--or);}
-.sl-or .sln{color:#ff9944;}.sl-or .slp{background:rgba(255,98,0,0.15);color:#ff9944;border:1px solid rgba(255,98,0,0.3);}
-.sl-bl input[type=range]{background:linear-gradient(to right,rgba(41,128,185,0.5),rgba(41,128,185,0.1));}
-.sl-bl input[type=range]::-webkit-slider-thumb{background:var(--bl);}
-.sl-bl .sln{color:var(--bl2);}.sl-bl .slp{background:rgba(41,128,185,0.15);color:var(--bl2);border:1px solid rgba(41,128,185,0.3);}
-.sl-go input[type=range]{background:linear-gradient(to right,rgba(232,160,0,0.5),rgba(232,160,0,0.1));}
-.sl-go input[type=range]::-webkit-slider-thumb{background:var(--go);}
-.sl-go .sln{color:var(--go2);}.sl-go .slp{background:rgba(232,160,0,0.15);color:var(--go2);border:1px solid rgba(232,160,0,0.3);}
-.sl-gr input[type=range]{background:linear-gradient(to right,rgba(22,163,74,0.5),rgba(22,163,74,0.1));}
-.sl-gr input[type=range]::-webkit-slider-thumb{background:var(--gr);}
-.sl-gr .sln{color:var(--gr2);}.sl-gr .slp{background:rgba(22,163,74,0.15);color:var(--gr2);border:1px solid rgba(22,163,74,0.3);}
-.sl-pu input[type=range]{background:linear-gradient(to right,rgba(109,40,217,0.5),rgba(109,40,217,0.1));}
-.sl-pu input[type=range]::-webkit-slider-thumb{background:#7d3c98;}
-.sl-pu .sln{color:#b06ae0;}.sl-pu .slp{background:rgba(109,40,217,0.15);color:#b06ae0;border:1px solid rgba(109,40,217,0.3);}
-/* LIVE PREVIEW */
-.preview{background:linear-gradient(135deg,rgba(255,98,0,0.08),rgba(232,160,0,0.05));border:1px solid rgba(255,98,0,0.2);border-radius:var(--r);padding:18px 20px;margin-bottom:14px;}
-.prev-title{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--or);margin-bottom:12px;}
-.prev-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;}
-.pv{text-align:center;}
-.pv-val{font-size:16px;font-weight:800;}.pv-lbl{font-size:9px;color:var(--t3);margin-top:2px;text-transform:uppercase;letter-spacing:0.05em;}
-.pv.curr .pv-val{color:var(--t2);}.pv.rev .pv-val{color:var(--or);}.pv.gain .pv-val{color:var(--gr2);}.pv.arr .pv-val{color:var(--go2);}
-/* NAV BUTTONS */
-.nav-btns{display:flex;gap:10px;margin-top:20px;}
-.btn-next{flex:1;background:linear-gradient(135deg,var(--or),#c84000);color:#fff;border:none;border-radius:10px;padding:14px;font-family:'Sora',sans-serif;font-size:15px;font-weight:800;cursor:pointer;transition:transform 0.2s,box-shadow 0.2s;animation:btnGlow 3s infinite;}
-@keyframes btnGlow{0%,100%{box-shadow:0 4px 20px rgba(255,98,0,0.3)}50%{box-shadow:0 4px 32px rgba(255,98,0,0.55)}}
-.btn-next:hover{transform:translateY(-2px);}
-.btn-back{background:var(--ink3);color:var(--t2);border:1px solid var(--b);border-radius:10px;padding:14px 20px;font-family:'Sora',sans-serif;font-size:14px;font-weight:600;cursor:pointer;transition:all 0.2s;}
-.btn-back:hover{border-color:rgba(255,98,0,0.3);color:var(--or);}
-/* LOADING */
-.loading{text-align:center;padding:60px 20px;}
-.load-emoji{font-size:52px;margin-bottom:18px;animation:bounce 0.8s infinite;}
-@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
-.load-title{font-size:22px;font-weight:800;color:#fff;margin-bottom:8px;}
-.load-msg{font-size:13px;color:var(--t2);margin-bottom:20px;}
-.load-bar{background:var(--b);border-radius:3px;height:5px;overflow:hidden;max-width:280px;margin:0 auto 16px;}
-.load-fill{height:100%;background:linear-gradient(90deg,var(--or),var(--go));border-radius:3px;animation:lfill 2.5s ease forwards;}
-@keyframes lfill{from{width:0}to{width:100%}}
-.load-steps{display:flex;flex-direction:column;gap:7px;max-width:280px;margin:0 auto;}
-.ls{font-size:12px;color:var(--t3);display:flex;align-items:center;gap:7px;opacity:0;animation:lsin 0.4s ease forwards;}
-@keyframes lsin{from{opacity:0;transform:translateX(-8px)}to{opacity:1;transform:translateX(0)}}
-/* RESULTS */
-.results-outer{max-width:900px;margin:0 auto;padding:32px 4% 80px;}
-.verdict{background:linear-gradient(135deg,var(--ink2),rgba(255,98,0,0.06));border:1px solid rgba(255,98,0,0.25);border-radius:18px;padding:26px 28px;margin-bottom:22px;position:relative;overflow:hidden;}
-.verdict::before{content:'';position:absolute;top:-40px;right:-40px;width:150px;height:150px;border-radius:50%;background:radial-gradient(circle,rgba(255,140,0,0.1),transparent);pointer-events:none;}
-.vmsg{font-size:clamp(17px,2.5vw,21px);font-weight:800;color:#fff;line-height:1.35;margin-bottom:14px;letter-spacing:-0.02em;}
-.vmsg span{color:var(--or);}
-.vnums{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:16px;}
-.vn{text-align:center;}.vv{font-size:clamp(15px,2vw,19px);font-weight:800;}.vl{font-size:10px;color:var(--t2);margin-top:2px;}
-.vn.vc .vv{color:var(--t2);}.vn.vr .vv{color:var(--or);}.vn.vg .vv{color:var(--gr2);}.vn.va .vv{color:var(--go2);}
-.rbtn{background:linear-gradient(135deg,rgba(255,98,0,0.15),rgba(232,160,0,0.1));border:1px solid rgba(255,98,0,0.35);color:var(--or);padding:11px 26px;border-radius:26px;font-family:'Sora',sans-serif;font-size:14px;font-weight:700;cursor:pointer;transition:all 0.3s;display:flex;align-items:center;gap:7px;margin:0 auto;}
-.rbtn:hover{background:rgba(255,98,0,0.25);transform:translateY(-1px);}
-/* ANALYSIS */
-.step{margin-bottom:22px;}
-.steplbl{display:flex;align-items:center;gap:10px;margin-bottom:12px;}
-.stepn{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;flex-shrink:0;}
-.stept{font-size:16px;font-weight:800;letter-spacing:-0.02em;}
-/* SLIPS */
-.slips{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
-.slip{background:var(--ink2);border:1px solid var(--b);border-radius:var(--r);overflow:hidden;box-shadow:var(--sh);}
-.shd{padding:13px 16px 10px;border-bottom:1px solid var(--b);}
-.shd .stg{font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:.1em;margin-bottom:3px;}
-.shd h3{font-size:18px;font-weight:800;letter-spacing:-0.02em;}
-.shd p{font-size:11px;color:var(--t3);margin-top:2px;}
-.shd.cur .stg{color:var(--t3);}.shd.cur h3{color:var(--t2);}
-.shd.rev .stg{color:var(--or);}.shd.rev h3{color:#fff;}
-.ssec{font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:.1em;padding:6px 16px 3px;color:var(--t3);background:var(--b2);}
-.sr{display:flex;justify-content:space-between;align-items:center;padding:6px 16px;border-bottom:1px solid var(--b2);font-size:12px;}
-.sr:last-child{border-bottom:none;}
-.sn{color:var(--t2);}.sn small{font-size:10px;color:var(--t3);display:block;margin-top:1px;}.sv{font-weight:600;}
-.sr.ern .sv{color:var(--gr2);}.sr.nil .sv{color:var(--t3);}.sr.ded .sv{color:var(--rd);}
-.sr.grs{background:rgba(22,163,74,0.07);border-top:1px solid rgba(22,163,74,0.15)!important;}
-.sr.grs .sn,.sr.grs .sv{font-weight:800;color:var(--gr2);font-size:13px;}
-.sr.ddt{background:rgba(192,57,43,0.06);border-top:1px solid rgba(192,57,43,0.12)!important;}
-.sr.ddt .sn,.sr.ddt .sv{font-weight:800;color:var(--rd);}
-.sr.net{padding:13px 16px!important;background:linear-gradient(135deg,rgba(255,98,0,0.1),rgba(232,160,0,0.08));border-top:2px solid rgba(255,98,0,0.3)!important;}
-.sr.net .sn{font-weight:800;color:#fff;font-size:13px;}.sr.net .sv{font-size:20px!important;font-weight:800;color:var(--or)!important;}
+.ts{background:#FF9933;flex:1}.tw{background:#fff;flex:1}.ti{background:#138808;flex:1}
+[data-theme="light"] .tw{background:#222;}
+.logo-main{font-size:20px;font-weight:900;color:var(--t1);letter-spacing:-0.04em;}
+.logo-main em{color:var(--or);font-style:normal;}
+.logo-sub{font-size:9px;color:var(--t3);letter-spacing:.12em;text-transform:uppercase;margin-top:1px;}
+.nav-right{margin-left:auto;display:flex;align-items:center;gap:8px;}
+.nav-link{color:var(--t2);font-size:12px;font-weight:500;padding:5px 10px;border-radius:7px;transition:all .2s;}
+.nav-link:hover{color:var(--or);background:var(--or3);}
+.theme-btn{background:var(--bg3);border:1px solid var(--bd);border-radius:20px;padding:5px 12px;font-size:11px;font-weight:700;color:var(--t2);cursor:pointer;font-family:'Sora',sans-serif;transition:all .2s;display:flex;align-items:center;gap:5px;}
+.theme-btn:hover{border-color:rgba(255,98,0,.4);color:var(--or);}
+.nav-cta{background:linear-gradient(135deg,var(--or),#c84000);color:#fff;border:none;border-radius:8px;padding:7px 16px;font-family:'Sora',sans-serif;font-size:12px;font-weight:700;cursor:pointer;transition:transform .2s;}
+.nav-cta:hover{transform:translateY(-1px);box-shadow:0 4px 16px rgba(255,98,0,.4);}
+
+/* ═══ HERO ═══ */
+.hero{background:linear-gradient(135deg,rgba(255,98,0,.06),rgba(232,160,0,.03));border-bottom:1px solid var(--bd);padding:28px 4% 20px;}
+.hero-inner{max-width:1240px;margin:0 auto;}
+.hero-badge{display:inline-flex;align-items:center;gap:7px;background:var(--or3);border:1px solid rgba(255,98,0,.2);border-radius:20px;padding:4px 14px;font-size:10px;font-weight:700;color:var(--or2);letter-spacing:.06em;text-transform:uppercase;margin-bottom:10px;}
+.pulse{width:6px;height:6px;border-radius:50%;background:var(--or);animation:pulse 2s infinite;display:inline-block;}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.6)}}
+.hero h1{font-size:clamp(20px,3vw,32px);font-weight:900;letter-spacing:-.03em;color:var(--t1);margin-bottom:5px;}
+.hero h1 span{color:var(--or);}
+.hero-sub{font-size:13px;color:var(--t2);font-weight:300;}
+.warn-pill{display:inline-flex;align-items:center;gap:5px;background:var(--go3);border:1px solid rgba(232,160,0,.2);border-radius:6px;padding:4px 10px;font-size:10px;color:var(--go2);margin-top:8px;}
+
+/* ═══ TABS ═══ */
+.tab-bar{background:var(--bg2);border-bottom:1px solid var(--bd);padding:0 4%;transition:background .3s;}
+.tab-inner{max-width:1240px;margin:0 auto;display:flex;gap:0;}
+.tab-btn{padding:13px 18px;font-size:12px;font-weight:600;color:var(--t3);background:none;border:none;border-bottom:2px solid transparent;cursor:pointer;font-family:'Sora',sans-serif;transition:all .2s;white-space:nowrap;}
+.tab-btn.on{color:var(--or);border-bottom-color:var(--or);}
+.tab-btn:hover:not(.on){color:var(--t2);}
+
+/* ═══ MAIN LAYOUT ═══ */
+.main{max-width:1240px;margin:0 auto;padding:20px 4% 60px;}
+.layout{display:grid;grid-template-columns:400px 1fr;gap:20px;align-items:start;}
+
+/* ═══ INPUT PANEL ═══ */
+.inp-panel{background:var(--bg2);border:1px solid var(--bd);border-radius:var(--r);overflow:hidden;position:sticky;top:72px;transition:background .3s;}
+.inp-head{background:var(--bg3);padding:14px 18px;border-bottom:1px solid var(--bd);}
+.inp-head h3{font-size:13px;font-weight:700;color:var(--t1);}
+.inp-head p{font-size:11px;color:var(--t3);margin-top:2px;}
+.inp-body{padding:16px 18px;}
+.sec-lbl{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--t3);margin:14px 0 8px;padding-bottom:5px;border-bottom:1px solid var(--bd);display:flex;align-items:center;gap:6px;}
+.sec-lbl:first-child{margin-top:0;}
+.f{margin-bottom:10px;}
+.f label{font-size:11px;font-weight:600;color:var(--t2);display:flex;align-items:center;gap:5px;margin-bottom:4px;}
+.f label .opt{font-size:9px;font-weight:500;background:var(--bg3);color:var(--t3);padding:1px 5px;border-radius:3px;}
+.f input,.f select{width:100%;background:var(--inp-bg);border:1px solid var(--inp-bd);border-radius:8px;padding:9px 11px;color:var(--t1);font-family:'Sora',sans-serif;font-size:12px;outline:none;transition:border-color .2s;}
+.f input:focus,.f select:focus{border-color:var(--or);}
+.f input.err,.f select.err{border-color:var(--rd2);}
+.f select option{background:var(--bg2);}
+.f-err{font-size:10px;color:var(--rd2);margin-top:3px;display:none;}
+.f-hint{font-size:10px;color:var(--t3);margin-top:3px;line-height:1.4;}
+.f-ok{font-size:10px;color:var(--gr2);margin-top:3px;}
+.f-warn{font-size:10px;color:var(--go2);margin-top:3px;}
+.f2{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+.sld-wrap{display:flex;align-items:center;gap:7px;}
+.sld-wrap input[type=range]{flex:1;-webkit-appearance:none;height:4px;background:var(--bg4);border-radius:2px;outline:none;}
+.sld-wrap input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:16px;height:16px;border-radius:50%;background:var(--or);cursor:pointer;}
+.sld-val{font-size:12px;font-weight:700;color:var(--or);min-width:44px;text-align:right;}
+.fit-marks{display:flex;justify-content:space-between;font-size:9px;color:var(--t3);margin-top:3px;}
+.city-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;margin-top:4px;}
+.city-btn{padding:8px 6px;border:1px solid var(--bd);border-radius:8px;background:var(--bg3);cursor:pointer;text-align:center;transition:all .2s;font-family:'Sora',sans-serif;}
+.city-btn.on{border-color:var(--or);background:var(--or3);}
+.city-btn .cn{font-size:12px;font-weight:700;color:var(--t1);}
+.city-btn .ch{font-size:9px;color:var(--t3);margin-top:1px;}
+.city-btn .ct{font-size:9px;color:var(--or2);margin-top:1px;}
+.city-btn.on .cn{color:var(--or);}
+.city-btn.on .ch,.city-btn.on .ct{color:var(--or2);}
+.tog-row{display:flex;gap:6px;margin-top:4px;}
+.tog{flex:1;padding:7px;border:1px solid var(--bd);border-radius:8px;background:var(--bg3);cursor:pointer;font-size:11px;font-weight:600;color:var(--t2);font-family:'Sora',sans-serif;transition:all .2s;text-align:center;}
+.tog.on{border-color:var(--or);background:var(--or3);color:var(--or);}
+.chk-list{display:flex;flex-direction:column;gap:7px;margin-top:4px;}
+.chk-item{display:flex;align-items:flex-start;gap:7px;font-size:11px;color:var(--t2);cursor:pointer;line-height:1.4;}
+.chk-item input[type=checkbox]{accent-color:var(--or);margin-top:2px;flex-shrink:0;width:13px;height:13px;}
+.chk-hint{font-size:10px;color:var(--t3);margin-left:20px;margin-top:-3px;line-height:1.3;}
+.ta-box{background:var(--bg3);border:1px solid var(--bd);border-radius:7px;padding:9px 11px;margin-top:7px;}
+.ta-box .ta-lbl{font-size:10px;color:var(--t3);margin-bottom:3px;}
+.ta-box .ta-val{font-size:12px;font-weight:700;color:var(--or2);}
+
+/* BUTTONS */
+.calc-btn{width:100%;background:linear-gradient(135deg,var(--or),#c84000);color:#fff;border:none;border-radius:9px;padding:13px;font-family:'Sora',sans-serif;font-size:14px;font-weight:800;cursor:pointer;transition:transform .2s;display:flex;align-items:center;justify-content:center;gap:7px;animation:glow 3s infinite;}
+@keyframes glow{0%,100%{box-shadow:0 4px 20px rgba(255,98,0,.3)}50%{box-shadow:0 4px 36px rgba(255,98,0,.55)}}
+.calc-btn:hover{transform:translateY(-1px);}
+.calc-btn.dirty{animation:none;box-shadow:0 0 0 2px var(--or);}
+.reset-row{display:flex;justify-content:space-between;align-items:center;margin-top:8px;}
+.reset-link{font-size:11px;color:var(--t3);cursor:pointer;padding:3px 6px;border-radius:5px;transition:color .2s;}
+.reset-link:hover{color:var(--rd2);}
+.disc-small{font-size:10px;color:var(--t3);text-align:center;line-height:1.5;}
+
+/* RECALC BANNER */
+.recalc-banner{background:var(--go3);border:1px solid rgba(232,160,0,.3);border-radius:8px;padding:8px 12px;font-size:11px;color:var(--go2);margin-bottom:12px;display:none;align-items:center;gap:8px;}
+.recalc-banner.show{display:flex;}
+
+/* ═══ RESULTS ═══ */
+.res-panel{display:flex;flex-direction:column;gap:16px;}
+.empty-state{background:var(--bg2);border:1px solid var(--bd);border-radius:var(--r);padding:60px 20px;text-align:center;transition:background .3s;}
+.es-icon{font-size:44px;margin-bottom:14px;}
+.es-title{font-size:17px;font-weight:700;color:var(--t1);margin-bottom:5px;}
+.es-sub{font-size:12px;color:var(--t3);font-weight:300;}
+
+/* RESULT CARD */
+.rcard{background:var(--bg2);border:1px solid var(--bd);border-radius:var(--r);overflow:hidden;transition:background .3s;}
+.rc-head{background:var(--bg3);padding:12px 18px;border-bottom:1px solid var(--bd);display:flex;align-items:center;justify-content:space-between;cursor:pointer;user-select:none;transition:background .3s;}
+.rc-head h4{font-size:12px;font-weight:700;color:var(--t1);display:flex;align-items:center;gap:7px;}
+.sn{width:20px;height:20px;border-radius:50%;background:var(--or3);border:1px solid rgba(255,98,0,.3);font-size:10px;font-weight:700;color:var(--or);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.rc-tog{font-size:11px;color:var(--t3);transition:transform .3s;}
+.rc-tog.open{transform:rotate(180deg);}
+.rc-body{padding:18px;display:none;}
+.rc-body.show{display:block;}
+.always-open .rc-head{cursor:default;}
+.always-open .rc-body{display:block;}
+
+/* BIG METRICS */
+.big2{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px;}
+.bm{border-radius:10px;padding:16px;text-align:center;}
+.bm-g{background:linear-gradient(135deg,rgba(22,163,74,.1),rgba(22,163,74,.05));border:1px solid rgba(22,163,74,.2);}
+.bm-o{background:linear-gradient(135deg,rgba(255,98,0,.1),rgba(232,160,0,.05));border:1px solid rgba(255,98,0,.2);}
+.bm-lbl{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:5px;}
+.bm-g .bm-lbl{color:var(--gr2);}
+.bm-o .bm-lbl{color:var(--or2);}
+.bm-big{font-size:clamp(18px,2.5vw,26px);font-weight:900;letter-spacing:-.03em;line-height:1.1;}
+.bm-g .bm-big{color:var(--gr2);}
+.bm-o .bm-big{color:var(--or);}
+.bm-net{font-size:12px;margin-top:4px;}
+.bm-g .bm-net{color:var(--gr);}
+.bm-o .bm-net{color:var(--go);}
+.bm-sub{font-size:10px;margin-top:2px;}
+.bm-g .bm-sub{color:var(--gr);}
+.bm-o .bm-sub{color:var(--go2);}
+
 /* TABLES */
-.twrap{background:var(--ink2);border:1px solid var(--b);border-radius:var(--r);overflow:hidden;box-shadow:var(--sh);}
-.thdr{padding:12px 17px;border-bottom:1px solid var(--b);display:flex;justify-content:space-between;align-items:center;}
-.thdr h3{font-size:14px;font-weight:700;}
+.tbl-wrap{overflow-x:auto;margin-top:10px;}
 .tbl{width:100%;border-collapse:collapse;font-size:11px;}
-.tbl th{padding:7px 12px;text-align:right;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--t3);background:rgba(255,255,255,.02);border-bottom:1px solid var(--b);}
+.tbl th{background:var(--bg3);padding:7px 9px;text-align:right;font-weight:600;font-size:10px;color:var(--t3);border-bottom:1px solid var(--bd);white-space:nowrap;transition:background .3s;}
 .tbl th:first-child{text-align:left;}
-.tbl td{padding:7px 12px;border-bottom:1px solid var(--b2);color:var(--t2);text-align:right;}
-.tbl td:first-child{text-align:left;}
-.tbl tr:hover td{background:rgba(255,255,255,.015);}
+.tbl td{padding:6px 9px;text-align:right;border-bottom:1px solid var(--bd2);color:var(--t2);}
+.tbl td:first-child{text-align:left;color:var(--t1);}
 .tbl tr:last-child td{border-bottom:none;}
-.ir td{background:rgba(255,98,0,.04)!important;}.ir td:first-child{border-left:3px solid var(--or);padding-left:9px;}
-.dar td{background:rgba(232,160,0,.03)!important;}.dar td:first-child{border-left:3px solid var(--go);}
-.tmo{font-weight:700;color:var(--t1);}.tpos{color:var(--gr2);font-weight:700;}.tneg{color:var(--rd);font-weight:600;}
-.tcum{color:var(--go2);font-weight:800;}.tyr{color:var(--or);font-weight:800;font-size:13px;}.tnet{color:var(--go2);font-weight:800;}
-.trem{font-size:10px;color:var(--t3);font-style:italic;text-align:left!important;}
+.tbl .gain{color:var(--gr2);font-weight:600;}
+.tbl .loss{color:var(--rd2);}
+.tbl .info{color:var(--bl2);}
+.tbl .warn{color:var(--go2);}
+.tbl .tot td{background:var(--bg3);font-weight:700;font-size:12px;border-top:1px solid var(--bd);}
+.tbl .grand td{font-weight:700;font-size:13px;border-top:1px solid rgba(255,98,0,.25);padding:8px 9px;}
+.tbl .mk td{background:rgba(232,160,0,.06);color:var(--go2);font-weight:600;font-size:10px;padding:4px 9px;text-align:left!important;border-bottom:1px solid rgba(232,160,0,.15);}
+.tbl .impl td{background:rgba(22,163,74,.06);color:var(--gr2);font-weight:600;font-size:10px;padding:4px 9px;text-align:left!important;border-top:1px solid rgba(22,163,74,.2);}
+
+/* NOTES */
+.note{border-radius:8px;padding:9px 13px;font-size:11px;line-height:1.6;margin-top:9px;}
+.note-g{background:var(--gr3);border:1px solid rgba(22,163,74,.2);color:var(--gr2);}
+.note-o{background:var(--or3);border:1px solid rgba(255,98,0,.2);color:var(--or2);}
+.note-go{background:var(--go3);border:1px solid rgba(232,160,0,.2);color:var(--go2);}
+.note-rd{background:var(--rd3);border:1px solid rgba(220,38,38,.2);color:var(--rd2);}
+.note-bl{background:var(--bl3);border:1px solid rgba(29,111,187,.2);color:var(--bl2);}
+
+/* CHARTS */
+.chart-wrap{margin-top:14px;position:relative;}
+.chart-wrap canvas{max-height:240px;}
+
+/* INPUT GRID for Section 1 */
+.inp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;}
+.ig-item{background:var(--bg3);border-radius:8px;padding:8px 10px;transition:background .3s;}
+.ig-lbl{font-size:9px;color:var(--t3);text-transform:uppercase;letter-spacing:.05em;margin-bottom:3px;}
+.ig-val{font-size:12px;font-weight:600;color:var(--t1);}
+.ig-val.warn{color:var(--go2);}
+.ig-val.info{color:var(--or2);}
+.ig-full{grid-column:1/-1;}
+
+/* SHARE CARD */
+.share-card{background:var(--bg3);border:1px solid rgba(255,98,0,.2);border-radius:10px;padding:18px;position:relative;overflow:hidden;transition:background .3s;}
+.share-card::before{content:'₹';position:absolute;font-size:100px;font-weight:900;opacity:.03;right:-5px;top:-5px;color:var(--or);pointer-events:none;}
+.sc-head{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px;padding-bottom:10px;border-bottom:1px solid var(--bd);}
+.sc-logo{font-size:14px;font-weight:800;color:var(--t1);}
+.sc-logo em{color:var(--or);font-style:normal;}
+.sc-sub{font-size:11px;color:var(--t2);margin-top:2px;}
+.sc-warn{font-size:9px;background:var(--go3);color:var(--go2);padding:2px 7px;border-radius:4px;border:1px solid rgba(232,160,0,.2);}
+.sc-grid{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-bottom:12px;}
+.sc-item{background:var(--bg2);border-radius:7px;padding:9px 11px;transition:background .3s;}
+.sc-lbl{font-size:9px;text-transform:uppercase;letter-spacing:.05em;color:var(--t3);margin-bottom:2px;}
+.sc-val{font-size:13px;font-weight:700;}
+.sc-val.g{color:var(--gr2);}
+.sc-val.o{color:var(--or);}
+.sc-disc{font-size:10px;color:var(--t3);line-height:1.6;padding-top:9px;border-top:1px solid var(--bd);}
+.sc-btns{display:flex;gap:7px;margin-top:10px;}
+.sc-btn{flex:1;padding:8px;border:1px solid var(--bd);border-radius:8px;background:var(--bg2);color:var(--t2);font-size:11px;font-weight:600;cursor:pointer;font-family:'Sora',sans-serif;transition:all .2s;display:flex;align-items:center;justify-content:center;gap:4px;}
+.sc-btn:hover{border-color:rgba(255,98,0,.4);color:var(--or);}
+.sc-btn.prime{background:var(--or3);border-color:rgba(255,98,0,.3);color:var(--or2);}
+
 /* TAX */
-.taxcard{background:var(--ink2);border:1px solid rgba(41,128,185,0.2);border-radius:var(--r);overflow:hidden;box-shadow:var(--sh);}
-.taxhdr{padding:12px 17px;background:rgba(41,128,185,0.08);border-bottom:1px solid rgba(41,128,185,0.15);}
-.taxhdr h3{font-size:14px;font-weight:700;color:var(--bl2);}
-.tr2{display:flex;justify-content:space-between;padding:7px 17px;border-bottom:1px solid var(--b2);font-size:12px;}
-.tr2:last-child{border-bottom:none;}
-.tn2{color:var(--t2);}.tn2 small{font-size:10px;color:var(--t3);display:block;}
-.tv2{font-weight:700;}
-.tr2.slb .tn2{padding-left:12px;font-size:11px;}.tr2.slb .tv2{color:var(--bl2);}
-.tr2.ttot{background:rgba(41,128,185,0.06);border-top:1px solid rgba(41,128,185,0.15)!important;}
-.tr2.ttot .tn2,.tr2.ttot .tv2{font-weight:800;color:var(--bl2);}
-.tr2.tart .tn2,.tr2.tart .tv2{color:var(--go2);font-weight:700;}
-.anote{padding:10px 17px;font-size:11px;color:var(--t3);background:var(--b2);line-height:1.7;}
-/* INVESTMENT TABS */
-.itabs{display:flex;gap:5px;margin-bottom:12px;flex-wrap:wrap;}
-.itab{padding:7px 13px;border-radius:8px;border:1px solid var(--b);background:var(--ink3);color:var(--t2);font-family:'Sora',sans-serif;font-size:12px;font-weight:600;cursor:pointer;transition:all .2s;}
-.itab.act{background:var(--or);color:#fff;border-color:var(--or);}
-.ipane{display:none;}.ipane.act{display:block;}
-.igrid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;}
-.ic{background:var(--ink3);border:1px solid var(--b);border-radius:10px;padding:13px;text-align:center;transition:transform .2s,border-color .2s;}
-.ic:hover{transform:translateY(-2px);border-color:rgba(255,98,0,0.35);}
-.ici{font-size:22px;margin-bottom:5px;}.icl{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--t3);margin-bottom:3px;}
-.icv{font-size:15px;font-weight:800;color:var(--go2);line-height:1.2;}.ics{font-size:10px;color:var(--t3);margin-top:3px;line-height:1.4;}
-.inote{margin-top:10px;padding:9px 12px;background:var(--ink3);border-radius:7px;font-size:11px;color:var(--t3);line-height:1.7;}
-.da-note{background:rgba(232,160,0,0.07);border:1px solid rgba(232,160,0,0.2);border-radius:8px;padding:9px 13px;font-size:11px;color:var(--go2);margin-bottom:10px;line-height:1.7;}
-/* LIKE */
-.likesec{background:linear-gradient(135deg,var(--ink2),var(--ink3));border:1px solid var(--b);border-radius:var(--r);padding:22px;text-align:center;box-shadow:var(--sh);}
-.liketitle{font-size:16px;font-weight:700;margin-bottom:5px;}
-.likesub{font-size:12px;color:var(--t3);margin-bottom:14px;}
-.likebtn{background:none;border:2px solid rgba(255,98,0,0.3);border-radius:50%;width:66px;height:66px;font-size:28px;cursor:pointer;transition:all .3s;margin:0 auto 8px;display:block;}
-.likebtn:hover{border-color:var(--or);transform:scale(1.1);}
-.likebtn.liked{border-color:var(--or);background:rgba(255,98,0,0.1);animation:hb .4s ease;}
-@keyframes hb{0%{transform:scale(1)}50%{transform:scale(1.3)}100%{transform:scale(1.05)}}
-.likecnt{font-size:24px;font-weight:800;color:var(--or);}
-.likelbl{font-size:11px;color:var(--t3);margin-top:3px;}
-.abar{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:14px;}
-.abtn{display:flex;align-items:center;gap:5px;padding:9px 16px;border-radius:8px;border:none;font-family:'Sora',sans-serif;font-size:12px;font-weight:700;cursor:pointer;transition:transform .15s;text-decoration:none;}
-.abtn:hover{transform:translateY(-1px);}
-.bwa{background:#25D366;color:#fff;}.btw{background:#1D9BF0;color:#fff;}
-.bpdf{background:linear-gradient(135deg,var(--or),#c04000);color:#fff;}
-.bcp{background:var(--ink3);color:var(--t1);border:1px solid var(--b);}
-.disc{font-size:10px;color:var(--t3);margin-top:12px;line-height:1.7;padding:9px;background:var(--b2);border-radius:7px;}
-/* CS COMING SOON */
-.cs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px;}
-.cs-card{background:var(--ink2);border:1px solid var(--b);border-radius:var(--r);padding:18px;text-align:center;transition:border-color .2s,transform .2s;}
-.cs-card:hover{border-color:rgba(255,98,0,0.3);transform:translateY(-2px);}
-.cs-icon{font-size:26px;margin-bottom:8px;}.cs-name{font-size:13px;font-weight:700;margin-bottom:5px;}
-.cs-badge{display:inline-block;background:rgba(109,40,217,0.15);color:#b06ae0;border:1px solid rgba(109,40,217,0.3);font-size:9px;font-weight:700;padding:2px 8px;border-radius:10px;margin-bottom:8px;}
-.cs-desc{font-size:11px;color:var(--t3);line-height:1.5;margin-bottom:10px;}
-.notify-btn{background:var(--ink3);border:1px solid var(--b);color:var(--t2);padding:6px 14px;border-radius:7px;font-family:'Sora',sans-serif;font-size:11px;font-weight:600;cursor:pointer;transition:all .2s;width:100%;}
-.notify-btn:hover{border-color:var(--or);color:var(--or);}
-.notify-btn.notified{background:rgba(22,163,74,0.1);border-color:var(--gr2);color:var(--gr2);}
-.da-teaser{background:var(--ink2);border:1px solid rgba(109,40,217,.3);border-radius:var(--r);padding:18px;text-align:center;margin-top:18px;}
-.da-teaser h3{font-size:14px;font-weight:700;color:#b06ae0;margin-bottom:5px;}
-.da-teaser p{font-size:11px;color:var(--t3);margin-bottom:10px;line-height:1.6;}
-.thumbup-btn{background:rgba(109,40,217,.15);border:1px solid rgba(109,40,217,.3);color:#b06ae0;padding:8px 20px;border-radius:18px;font-family:'Sora',sans-serif;font-size:12px;font-weight:700;cursor:pointer;transition:all .2s;display:inline-flex;align-items:center;gap:7px;}
-.thumbup-btn:hover{background:rgba(109,40,217,.25);}
-/* CONFETTI */
-.cp{position:fixed;width:8px;height:8px;border-radius:2px;animation:cf 2.5s ease forwards;pointer-events:none;z-index:9999;}
-@keyframes cf{0%{transform:translateY(-20px) rotate(0deg);opacity:1}100%{transform:translateY(100vh) rotate(720deg);opacity:0}}
+.tax2{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.tc{background:var(--bg3);border:1px solid var(--bd);border-radius:9px;overflow:hidden;transition:background .3s;}
+.tc-head{padding:9px 13px;border-bottom:1px solid var(--bd);display:flex;justify-content:space-between;align-items:center;transition:background .3s;}
+.tc-head h5{font-size:11px;font-weight:700;color:var(--t1);}
+.fy{font-size:9px;font-weight:700;padding:2px 7px;border-radius:4px;}
+.fy-c{background:var(--bl3);color:var(--bl2);}
+.fy-r{background:var(--go3);color:var(--go2);}
+.tc-body{padding:11px 13px;}
+.tx{display:flex;justify-content:space-between;padding:3px 0;border-bottom:1px solid var(--bd2);font-size:11px;}
+.tx:last-child{border-bottom:none;}
+.tx.tot{font-weight:700;font-size:12px;border-top:1px solid var(--bd);padding-top:6px;margin-top:3px;}
+.tx.grand{font-weight:700;font-size:13px;border-top:1px solid rgba(255,98,0,.2);padding-top:6px;margin-top:3px;}
+.tx-l{color:var(--t2);}
+.tx-v{font-family:monospace;}
+.tx-v.red{color:var(--rd2);}
+.tx-v.grn{color:var(--gr2);}
+.slab-t{width:100%;border-collapse:collapse;font-size:10px;margin:7px 0;}
+.slab-t th{padding:3px 6px;text-align:right;font-size:9px;color:var(--t3);border-bottom:1px solid var(--bd);background:var(--bg4);}
+.slab-t th:first-child{text-align:left;}
+.slab-t td{padding:3px 6px;text-align:right;border-bottom:1px solid var(--bd2);color:var(--t3);}
+.slab-t td:first-child{text-align:left;}
+.slab-t .sl-nil td{color:var(--gr);}
+.slab-t .sl-tax td{color:var(--or2);background:rgba(255,98,0,.04);}
+.slab-t .sl-act td{color:var(--go2);background:rgba(232,160,0,.06);}
+.slab-t .sl-na td{opacity:.3;}
+.eff-wrap{margin-top:9px;}
+.eff-lbl{font-size:10px;color:var(--t3);margin-bottom:3px;}
+.eff-track{height:5px;background:var(--bg4);border-radius:3px;overflow:hidden;}
+.eff-fill{height:100%;border-radius:3px;background:linear-gradient(90deg,var(--or),var(--go));}
+
+/* COMPARE TAB */
+.cmp-layout{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px;}
+.cmp-col{background:var(--bg2);border:1px solid var(--bd);border-radius:var(--r);overflow:hidden;transition:background .3s;}
+.cmp-col-head{background:var(--bg3);padding:11px 16px;border-bottom:1px solid var(--bd);display:flex;align-items:center;justify-content:space-between;transition:background .3s;}
+.cmp-col-head h4{font-size:12px;font-weight:700;color:var(--t1);}
+.emp-badge{font-size:9px;padding:2px 7px;border-radius:4px;font-weight:700;}
+.emp1{background:var(--bl3);color:var(--bl2);}
+.emp2{background:var(--pu3,rgba(109,40,217,.1));color:var(--pu2);}
+.cmp-body{padding:14px;}
+.cmp-result{background:var(--bg2);border:1px solid var(--bd);border-radius:var(--r);margin-top:14px;overflow:hidden;transition:background .3s;}
+.cmp-result-head{background:var(--bg3);padding:11px 16px;border-bottom:1px solid var(--bd);transition:background .3s;}
+.cmp-result-head h4{font-size:12px;font-weight:700;color:var(--t1);}
+.cmp-table{width:100%;border-collapse:collapse;font-size:11px;}
+.cmp-table th{background:var(--bg3);padding:7px 10px;font-weight:600;font-size:10px;color:var(--t3);border-bottom:1px solid var(--bd);transition:background .3s;}
+.cmp-table th:first-child{text-align:left;}
+.cmp-table th:not(:first-child){text-align:right;}
+.cmp-table td{padding:7px 10px;border-bottom:1px solid var(--bd2);text-align:right;}
+.cmp-table td:first-child{text-align:left;color:var(--t2);font-size:11px;}
+.cmp-table .cmp-tot td{background:var(--bg3);font-weight:700;border-top:1px solid var(--bd);}
+.winner{border:2px solid var(--gr2);border-radius:8px;overflow:hidden;}
+.winner-badge{background:var(--gr3);color:var(--gr2);font-size:10px;font-weight:700;padding:3px 10px;text-align:center;border-bottom:1px solid rgba(22,163,74,.2);}
+
+/* CONFIRM DIALOG */
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:800;display:none;align-items:center;justify-content:center;}
+.overlay.show{display:flex;}
+.dialog{background:var(--bg2);border:1px solid var(--bd);border-radius:var(--r);padding:24px;max-width:360px;width:90%;transition:background .3s;}
+.dialog h3{font-size:15px;font-weight:700;margin-bottom:8px;color:var(--t1);}
+.dialog p{font-size:13px;color:var(--t2);margin-bottom:18px;line-height:1.6;}
+.dialog-btns{display:flex;gap:8px;}
+.dbtn{flex:1;padding:9px;border-radius:8px;font-family:'Sora',sans-serif;font-size:12px;font-weight:700;cursor:pointer;border:1px solid var(--bd);}
+.dbtn-cancel{background:var(--bg3);color:var(--t2);}
+.dbtn-confirm{background:var(--rd3);border-color:rgba(220,38,38,.3);color:var(--rd2);}
+
+/* MOBILE */
+.mobile-jump{display:none;width:100%;background:linear-gradient(135deg,var(--or),#c84000);color:#fff;border:none;border-radius:9px;padding:11px;font-family:'Sora',sans-serif;font-size:13px;font-weight:700;cursor:pointer;margin-top:10px;text-align:center;}
+.stt{position:fixed;bottom:20px;right:20px;width:40px;height:40px;border-radius:50%;background:var(--or);color:#fff;border:none;font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(255,98,0,.4);transition:opacity .3s,transform .2s;opacity:0;z-index:300;}
+.stt.show{opacity:1;}
+.stt:hover{transform:scale(1.1);}
+
 /* FOOTER */
-footer{background:var(--ink2);border-top:1px solid var(--b);padding:20px 4%;text-align:center;}
-footer p{font-size:11px;color:var(--t3);line-height:1.8;}
-footer a{color:var(--or);text-decoration:none;}
-footer a:hover{text-decoration:underline;}
-@media print{nav,.prog-wrap,.nav-btns,.wstep,.loading,.likesec,.da-teaser,.cs-grid,footer{display:none!important;}.results-outer{padding:0;}}
-@media(max-width:700px){.slips{grid-template-columns:1fr;}.vnums{grid-template-columns:1fr 1fr;}.igrid,.cs-grid{grid-template-columns:1fr 1fr;}.prev-grid{grid-template-columns:1fr 1fr;}.r2{grid-template-columns:1fr;}}
+.disc-bar{background:rgba(255,98,0,.03);border-top:1px solid rgba(255,98,0,.08);padding:10px 4%;font-size:10px;color:var(--t3);text-align:center;line-height:1.8;}
+footer{background:var(--bg2);border-top:1px solid var(--bd);padding:20px 4%;transition:background .3s;}
+.foot-inner{max-width:1240px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;font-size:11px;color:var(--t3);}
+.foot-inner a{color:var(--or);}
+
+/* PRINT */
+@media print{
+  .nav,.tab-bar,.inp-panel,.stt,.sc-btns,.disc-bar,.recalc-banner{display:none!important;}
+  .layout{grid-template-columns:1fr!important;}
+  .rcard{break-inside:avoid;}
+  body{background:#fff;color:#000;}
+  .tbl th{background:#f0f0f0!important;}
+  .ig-item,.bm,.ta-box,.note,.sc-item{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+}
+
+@media(max-width:900px){
+  .layout{grid-template-columns:1fr;}
+  .inp-panel{position:static;}
+  .tax2{grid-template-columns:1fr;}
+  .cmp-layout{grid-template-columns:1fr;}
+  .big2{grid-template-columns:1fr;}
+  .mobile-jump{display:block;}
+}
+@media(max-width:600px){
+  .sc-grid{grid-template-columns:1fr;}
+  .inp-grid{grid-template-columns:1fr 1fr;}
+  .hero h1{font-size:20px;}
+}
 </style>
 </head>
 <body>
 
 <!-- NAV -->
-<nav>
+<nav class="nav">
   <a href="index.html" class="nav-logo">
-    <div class="tri"><div class="t1"></div><div class="t2"></div><div class="t3"></div></div>
-    <div style="display:flex;flex-direction:column;line-height:1;">
-      <span class="logo-main">m<em>class</em>.in</span>
-      <span class="logo-sub">Middle Class India</span>
-    </div>
+    <div class="tri"><div class="ts"></div><div class="tw"></div><div class="ti"></div></div>
+    <div><div class="logo-main">m<em>class</em>.in</div><div class="logo-sub">Middle Class India</div></div>
   </a>
-  <a href="index.html" class="nav-back">← Back to Home</a>
+  <div class="nav-right">
+    <a href="index.html" class="nav-link">← Home</a>
+    <a href="jobs.html" class="nav-link">🔔 Jobs</a>
+    <button class="theme-btn" onclick="toggleTheme()" id="themeBtn">☀️ Light</button>
+    <button class="nav-cta" onclick="scrollToCalc()">🏛️ Calculate Now</button>
+  </div>
 </nav>
 
-<!-- PROGRESS BAR -->
-<div class="prog-wrap" id="progWrap">
-  <div class="prog-steps">
-    <div class="ps"><div class="ps-dot active" id="pd1">1</div><div class="ps-label active">You</div></div>
-    <div class="ps-line" id="pl1"></div>
-    <div class="ps"><div class="ps-dot" id="pd2">2</div><div class="ps-label">Salary</div></div>
-    <div class="ps-line" id="pl2"></div>
-    <div class="ps"><div class="ps-dot" id="pd3">3</div><div class="ps-label">Allowances</div></div>
-    <div class="ps-line" id="pl3"></div>
-    <div class="ps"><div class="ps-dot" id="pd4">4</div><div class="ps-label">Deductions</div></div>
-    <div class="ps-line" id="pl4"></div>
-    <div class="ps"><div class="ps-dot" id="pd5">5</div><div class="ps-label">8th CPC</div></div>
-    <div class="ps-line" id="pl5"></div>
-    <div class="ps"><div class="ps-dot" id="pd6">✓</div><div class="ps-label">Results</div></div>
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge"><span class="pulse"></span> 8th Pay Commission — Live Calculator</div>
+    <h1>8th CPC <span>Salary Calculator</span></h1>
+    <p class="hero-sub">Revised salary · Monthly gain · Total arrears · NPS impact · Income tax — All in one place. Free for all central govt employees.</p>
+    <div class="warn-pill">⚠️ Estimated projection only — 8th Pay Commission report not yet submitted. Official figures may differ.</div>
   </div>
 </div>
 
-<!-- WIZARD STEPS -->
-<div class="wizard" id="wizardArea">
-
-<!-- STEP 1: WHO ARE YOU -->
-<div class="wstep active" id="step1">
-  <div class="step-hdr">
-    <div class="step-emoji">👋</div>
-    <div class="step-title">Hello! Let's calculate your <span>8th CPC salary</span></div>
-    <div class="step-sub">Takes 2 minutes. Tell us about yourself to get started.</div>
-  </div>
-  <div class="fcard">
-    <div class="fcard-title">Your Details</div>
-    <div class="r2">
-      <div class="fg"><label class="fl">Designation <span class="fl-hint">(optional)</span></label><input type="text" class="fi" id="desig" placeholder="e.g. AAO, Inspector, Clerk"></div>
-      <div class="fg"><label class="fl">Department <span class="fl-hint">(optional)</span></label><input type="text" class="fi" id="dept" placeholder="e.g. Income Tax, Postal"></div>
-    </div>
-    <div class="r2">
-      <div class="fg">
-        <label class="fl">Pay Level (7th CPC)</label>
-        <select class="fsel" id="payLevel" onchange="onLevel()">
-          <option value="1">Level 1 — starts ₹18,000</option><option value="2">Level 2 — starts ₹19,900</option>
-          <option value="3">Level 3 — starts ₹21,700</option><option value="4">Level 4 — starts ₹25,500</option>
-          <option value="5">Level 5 — starts ₹29,200</option><option value="6">Level 6 — starts ₹35,400</option>
-          <option value="7">Level 7 — starts ₹44,900</option><option value="8">Level 8 — starts ₹47,600</option>
-          <option value="9" selected>Level 9 — starts ₹53,100</option><option value="10">Level 10 — starts ₹56,100</option>
-          <option value="11">Level 11 — starts ₹67,700</option><option value="12">Level 12 — starts ₹78,800</option>
-          <option value="13">Level 13 — starts ₹1,23,100</option><option value="13A">Level 13A — starts ₹1,31,100</option>
-          <option value="14">Level 14 — starts ₹1,44,200</option><option value="15">Level 15 — starts ₹1,82,200</option>
-          <option value="16">Level 16 — starts ₹2,05,400</option><option value="17">Level 17 — starts ₹2,25,000</option>
-          <option value="18">Level 18 — ₹2,50,000</option>
-        </select>
-      </div>
-      <div class="fg">
-        <label class="fl">Employee Group</label>
-        <select class="fsel" id="grp" onchange="onGrp()">
-          <option value="A">Group A (Level 10 and above)</option>
-          <option value="B" selected>Group B (Level 6 to 9)</option>
-          <option value="C">Group C (Level 1 to 5)</option>
-        </select>
-      </div>
-    </div>
-    <div class="fg">
-      <label class="fl">Annual Increment Month</label>
-      <select class="fsel" id="incrMo">
-        <option value="1" selected>January</option>
-        <option value="7">July</option>
-      </select>
-    </div>
-  </div>
-  <div class="nav-btns"><button class="btn-next" onclick="goNext(1)">Continue — Enter Salary Details →</button></div>
-</div>
-
-<!-- STEP 2: SALARY -->
-<div class="wstep" id="step2">
-  <div class="step-hdr">
-    <div class="step-emoji">💰</div>
-    <div class="step-title">Your <span>Current Salary</span></div>
-    <div class="step-sub">Enter your basic pay from your pay slip. Select city to auto-calculate allowances.</div>
-  </div>
-  <div class="fcard">
-    <div class="fcard-title">Basic Pay</div>
-    <div class="fg">
-      <label class="fl">Select from Pay Matrix <span class="fl-hint">— or type your exact amount below</span></label>
-      <select class="fsel" id="basicSel" onchange="onBSel()" style="margin-bottom:8px"></select>
-      <input type="number" class="fi" id="basicPay" value="63300" placeholder="Enter exact basic pay from pay slip">
-    </div>
-    <div class="r2">
-      <div class="fg"><label class="fl">Current DA % <span class="tag-da">EDITABLE</span></label><input type="number" class="fi" id="daP" value="60" min="0" max="100"><div style="font-size:10px;color:var(--t3);margin-top:4px">Default 60% from Jan 2026. Update when DA is revised.</div></div>
-      <div class="fg"><label class="fl">DA Effective From</label><input type="text" class="fi" id="daEff" value="Jan 2026"></div>
-    </div>
-  </div>
-  <div class="fcard">
-    <div class="fcard-title">City and Accommodation</div>
-    <div class="fg">
-      <label class="fl">Your City Class</label>
-      <select class="fsel" id="city" onchange="onCity()">
-        <option value="X">X Class — Metro City (HRA 30% · Higher TA)</option>
-        <option value="Y">Y Class — Tier-2 City (HRA 20%)</option>
-        <option value="Z">Z Class — Other Town (HRA 10%)</option>
-        <option value="0">Government Accommodation (HRA = Nil)</option>
-      </select>
-      <div class="city-hint"><strong style="color:var(--t2)">X:</strong> Delhi, Mumbai, Chennai, Kolkata, Bengaluru, Hyderabad, Ahmedabad, Pune &nbsp;|&nbsp; <strong style="color:var(--t2)">Y:</strong> Jaipur, Lucknow, Patna, Kochi, Nagpur &amp; major cities &nbsp;|&nbsp; <strong style="color:var(--t2)">Z:</strong> All other towns</div>
-    </div>
-    <div id="licRow" style="display:none" class="fg"><label class="fl">License Fee to CPWD ₹/month <span class="tag-edit">MAX ₹1,000</span></label><input type="number" class="fi" id="licFee" value="1000" max="1000"></div>
-    <div class="fg"><label class="fl">Special Allowance ₹/month <span class="fl-hint">(Doctor's Practice Allowance etc.)</span></label><input type="number" class="fi" id="specAll" value="0" placeholder="0"></div>
-  </div>
-  <div class="nav-btns">
-    <button class="btn-back" onclick="goBack(2)">← Back</button>
-    <button class="btn-next" onclick="goNext(2)">Continue — Transport Allowance →</button>
+<!-- TABS -->
+<div class="tab-bar" id="calcTop">
+  <div class="tab-inner">
+    <button class="tab-btn on" id="tab-basic" onclick="switchTab('basic')">Basic Calculator</button>
+    <button class="tab-btn" id="tab-advanced" onclick="switchTab('advanced')">Advanced Calculator</button>
+    <button class="tab-btn" id="tab-compare" onclick="switchTab('compare')">Compare Two Employees</button>
   </div>
 </div>
 
-<!-- STEP 3: ALLOWANCES -->
-<div class="wstep" id="step3">
-  <div class="step-hdr">
-    <div class="step-emoji">🚌</div>
-    <div class="step-title">Transport <span>Allowance</span></div>
-    <div class="step-sub">Auto-calculated based on your level and city. Override if needed.</div>
-  </div>
-  <div class="fcard">
-    <div class="fcard-title">Transport Allowance <span class="tag-auto">AUTO-CALCULATED</span></div>
-    <div class="fg">
-      <label class="fl">Your Transport Allowance (Base Amount)</label>
-      <div class="auto-val" id="taDisplay"><span id="taVal">₹7,200/month base + DA</span><span class="av-edit" onclick="enTA()">✏️ Override</span></div>
-      <input type="number" class="fi" id="taOv" placeholder="Enter override amount" style="margin-top:8px;display:none">
-    </div>
-    <div class="tgrid">
-      <div class="tcard" id="pwbdCard" onclick="toggleCard(this,'pwbd')">
-        <div class="tchk"><span class="tchk-ic">✓</span></div>
-        <div><div class="tcard-name">Person with Benchmark Disability (PwBD)</div><div class="tcard-amt">Eligible for Double Transport Allowance</div><div class="tcard-note">Minimum ₹2,250 + DA per month guaranteed</div></div>
+<!-- MAIN -->
+<div class="main">
+  <div class="recalc-banner" id="recalcBanner">⚠️ Inputs changed — click Calculate to update results with new values.</div>
+
+  <!-- BASIC & ADVANCED TABS -->
+  <div id="tabBasicAdv">
+    <div class="layout">
+      <!-- INPUT PANEL -->
+      <div class="inp-panel" id="inpPanel">
+        <div class="inp-head">
+          <h3 id="inpTitle">🏛️ Basic Calculator</h3>
+          <p>Fill required fields and click Calculate</p>
+        </div>
+        <div class="inp-body">
+
+          <!-- PERSONAL — advanced only -->
+          <div id="secPersonal" style="display:none;">
+            <div class="sec-lbl">👤 Personal details</div>
+            <div class="f"><label>Name <span class="opt">Optional</span></label><input type="text" id="empName" placeholder="e.g. Shri Rajan Kumar" oninput="markDirty()"></div>
+            <div class="f"><label>Designation <span class="opt">Optional</span></label><input type="text" id="empDesig" placeholder="e.g. Section Officer" oninput="markDirty()"></div>
+          </div>
+
+          <!-- PAY -->
+          <div class="sec-lbl">💰 Pay details</div>
+          <div class="f">
+            <label>Pay Level *</label>
+            <select id="payLevel" onchange="onLevelChange();markDirty()">
+              <option value="">— Select Level —</option>
+              <option value="1">Level 1 — Basic from ₹18,000</option>
+              <option value="2">Level 2 — Basic from ₹19,900</option>
+              <option value="3">Level 3 — Basic from ₹21,700</option>
+              <option value="4">Level 4 — Basic from ₹25,500</option>
+              <option value="5">Level 5 — Basic from ₹29,200</option>
+              <option value="6">Level 6 — Basic from ₹35,400</option>
+              <option value="7">Level 7 — Basic from ₹44,900</option>
+              <option value="8">Level 8 — Basic from ₹47,600</option>
+              <option value="9">Level 9 — Basic from ₹53,100</option>
+              <option value="10">Level 10 — Basic from ₹56,100</option>
+              <option value="11">Level 11 — Basic from ₹67,700</option>
+              <option value="12">Level 12 — Basic from ₹78,800</option>
+              <option value="13">Level 13 — Basic from ₹1,18,500</option>
+              <option value="13a">Level 13A — Basic from ₹1,31,100</option>
+              <option value="14">Level 14 — Basic from ₹1,44,200</option>
+              <option value="15">Level 15 — Basic from ₹1,82,200</option>
+              <option value="16">Level 16 — Basic from ₹2,05,400</option>
+              <option value="17">Level 17 — Basic from ₹2,25,000</option>
+              <option value="18">Level 18 — ₹2,50,000 (fixed)</option>
+            </select>
+            <div class="f-err" id="errLevel">Please select Pay Level</div>
+          </div>
+          <div class="f">
+            <label>Current Basic Pay (₹) *</label>
+            <input type="number" id="basicPay" placeholder="e.g. 63300" min="18000" max="300000" oninput="onBasicChange();markDirty()">
+            <div class="f-ok" id="cellInfo" style="display:none;"></div>
+            <div class="f-err" id="errBasic">Please enter valid basic pay</div>
+          </div>
+          <div class="f">
+            <label>Fitment Factor *</label>
+            <div class="sld-wrap">
+              <span style="font-size:9px;color:var(--t3);">1.60×</span>
+              <input type="range" id="fitSlider" min="160" max="400" value="286" step="1" oninput="updFit();markDirty()">
+              <span style="font-size:9px;color:var(--t3);">4.00×</span>
+              <span class="sld-val" id="fitVal">2.86×</span>
+            </div>
+            <div class="fit-marks"><span>1.60</span><span style="color:var(--or2);">2.86★ likely</span><span>3.68 union</span><span>3.83 NC-JCM</span></div>
+          </div>
+
+          <!-- IMPLEMENTATION -->
+          <div class="sec-lbl">📅 Implementation & increments</div>
+          <div class="f">
+            <label>Expected Implementation *</label>
+            <div class="f2">
+              <select id="implMonth" onchange="markDirty()">
+                <option value="1">January</option><option value="2">February</option><option value="3">March</option>
+                <option value="4">April</option><option value="5" selected>May</option><option value="6">June</option>
+                <option value="7">July</option><option value="8">August</option><option value="9">September</option>
+                <option value="10">October</option><option value="11">November</option><option value="12">December</option>
+              </select>
+              <select id="implYear" onchange="markDirty()">
+                <option value="2026">2026</option><option value="2027">2027</option>
+                <option value="2028" selected>2028</option><option value="2029">2029</option><option value="2030">2030</option>
+              </select>
+            </div>
+            <div class="f-warn">⚠️ Assumed by you — not official</div>
+            <div class="f-err" id="errImpl">Implementation must be after January 2026</div>
+          </div>
+          <div class="f">
+            <label>Increment Month *</label>
+            <div class="tog-row">
+              <button class="tog" id="incJan" onclick="setInc(1)">January</button>
+              <button class="tog on" id="incJul" onclick="setInc(7)">July (default)</button>
+            </div>
+            <div class="f-hint">Month when your basic moves to next pay matrix cell each year</div>
+          </div>
+
+          <!-- DA — advanced only -->
+          <div id="secDA">
+            <div class="sec-lbl">📊 Dearness allowance</div>
+            <div class="f">
+              <label>Current DA Rate *</label>
+              <div class="sld-wrap">
+                <span style="font-size:9px;color:var(--t3);">0%</span>
+                <input type="range" id="daSlider" min="0" max="100" value="60" step="1" oninput="updDA();markDirty()">
+                <span style="font-size:9px;color:var(--t3);">100%</span>
+                <span class="sld-val" id="daVal">60%</span>
+              </div>
+              <div class="f-hint">DA effective Jan 2026 = 60%</div>
+            </div>
+            <div class="f" id="secDARise">
+              <label>DA Rise Per Half Year *</label>
+              <div class="sld-wrap">
+                <span style="font-size:9px;color:var(--t3);">0%</span>
+                <input type="range" id="daRiseSlider" min="0" max="6" value="2" step="1" oninput="updDARise();markDirty()">
+                <span style="font-size:9px;color:var(--t3);">6%</span>
+                <span class="sld-val" id="daRiseVal">2%</span>
+              </div>
+              <div class="f-hint">DA revised every January and July</div>
+            </div>
+          </div>
+
+          <!-- CITY -->
+          <div class="sec-lbl">🏙️ City & allowances</div>
+          <div class="f">
+            <label>City Type * <span class="opt">Sets HRA + TA</span></label>
+            <div class="city-row">
+              <div class="city-btn" id="cityX" onclick="setCity('X')"><div class="cn">X City</div><div class="ch">HRA 30%</div><div class="ct">TPTA TA</div></div>
+              <div class="city-btn" id="cityY" onclick="setCity('Y')"><div class="cn">Y City</div><div class="ch">HRA 20%</div><div class="ct">TPTA TA</div></div>
+              <div class="city-btn on" id="cityZ" onclick="setCity('Z')"><div class="cn">Z City</div><div class="ch">HRA 10%</div><div class="ct">Non-TPTA</div></div>
+            </div>
+            <div class="f-hint">X: Delhi/Mumbai/Chennai/Kolkata/Bengaluru/Hyderabad · Y: State capitals, large cities · Z: Others</div>
+            <div class="f-err" id="errCity">Please select city type</div>
+          </div>
+          <div class="f">
+            <label>Staying in Govt Accommodation?</label>
+            <div class="tog-row">
+              <button class="tog" id="govtY" onclick="setGovt(true)">Yes — HRA = Zero</button>
+              <button class="tog on" id="govtN" onclick="setGovt(false)">No — HRA applicable</button>
+            </div>
+          </div>
+          <div class="ta-box" id="taBox">
+            <div class="ta-lbl">TA eligibility — auto-calculated from Level + City:</div>
+            <div class="ta-val" id="taVal">Select level and city to see TA</div>
+          </div>
+
+          <!-- SPECIAL -->
+          <div class="f" style="margin-top:10px;">
+            <label>Special conditions <span class="opt">Default: No</span></label>
+            <div class="chk-list">
+              <label class="chk-item"><input type="checkbox" id="chkPwd" onchange="updTA();markDirty()"> Person with Disability (PwD) — TA doubled<div class="chk-hint">As per RPwD Act 2016. Disability certificate required.</div></label>
+              <label class="chk-item"><input type="checkbox" id="chkCar" onchange="updTA();markDirty()"> Govt car provided for commute — TA = Zero<div class="chk-hint">Ministry of Finance OM dated 7 July 2017</div></label>
+              <label class="chk-item" id="rowLev14" style="display:none;"><input type="checkbox" id="chkLev14" onchange="updTA();markDirty()"> Level 14+ opting TA instead of official car<div class="chk-hint">₹15,750 + DA. Option cannot be changed during assignment.</div></label>
+            </div>
+          </div>
+
+          <!-- NPS -->
+          <div class="sec-lbl">🛡️ NPS</div>
+          <div class="f">
+            <label>NPS Applicable?</label>
+            <div class="tog-row">
+              <button class="tog on" id="npsY" onclick="setNPS(true)">Yes — Post Jan 2004</button>
+              <button class="tog" id="npsN" onclick="setNPS(false)">No — Old Pension</button>
+            </div>
+            <div class="f-hint">If yes: 10% of (Basic + DA) deducted monthly</div>
+          </div>
+
+          <!-- TAX -->
+          <div class="sec-lbl">📋 Income Tax</div>
+          <div class="note note-o" style="margin-bottom:12px;">New regime applied (FY 2025-26). Std deduction ₹75,000. Zero tax up to ₹12,75,000 salary. Old regime users — consult your DDO.</div>
+
+          <button class="calc-btn" id="calcBtn" onclick="calculate()">⚡ Calculate My 8th CPC Salary</button>
+          <button class="mobile-jump" onclick="document.getElementById('resPanel').scrollIntoView({behavior:'smooth'})">↓ Jump to Results</button>
+          <div class="reset-row">
+            <span class="reset-link" onclick="showReset('tab')">↺ Reset this tab</span>
+            <span class="reset-link" onclick="showReset('all')">↺ Reset all</span>
+          </div>
+          <div class="disc-small" style="margin-top:8px;">All figures are estimates. Official 8th CPC notification not yet released.</div>
+        </div>
       </div>
-      <div class="tcard" id="staffcarCard" onclick="toggleCard(this,'staffcar')">
-        <div class="tchk"><span class="tchk-ic">✓</span></div>
-        <div><div class="tcard-name">Official Staff Car Provided</div><div class="tcard-amt">Transport Allowance = Nil</div><div class="tcard-note">If dedicated government vehicle provided for commuting</div></div>
+
+      <!-- RESULTS -->
+      <div class="res-panel" id="resPanel">
+        <div class="empty-state" id="emptyState">
+          <div class="es-icon">🏛️</div>
+          <div class="es-title">Your results will appear here</div>
+          <div class="es-sub">Fill your details on the left and click Calculate</div>
+        </div>
       </div>
     </div>
   </div>
-  <div class="preview">
-    <div class="prev-title">📊 Live Preview — Your Current Salary</div>
-    <div class="prev-grid" style="grid-template-columns:1fr 1fr">
-      <div class="pv"><div class="pv-val" id="pv-gross" style="color:var(--gr2)">—</div><div class="pv-lbl">Gross Salary</div></div>
-      <div class="pv rev"><div class="pv-val" id="pv-net">—</div><div class="pv-lbl">Est. Net In-Hand</div></div>
+
+  <!-- COMPARE TAB -->
+  <div id="tabCompare" style="display:none;">
+    <div style="background:var(--bg2);border:1px solid var(--bd);border-radius:var(--r);padding:16px;margin-bottom:14px;transition:background .3s;">
+      <p style="font-size:12px;color:var(--t2);">Enter details for two employees to compare their 8th CPC salary outcomes side by side.</p>
     </div>
-  </div>
-  <div class="nav-btns">
-    <button class="btn-back" onclick="goBack(3)">← Back</button>
-    <button class="btn-next" onclick="goNext(3)">Continue — Select Deductions →</button>
+    <div class="cmp-layout">
+      <!-- EMP 1 -->
+      <div class="cmp-col">
+        <div class="cmp-col-head"><h4>Employee 1</h4><span class="emp-badge emp1">Employee 1</span></div>
+        <div class="cmp-body">
+          <div class="f"><label>Pay Level *</label><select id="c1Level" onchange="cmpTA(1)"><option value="">— Select —</option></select></div>
+          <div class="f"><label>Basic Pay (₹) *</label><input type="number" id="c1Basic" placeholder="e.g. 44900" min="18000"></div>
+          <div class="f"><label>Fitment Factor</label><div class="sld-wrap"><input type="range" id="c1Fit" min="160" max="400" value="286" step="1" oninput="document.getElementById('c1FitV').textContent=(this.value/100).toFixed(2)+'×'"><span class="sld-val" id="c1FitV">2.86×</span></div></div>
+          <div class="f"><label>City Type</label><div class="tog-row"><button class="tog" id="c1X" onclick="setCmpCity(1,'X')">X</button><button class="tog" id="c1Y" onclick="setCmpCity(1,'Y')">Y</button><button class="tog on" id="c1Z" onclick="setCmpCity(1,'Z')">Z</button></div></div>
+          <div class="f"><label>Govt Accommodation?</label><div class="tog-row"><button class="tog" id="c1GY" onclick="setCmpGovt(1,true)">Yes</button><button class="tog on" id="c1GN" onclick="setCmpGovt(1,false)">No</button></div></div>
+          <div class="f"><label>Implementation</label><div class="f2"><select id="c1IM"><option value="1">Jan</option><option value="2">Feb</option><option value="3">Mar</option><option value="4">Apr</option><option value="5" selected>May</option><option value="6">Jun</option><option value="7">Jul</option><option value="8">Aug</option><option value="9">Sep</option><option value="10">Oct</option><option value="11">Nov</option><option value="12">Dec</option></select><select id="c1IY"><option value="2026">2026</option><option value="2027">2027</option><option value="2028" selected>2028</option><option value="2029">2029</option></select></div></div>
+          <div class="f"><label>NPS</label><div class="tog-row"><button class="tog on" id="c1NY" onclick="setCmpNPS(1,true)">Yes</button><button class="tog" id="c1NN" onclick="setCmpNPS(1,false)">No</button></div></div>
+        </div>
+      </div>
+      <!-- EMP 2 -->
+      <div class="cmp-col">
+        <div class="cmp-col-head"><h4>Employee 2</h4><span class="emp-badge emp2">Employee 2</span></div>
+        <div class="cmp-body">
+          <div class="f"><label>Pay Level *</label><select id="c2Level" onchange="cmpTA(2)"><option value="">— Select —</option></select></div>
+          <div class="f"><label>Basic Pay (₹) *</label><input type="number" id="c2Basic" placeholder="e.g. 56100" min="18000"></div>
+          <div class="f"><label>Fitment Factor</label><div class="sld-wrap"><input type="range" id="c2Fit" min="160" max="400" value="286" step="1" oninput="document.getElementById('c2FitV').textContent=(this.value/100).toFixed(2)+'×'"><span class="sld-val" id="c2FitV">2.86×</span></div></div>
+          <div class="f"><label>City Type</label><div class="tog-row"><button class="tog" id="c2X" onclick="setCmpCity(2,'X')">X</button><button class="tog" id="c2Y" onclick="setCmpCity(2,'Y')">Y</button><button class="tog on" id="c2Z" onclick="setCmpCity(2,'Z')">Z</button></div></div>
+          <div class="f"><label>Govt Accommodation?</label><div class="tog-row"><button class="tog" id="c2GY" onclick="setCmpGovt(2,true)">Yes</button><button class="tog on" id="c2GN" onclick="setCmpGovt(2,false)">No</button></div></div>
+          <div class="f"><label>Implementation</label><div class="f2"><select id="c2IM"><option value="1">Jan</option><option value="2">Feb</option><option value="3">Mar</option><option value="4">Apr</option><option value="5" selected>May</option><option value="6">Jun</option><option value="7">Jul</option><option value="8">Aug</option><option value="9">Sep</option><option value="10">Oct</option><option value="11">Nov</option><option value="12">Dec</option></select><select id="c2IY"><option value="2026">2026</option><option value="2027">2027</option><option value="2028" selected>2028</option><option value="2029">2029</option></select></div></div>
+          <div class="f"><label>NPS</label><div class="tog-row"><button class="tog on" id="c2NY" onclick="setCmpNPS(2,true)">Yes</button><button class="tog" id="c2NN" onclick="setCmpNPS(2,false)">No</button></div></div>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:14px;">
+      <button class="calc-btn" style="max-width:400px;margin:0 auto;" onclick="compareCalc()">⚡ Compare Both Employees</button>
+    </div>
+    <div class="cmp-result" id="cmpResult" style="display:none;">
+      <div class="cmp-result-head"><h4>Comparison Report</h4></div>
+      <div style="padding:16px;" id="cmpResultBody"></div>
+    </div>
   </div>
 </div>
 
-<!-- STEP 4: DEDUCTIONS -->
-<div class="wstep" id="step4">
-  <div class="step-hdr">
-    <div class="step-emoji">📋</div>
-    <div class="step-title">Your <span>Deductions</span></div>
-    <div class="step-sub">Tick what applies to you. Amounts are auto-calculated based on your salary and group.</div>
-  </div>
-  <div class="fcard">
-    <div class="fcard-title">Select Applicable Deductions</div>
-    <div class="tgrid">
-      <div class="tcard on" id="npsCard" onclick="toggleCard(this,'npsOn')">
-        <div class="tchk"><span class="tchk-ic">✓</span></div>
-        <div><div class="tcard-name">NPS — National Pension System</div><div class="tcard-amt" id="npsAmt">10% of (Basic Pay + DA)</div><div class="tcard-note">Mandatory for all post-2004 recruits</div></div>
-      </div>
-      <div class="tcard on" id="cghsCard" onclick="toggleCard(this,'cghsOn')">
-        <div class="tchk"><span class="tchk-ic">✓</span></div>
-        <div><div class="tcard-name">CGHS — Central Govt Health Scheme</div><div class="tcard-amt" id="cghsLbl">₹650/month (Level 7–11)</div><div class="tcard-note">Untick if not in a CGHS-covered city</div></div>
-      </div>
-      <div class="tcard on" id="cgegisCard" onclick="toggleCard(this,'cgegOn')">
-        <div class="tchk"><span class="tchk-ic">✓</span></div>
-        <div><div class="tcard-name">CGEGIS — Group Insurance Scheme</div><div class="tcard-amt" id="cgegLbl">₹60/month (Group B)</div><div class="tcard-note">Auto-set based on your employee group</div></div>
-      </div>
+<!-- CONFIRM DIALOG -->
+<div class="overlay" id="overlay">
+  <div class="dialog">
+    <h3 id="dlgTitle">Reset confirmation</h3>
+    <p id="dlgMsg">Are you sure? All entered data will be cleared.</p>
+    <div class="dialog-btns">
+      <button class="dbtn dbtn-cancel" onclick="closeDialog()">Cancel</button>
+      <button class="dbtn dbtn-confirm" id="dlgConfirm">Yes, Reset</button>
     </div>
-  </div>
-  <div class="preview">
-    <div class="prev-title">📊 Salary Summary After Deductions</div>
-    <div class="prev-grid">
-      <div class="pv"><div class="pv-val" id="pv2-gross" style="color:var(--gr2)">—</div><div class="pv-lbl">Gross</div></div>
-      <div class="pv"><div class="pv-val" id="pv2-ded" style="color:var(--rd)">—</div><div class="pv-lbl">Deductions</div></div>
-      <div class="pv rev"><div class="pv-val" id="pv2-net">—</div><div class="pv-lbl">Net In-Hand</div></div>
-      <div class="pv"><div class="pv-val" id="pv2-tds" style="color:var(--rd)">—</div><div class="pv-lbl">Tax TDS/mo</div></div>
-    </div>
-  </div>
-  <div class="nav-btns">
-    <button class="btn-back" onclick="goBack(4)">← Back</button>
-    <button class="btn-next" onclick="goNext(4)">Continue — 8th CPC Settings →</button>
   </div>
 </div>
 
-<!-- STEP 5: 8TH CPC SETTINGS -->
-<div class="wstep" id="step5">
-  <div class="step-hdr">
-    <div class="step-emoji">⚙️</div>
-    <div class="step-title">8th CPC <span>Projection Settings</span></div>
-    <div class="step-sub">Adjust sliders to explore different scenarios. Type or slide — both work.</div>
-  </div>
-  <div class="fcard">
-    <div class="fcard-title">Fitment Factor and HRA</div>
-    <div class="slb sl-or">
-      <div class="slt"><span class="sln">🟠 Fitment Factor — multiplied with your basic pay</span><div class="slc"><input class="slim" type="number" id="fitN" value="2.86" min="1.92" max="3.83" step="0.01" oninput="sN('fitR','fitN',2)"><span class="slp" id="fitP">2.86×</span></div></div>
-      <input type="range" id="fitR" min="1.92" max="3.83" step="0.01" value="2.86" oninput="sR('fitR','fitN','fitP','x',2);updPreview5()">
-      <div class="slsb"><span>Conservative 1.92×</span><span>7th CPC was 2.57×</span><span>Union Demand 3.83×</span></div>
-    </div>
-    <div class="slb sl-bl" id="hraSlRow">
-      <div class="slt"><span class="sln">🔵 Revised HRA % under 8th CPC (estimated)</span><div class="slc"><input class="slim" type="number" id="hraN" value="10" min="6" max="30" step="1" oninput="sN('hraR','hraN',0)"><span class="slp" id="hraP">10%</span></div></div>
-      <input type="range" id="hraR" min="6" max="30" step="1" value="10" oninput="sR('hraR','hraN','hraP','%',0);updPreview5()">
-      <div class="slsb"><span>X:10% Y:9% Z:8% (default)</span><span>Current max 30%</span></div>
-    </div>
-  </div>
-  <div class="fcard">
-    <div class="fcard-title">DA, Timeline and Projection</div>
-    <div class="slb sl-go">
-      <div class="slt"><span class="sln">🟡 Estimated DA hike per installment (Jan and Jul)</span><div class="slc"><input class="slim" type="number" id="daHN" value="2" min="1" max="6" step="0.5" oninput="sN('daHR','daHN',1)"><span class="slp" id="daHP">2%</span></div></div>
-      <input type="range" id="daHR" min="1" max="6" step="0.5" value="2" oninput="sR('daHR','daHN','daHP','%',1)">
-      <div class="slsb"><span>1% (low)</span><span>3% (typical)</span><span>6% (high)</span></div>
-    </div>
-    <div class="slb sl-pu">
-      <div class="slt"><span class="sln">🟣 Expected Implementation Month</span><span class="slp" id="implP">Jul 2026</span></div>
-      <input type="range" id="implR" min="0" max="35" step="1" value="6" oninput="updImpl();updPreview5()">
-      <div class="slsb"><span>Jan 2026</span><span>Dec 2028</span></div>
-    </div>
-    <div class="slb sl-gr">
-      <div class="slt"><span class="sln">🟢 Years to project after implementation</span><div class="slc"><input class="slim" type="number" id="projN" value="5" min="1" max="10" step="1" oninput="sN('projR','projN',0)"><span class="slp" id="projP">5 yrs</span></div></div>
-      <input type="range" id="projR" min="1" max="10" step="1" value="5" oninput="sR('projR','projN','projP',' yrs',0)">
-      <div class="slsb"><span>1 year</span><span>10 years</span></div>
-    </div>
-    <div class="slb" style="background:var(--ink3);border:1px solid var(--b);">
-      <div class="slt" style="margin-bottom:0"><span class="sln" style="color:var(--t2)">🩵 Gold price ₹/gram (for investment calculations)</span><div class="slc"><input class="slim" type="number" id="goldN" value="9500" min="5000" max="15000" step="100" oninput="sN('goldR','goldN',0)"><span class="slp" id="goldP" style="background:rgba(15,118,110,0.15);color:#3ec8ae;border:1px solid rgba(15,118,110,0.3)">₹9,500</span></div></div>
-      <input type="range" id="goldR" min="5000" max="15000" step="100" value="9500" style="margin-top:10px;background:linear-gradient(to right,rgba(15,118,110,0.4),rgba(15,118,110,0.1))" oninput="sRm('goldR','goldN','goldP')">
-      <div class="slsb" style="margin-top:4px"><span>₹5,000</span><span>₹15,000</span></div>
-    </div>
-  </div>
-  <div class="preview" id="prev5">
-    <div class="prev-title">🚀 Estimated 8th CPC Impact</div>
-    <div class="prev-grid">
-      <div class="pv curr"><div class="pv-val" id="p5-curr">—</div><div class="pv-lbl">Current Net</div></div>
-      <div class="pv rev"><div class="pv-val" id="p5-rev">—</div><div class="pv-lbl">Revised Net</div></div>
-      <div class="pv gain"><div class="pv-val" id="p5-gain">—</div><div class="pv-lbl">Monthly Gain</div></div>
-      <div class="pv arr"><div class="pv-val" id="p5-arr">—</div><div class="pv-lbl">Est. Arrears</div></div>
-    </div>
-  </div>
-  <div class="nav-btns">
-    <button class="btn-back" onclick="goBack(5)">← Back</button>
-    <button class="btn-next" onclick="runCalc()" style="font-size:16px">⚡ Calculate My Salary →</button>
-  </div>
-</div>
+<button class="stt" id="sttBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 
-</div><!-- end wizard -->
-
-<!-- RESULTS -->
-<div id="resultsOuter" style="display:none">
-  <div class="results-outer" id="resultsArea"></div>
-</div>
-
-<!-- FOOTER -->
+<div class="disc-bar">⚠️ <strong>Disclaimer:</strong> Estimated projections only. 8th Pay Commission has not submitted its report. Official salary revision will be notified by Government of India. Tax calculated under new regime only. Not applicable to Railway and Defence employees — separate departmental orders apply.</div>
 <footer>
-  <p>© 2026 <a href="index.html">mclass.in</a> — Free Financial Tools for India's Middle Class &nbsp;|&nbsp; <a href="index.html">Home</a> &nbsp;|&nbsp; <a onclick="resetWizard()" style="cursor:pointer;color:var(--or)">Recalculate</a></p>
-  <p style="margin-top:5px">⚠️ Estimated projections only. Actual 8th Pay Commission rates will be officially notified by Government of India.</p>
+  <div class="foot-inner">
+    <span>© 2026 <a href="index.html">mclass.in</a> — India's Middle Class Platform · Free forever · <a href="#">Disclaimer</a> · <a href="#">Privacy</a></span>
+    <span style="display:flex;gap:8px;"><a href="index.html" class="nav-link">Home</a><a href="jobs.html" class="nav-link">Jobs</a></span>
+  </div>
 </footer>
 
 <script>
-const MN=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-const IMPL=[];
-for(let y=2026;y<=2028;y++) for(let m=0;m<12;m++) IMPL.push({lb:MN[m]+' '+y,yr:y,mo:m+1});
-const PM={1:[18000,18500,19100,19700,20300,20900,21500,22100,22800,23500,24200,24900,25700,26500,27300,28100,28900,29800,30700,31600,32600,33600,34600,35700,36800,37900,39100,40300,41500,42800,44100,45400,46800,48200,49700,51200,52700,54300,56000,57700],2:[19900,20500,21100,21700,22400,23100,23800,24500,25200,26000,26800,27600,28400,29300,30200,31100,32000,33000,34000,35000,36100,37200,38300,39400,40600,41800,43100,44400,45700,47100,48500,50000,51500,53100,54700,56300,58000,59700,61500,63300],3:[21700,22400,23100,23800,24500,25200,26000,26800,27600,28400,29300,30200,31100,32000,33000,34000,35000,36100,37200,38300,39400,40600,41800,43100,44400,45700,47100,48500,50000,51500,53100,54700,56300,58000,59700,61500,63300,65200,67200,69200],4:[25500,26300,27100,27900,28700,29600,30500,31400,32300,33300,34300,35300,36400,37500,38600,39800,41000,42200,43500,44800,46100,47500,48900,50400,51900,53500,55100,56800,58500,60300,62100,64000,65900,67900,69900,72000,74200,76400,78700,81100],5:[29200,30100,31000,31900,32900,33900,34900,36000,37100,38200,39400,40600,41800,43100,44400,45700,47100,48500,50000,51500,53100,54700,56300,58000,59700,61500,63300,65200,67200,69200,71300,73400,75600,77900,80200,82600,85100,87700,90300,93000],6:[35400,36500,37600,38700,39900,41100,42300,43600,44900,46300,47700,49100,50600,52100,53700,55300,57000,58700,60500,62300,64200,66100,68100,70100,72200,74400,76600,78900,81300,83700,86200,88800,91500,94200,97000,99900,102900,106000,109200,112500],7:[44900,46200,47600,49000,50500,52000,53600,55200,56900,58600,60400,62200,64100,66000,68000,70000,72100,74300,76500,78800,81200,83600,86100,88700,91400,94100,96900,99800,102800,105900,109100,112400,115800,119300,122900,126600,130400,134300,138300,142500],8:[47600,49000,50500,52000,53600,55200,56900,58600,60400,62200,64100,66100,68100,70100,72200,74400,76600,78900,81300,83700,86200,88800,91500,94200,97000,99900,102900,106000,109200,112500,115900,119400,123000,126700,130500,134400,138400,142600,146900,151300],9:[53100,54700,56300,58000,59700,61500,63300,65200,67200,69200,71300,73400,75600,77900,80200,82600,85100,87600,90200,92900,95700,98600,101600,104600,107700,110900,114200,117600,121100,124700,128400,132300,136300,140400,144600,148900,153400,158000,162700,167600],10:[56100,57800,59500,61300,63100,65000,67000,69000,71100,73200,75400,77700,80000,82400,84900,87400,90000,92700,95500,98400,101400,104400,107500,110700,114000,117400,120900,124500,128200,132000,136000,140100,144300,148600,153100,157700,162400,167300,172300,177500],11:[67700,69700,71800,74000,76200,78500,80900,83300,85800,88400,91100,93800,96600,99500,102500,105600,108800,112100,115500,119000,122600,126300,130100,134000,138000,142100,146400,150800,155300,160000,164800,169700,174800,180000,185400,191000,196700,202600,208700,214900],12:[78800,81200,83600,86100,88700,91300,94000,96900,99800,102800,105900,109100,112400,115800,119300,122900,126600,130400,134300,138300,142400,146700,151100,155600,160300,165100,170100,175200,180500,185900,191500,197200,203100,209200,215500,222000,228700,235600,242700,250000],13:[123100,126800,130600,134500,138500,142700,147000,151400,155900,160600,165400,170400,175500,180900,186300,191900,197700,203600,209700,216000,222500,229200,236100,243200,250500,258000,265700,273700,282100,290600,299300,308300,317500,327000,336800,346900,357300,368000,379000,390500],'13A':[131100,135000,139100,143300,147600,152000,156600,161300,166100,171100,176200,181500,186900,192500,198300,204200,210300,216600,223100,229800,236700,243800,251100,258600,266400,274400,282600,291100,299800,308800,318100,327600,337400,347500,357900,368600,379700,391100,402800,414900],14:[144200,148500,153000,157600,162300,167200,172200,177400,182700,188200,193800,199600,205600,211800,218200,224700,231400,238300,245400,252800,260400,268200,276200,284500,293000,301800,310900,320200,329800,339700,349900,360300,371100,382200,393700,405500,417600,430000,442900,456200],15:[182200,187700,193300,199100,205100,211300,217600,224100,230800,237700,244800,252100,259700,267500,275500,283800,292300,301100,310100,319400,329000,338900,349100,359600,370400,381500,393000,404800,416900,429400,442300,455600,469300,483400,497900,513000,528400,544500,561000,578000],16:[205400,211600,217900,224400,231100,238000,245100,252500,260100,267900,275900,284200,292700,301500,310500,319800,329400,339300,349500,360000,370800,381900,393400,405200,417400,429900,442800,456100,469800,483900,498400,513300,528700,544600,561000,577800,595200,612900,631300,650200],17:[225000,231800,238800,246000,253400,261000,268800,276900,285200,293800,302600,311700,321100,330700,340600,350800,361300,372100,383300,394800,406600,418800,431400,444300,457600,471300,485400,500000,515000,530500,546400,562800,580000,597400,615300,633800,652900,672500,692700,713500],18:Array(40).fill(250000)};
-const CGHS={1:250,2:250,3:250,4:250,5:250,6:450,7:650,8:650,9:650,10:650,11:650,'13A':1000,12:1000,13:1000,14:1000,15:1000,16:1000,17:1000,18:1000};
-const CGEG={A:120,B:60,C:30};
-const HRA_C={X:0.30,Y:0.20,Z:0.10,'0':0};
-const HRA_RD={X:10,Y:9,Z:8,'0':0};
-function getTA(lv,city){
-  const n=parseInt(lv)||1;
-  const isX=(city==='X');
-  if(n>=9) return isX?7200:3600;
-  if(n>=3) return isX?3600:1800;
-  return isX?1350:900;
-}
-function nextCell(lv,basic){
-  const cells=PM[lv]||[];
-  const idx=cells.findIndex(v=>v>=basic);
-  if(idx===-1||idx>=cells.length-1) return Math.round(basic*1.03);
-  return cells[idx+1];
-}
-function calcTax(ann){
-  const tx=Math.max(0,ann-75000);
-  if(tx<=400000) return{tax:0,cess:0,total:0,taxable:tx,slabs:[]};
-  const br=[[400000,800000,0.05],[800000,1200000,0.10],[1200000,1600000,0.15],[1600000,2000000,0.20],[2000000,2400000,0.25],[2400000,Infinity,0.30]];
-  let tax=0;const slabs=[];
-  for(const[lo,hi,rate]of br){if(tx>lo){const amt=Math.min(tx,hi)-lo;const t=amt*rate;tax+=t;slabs.push({lo,hi,rate,amt,t});}}
-  if(tx<=1275000) tax=0;
-  const cess=Math.round(tax*0.04);
-  return{tax:Math.round(tax),cess,total:Math.round(tax+cess),taxable:tx,slabs};
-}
-function f(n){return'₹'+Math.round(n).toLocaleString('en-IN');}
-function fL(n){if(n>=10000000)return'₹'+(n/10000000).toFixed(2)+' Cr';if(n>=100000)return'₹'+(n/100000).toFixed(2)+' L';return f(n);}
+// ══════════════════════════════════════
+// DATA
+// ══════════════════════════════════════
+const PM={
+  1:[18000,18500,19100,19700,20300,20900,21500,22200,22900,23600,24300,25100,25900,26700,27500,28400,29300,30200,31100,32100,33100,34100,35100,36200,37300,38400,39600,40800,42000,43300,44600,46000,47400,48800,50300,51800,53400,55000,56700,58400],
+  2:[19900,20500,21100,21700,22400,23100,23800,24500,25200,26000,26800,27600,28400,29300,30200,31100,32000,33000,34000,35000,36100,37200,38300,39500,40700,41900,43200,44500,45800,47200,48600,50100,51600,53100,54700,56400,58100,59800,61600,63500],
+  3:[21700,22400,23100,23800,24500,25200,26000,26800,27600,28400,29300,30200,31100,32000,33000,34000,35000,36100,37200,38300,39500,40700,41900,43200,44500,45800,47200,48600,50100,51600,53100,54700,56400,58100,59800,61600,63500,65400,67400,69400],
+  4:[25500,26300,27100,27900,28700,29600,30500,31400,32300,33300,34300,35400,36500,37600,38700,39900,41100,42300,43600,44900,46300,47700,49100,50600,52100,53700,55300,57000,58700,60500,62300,64200,66100,68100,70100,72200,74400,76600,78900,81300],
+  5:[29200,30100,31000,31900,32900,33900,34900,36000,37100,38200,39300,40500,41700,43000,44300,45600,47000,48400,49900,51400,53000,54600,56200,57900,59600,61400,63200,65100,67100,69100,71200,73300,75500,77800,80100,82500,84900,87400,90000,92700],
+  6:[35400,36500,37600,38700,39900,41100,42300,43600,44900,46300,47700,49100,50600,52100,53700,55300,57000,58700,60500,62300,64200,66100,68100,70100,72200,74400,76600,78900,81300,83700,86200,88800,91500,94200,97000,99900,102900,106000,109200,112500],
+  7:[44900,46200,47600,49000,50500,52000,53600,55200,56900,58600,60400,62200,64100,66000,68000,70000,72100,74300,76500,78800,81200,83600,86100,88700,91400,94100,96900,99800,102800,105900,109100,112400,115800,119300,122900,126600,130400,134300,138300,142400],
+  8:[47600,49000,50500,52000,53600,55200,56900,58600,60400,62200,64100,66000,68000,70000,72100,74300,76500,78800,81200,83600,86100,88700,91400,94100,96900,99800,102800,105900,109100,112400,115800,119300,122900,126600,130400,134300,138300,142400,146700,151100],
+  9:[53100,54700,56300,58000,59700,61500,63300,65200,67100,69100,71200,73300,75500,77800,80100,82500,84900,87400,90000,92700,95500,98400,101300,104400,107500,110700,114000,117400,120900,124500,128200,132000,135900,139900,144100,148400,152800,157400,162100,166900],
+  10:[56100,57800,59500,61300,63100,65000,67000,69000,71100,73200,75400,77700,80000,82400,84900,87400,90000,92700,95500,98400,101300,104400,107500,110700,114000,117400,120900,124500,128200,132000,135900,139900,144100,148400,152800,157400,162100,166900,171900,177100],
+  11:[67700,69700,71800,74000,76200,78500,80900,83300,85800,88400,91100,93800,96600,99500,102500,105600,108800,112100,115500,119000,122600,126300,130100,134000,138000,142100,146400,150800,155300,160000,164800,169700,174800,180000,185400,191000,196700,202600,208700,215000],
+  12:[78800,81200,83600,86100,88700,91400,94100,96900,99800,102800,105900,109100,112400,115800,119300,122900,126600,130400,134300,138300,142400,146700,151100,155600,160300,165100,170100,175200,180500,185900,191500,197200,203100,209200,215500,221900,228600,235500,242600,249900],
+  13:[118500,122100,125800,129600,133500,137500,141600,145800,150200,154700,159300,164100,169000,174100,179300,184700,190200,195900,201800,207900,214100,220500,227100,234000,241000,248200,255700,263400,271300,279400,287800,296400,305300,314500,323900,333600,343600,353900,364500,375400],
+  '13a':[131100,135000,139100,143300,147600,152000,156600,161300,166100,171100,176200,181500,187000,192600,198400,204400,210500,216800,223300,230000,236900,244000,251300,258800,266600,274600,282800,291300,300000,309000],
+  14:[144200,148500,153000,157600,162300,167200,172200,177400,182700,188200,193800,199600,205600,211800,218200,224700,231400,238300,245400,252800,260400,268200,276200,284500,293000,301800,310900,320200,329800,339700,349900,360400,371200,382300,393800,405600,417800,430300,443200,456500],
+  15:[182200,187700,193300,199100,205100,211300,217600,224100,230800,237700,244800,252100,259700,267500,275500,283800,292300,301100,310100,319400,329000,338900,349100,359600,370400,381500,393000,404800,417000,429500,442400,455700,469400,483500,498000,513000,528400,544300,560600,577400],
+  16:[205400,211600,217900,224400,231100,238000,245100,252400,260000,267800,275800,284100,292600,301400,310400,319700,329300,339200,349400,359900,370700,381800,393300,405100,417300,429800,442700,455900,469600,483700,498200,513100,528500,544400,560700,577500,594800,612600,631000,650000],
+  17:[225000,231800,238700,245900,253300,261000,269000,277100,285500,294100,303000,312100,321500,331100,341100,351300,361800,372700,383900,395400,407300,419500,432100,445100,458400,472200,486400,501000,516000,531500,547400,563800,580700,598100,616000,634500,653500,673100,693300,714100],
+  18:[250000]
+};
 
-function updImpl(){const v=parseInt(document.getElementById('implR').value);document.getElementById('implP').textContent=IMPL[v]?.lb||'Jul 2026';}
-updImpl();
-function sR(sid,nid,pid,sfx,dec){const v=parseFloat(document.getElementById(sid).value);if(nid)document.getElementById(nid).value=dec>0?v.toFixed(dec):Math.round(v);document.getElementById(pid).textContent=(dec>0?v.toFixed(dec):Math.round(v))+sfx;}
-function sRm(sid,nid,pid){const v=parseFloat(document.getElementById(sid).value);document.getElementById(nid).value=Math.round(v);document.getElementById(pid).textContent='₹'+Math.round(v).toLocaleString('en-IN');}
-function sN(sid,nid,dec){const v=parseFloat(document.getElementById(nid).value);const sl=document.getElementById(sid);const c=Math.max(parseFloat(sl.min),Math.min(parseFloat(sl.max),v));sl.value=c;sl.dispatchEvent(new Event('input'));}
+const MN=['','Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
 
+// STATE
+let ST={city:'Z',govt:false,nps:true,inc:7,calculated:false,dirty:false,currentTab:'basic'};
+let cmpST={e1:{city:'Z',govt:false,nps:true},e2:{city:'Z',govt:false,nps:true}};
+let charts={};
 
-function getTA(lv,city){const n=parseInt(lv)||1;const isX=(city==='X');if(n>=9)return isX?7200:3600;if(n>=3)return isX?3600:1800;return isX?1350:900;}
-function nextCell(lv,basic){const cells=PM[lv]||[];const idx=cells.findIndex(v=>v>=basic);if(idx===-1||idx>=cells.length-1)return Math.round(basic*1.03);return cells[idx+1];}
-function calcTax(ann){const tx=Math.max(0,ann-75000);if(tx<=400000)return{tax:0,cess:0,total:0,taxable:tx,slabs:[]};const br=[[400000,800000,0.05],[800000,1200000,0.10],[1200000,1600000,0.15],[1600000,2000000,0.20],[2000000,2400000,0.25],[2400000,Infinity,0.30]];let tax=0;const slabs=[];for(const[lo,hi,rate]of br){if(tx>lo){const amt=Math.min(tx,hi)-lo;const t=amt*rate;tax+=t;slabs.push({lo,hi,rate,amt,t});}}if(tx<=1275000)tax=0;const cess=Math.round(tax*0.04);return{tax:Math.round(tax),cess,total:Math.round(tax+cess),taxable:tx,slabs};}
-function f(n){return'₹'+Math.round(n).toLocaleString('en-IN');}
-function fL(n){if(n>=10000000)return'₹'+(n/10000000).toFixed(2)+' Cr';if(n>=100000)return'₹'+(n/100000).toFixed(2)+' L';return f(n);}
+// ══════════════════════════════════════
+// UTILITIES
+// ══════════════════════════════════════
+function fmt(n){return new Intl.NumberFormat('en-IN',{maximumFractionDigits:0}).format(Math.round(n));}
+function rs(n){return '₹'+fmt(n);}
 
-function updImpl(){const v=parseInt(document.getElementById('implR').value);document.getElementById('implP').textContent=IMPL[v]?.lb||'Jul 2026';}
-updImpl();
-function sR(sid,nid,pid,sfx,dec){const v=parseFloat(document.getElementById(sid).value);if(nid)document.getElementById(nid).value=dec>0?v.toFixed(dec):Math.round(v);document.getElementById(pid).textContent=(dec>0?v.toFixed(dec):Math.round(v))+(sfx==='x'?'×':sfx);}
-function sRm(sid,nid,pid){const v=parseFloat(document.getElementById(sid).value);document.getElementById(nid).value=Math.round(v);document.getElementById(pid).textContent='₹'+Math.round(v).toLocaleString('en-IN');}
-function sN(sid,nid,dec){const v=parseFloat(document.getElementById(nid).value);const sl=document.getElementById(sid);const c=Math.max(parseFloat(sl.min),Math.min(parseFloat(sl.max),v));sl.value=c;sl.dispatchEvent(new Event('input'));}
-
-function onLevel(){
-  const lv=document.getElementById('payLevel').value,n=parseInt(lv)||1;
-  const sel=document.getElementById('basicSel');
-  const cells=PM[lv]||PM[n]||[];
-  sel.innerHTML='<option value="">— Select your pay matrix cell —</option>';
-  cells.forEach((v,i)=>{const o=document.createElement('option');o.value=v;o.textContent=`Cell ${i+1}: ₹${v.toLocaleString('en-IN')}`;sel.appendChild(o);});
-  const cr=CGHS[lv]||CGHS[n]||650;
-  const bd=n<=5?'Level 1–5':n===6?'Level 6':n<=11?'Level 7–11':'Level 12+';
-  document.getElementById('cghsLbl').textContent=`₹${cr}/month (${bd})`;
-  const g=n>=10?'A':n>=6?'B':'C';
-  document.getElementById('grp').value=g;
-  document.getElementById('cgegLbl').textContent=`₹${CGEG[g]}/month (Group ${g})`;
-  const city=document.getElementById('city').value;
-  const dh=HRA_RD[city]||10;
-  document.getElementById('hraR').value=dh;document.getElementById('hraN').value=dh;document.getElementById('hraP').textContent=dh+'%';
-  autoTA();updPreviews();
-}
-function onGrp(){const g=document.getElementById('grp').value;document.getElementById('cgegLbl').textContent=`₹${CGEG[g]}/month (Group ${g})`;}
-function onCity(){
-  const c=document.getElementById('city').value;
-  document.getElementById('licRow').style.display=c==='0'?'block':'none';
-  document.getElementById('hraSlRow').style.display=c==='0'?'none':'block';
-  const dh=HRA_RD[c]||10;
-  document.getElementById('hraR').value=dh;document.getElementById('hraN').value=dh;document.getElementById('hraP').textContent=dh+'%';
-  autoTA();updPreviews();
-}
-function onBSel(){const v=document.getElementById('basicSel').value;if(v){document.getElementById('basicPay').value=v;updPreviews();}}
-function autoTA(){
-  const lv=document.getElementById('payLevel').value,ct=document.getElementById('city').value;
-  const sc=document.getElementById('staffcarCard');
-  if(sc&&sc.classList.contains('on')){document.getElementById('taVal').textContent='₹0 — Staff car provided';return;}
-  const base=getTA(lv,ct);
-  document.getElementById('taVal').textContent='₹'+base.toLocaleString('en-IN')+'/month (base) + DA';
-  document.getElementById('taOv').dataset.auto=base;
-}
-function enTA(){const ov=document.getElementById('taOv');ov.style.display='block';ov.value=ov.dataset.auto||'';ov.focus();}
-onLevel();
-
-// TOGGLE CARDS
-function toggleCard(card,id){card.classList.toggle('on');if(id==='staffcar')autoTA();updPreviews();}
-function isOn(id){const m={npsOn:'npsCard',cghsOn:'cghsCard',cgegOn:'cgegisCard',pwbd:'pwbdCard',staffcar:'staffcarCard'};const c=document.getElementById(m[id]);return c?c.classList.contains('on'):false;}
-
-// BASE CALC for previews
-function baseCalc(){
-  const lv=document.getElementById('payLevel').value,n=parseInt(lv)||9;
-  const basic=parseFloat(document.getElementById('basicPay').value)||53100;
-  const daP0=parseFloat(document.getElementById('daP').value)||60;
-  const city=document.getElementById('city').value,govtA=city==='0';
-  const licFee=govtA?(parseFloat(document.getElementById('licFee').value)||1000):0;
-  const grp=document.getElementById('grp').value;
-  const isPwBD=isOn('pwbd'),staffC=isOn('staffcar');
-  const npsOn=isOn('npsOn'),cghsOn=isOn('cghsOn'),cgegOn=isOn('cgegOn');
-  const specAll=parseFloat(document.getElementById('specAll').value)||0;
-  let taBase=0;
-  if(staffC){taBase=0;}else{
-    const ov=document.getElementById('taOv');
-    taBase=(ov.style.display!=='none'&&ov.value)?parseFloat(ov.value)||0:getTA(lv,city);
-    if(isPwBD&&taBase>0)taBase=taBase*2;
-  }
-  function pwbdMin(daP){return isPwBD&&!staffC?Math.max(taBase,2250+2250*(daP/100)):taBase;}
-  const cghsAmt=cghsOn?(CGHS[lv]||CGHS[n]||650):0;
-  const cgegAmt=cgegOn?(CGEG[grp]||60):0;
-  const hraRateCurr=HRA_C[city]||0;
-  const da0=basic*(daP0/100);
-  const hra0=govtA?0:basic*hraRateCurr;
-  const taEff0=pwbdMin(daP0);
-  const taDA0=taEff0*(daP0/100);
-  const grossCurr=basic+da0+hra0+taEff0+taDA0+specAll;
-  const npsCurr=npsOn?(basic+da0)*0.10:0;
-  const tdsCurr=Math.round(calcTax(grossCurr*12).total/12);
-  const totalDedC=npsCurr+cghsAmt+cgegAmt+tdsCurr+licFee;
-  const netCurr=grossCurr-totalDedC;
-  return{basic,daP0,city,govtA,licFee,grp,isPwBD,staffC,npsOn,cghsOn,cgegOn,specAll,taBase,taEff0,taDA0,cghsAmt,cgegAmt,hraRateCurr,da0,hra0,grossCurr,npsCurr,tdsCurr,totalDedC,netCurr,lv,n,pwbdMin};
+function getLvN(lv){
+  if(lv==='13a') return 13.5;
+  return parseInt(lv)||0;
 }
 
-function updPreviews(){
-  try{
-    const d=baseCalc();
-    function sv(id,v){const el=document.getElementById(id);if(el)el.textContent=v;}
-    sv('pv-gross',f(d.grossCurr));sv('pv-net',f(d.netCurr));
-    sv('pv2-gross',f(d.grossCurr));sv('pv2-ded',f(d.totalDedC));sv('pv2-net',f(d.netCurr));sv('pv2-tds',f(d.tdsCurr));
-    updPreview5();
-  }catch(e){}
-}
-
-function updPreview5(){
-  try{
-    const d=baseCalc();
-    const fit=parseFloat(document.getElementById('fitN').value)||2.86;
-    const govtA=d.govtA;
-    const hraRevPct=govtA?0:(parseFloat(document.getElementById('hraN').value)||10);
-    const newBasic=d.basic*fit;
-    const newHRA=govtA?0:newBasic*(hraRevPct/100);
-    const grossRev0=newBasic+newHRA+d.taBase+d.specAll;
-    const npsRev0=d.npsOn?newBasic*0.10:0;
-    const tdsRev0=Math.round(calcTax(grossRev0*12).total/12);
-    const netRev0=grossRev0-npsRev0-d.cghsAmt-d.cgegAmt-tdsRev0-d.licFee;
-    const implIdx=parseInt(document.getElementById('implR').value);
-    const implInfo=IMPL[implIdx];
-    const mosDiff=Math.max(0,(implInfo.yr-2026)*12+(implInfo.mo-1));
-    const estArr=Math.max(0,(netRev0-d.netCurr)*mosDiff);
-    function sv(id,v){const el=document.getElementById(id);if(el)el.textContent=v;}
-    sv('p5-curr',f(d.netCurr));sv('p5-rev',f(netRev0));
-    sv('p5-gain','+'+ f(netRev0-d.netCurr));sv('p5-arr',fL(estArr));
-  }catch(e){}
-}
-
-// WIZARD NAVIGATION
-let curStep=1;
-const glowState={lv:0};
-
-function goNext(from){
-  if(from===2){
-    const bp=parseFloat(document.getElementById('basicPay').value);
-    if(!bp||bp<10000){alert('Please enter your basic pay (minimum ₹10,000).');return;}
-  }
-  curStep=from+1;showStep(curStep);updProgress(curStep);updPreviews();window.scrollTo({top:0,behavior:'smooth'});
-}
-function goBack(from){curStep=from-1;showStep(curStep);updProgress(curStep);window.scrollTo({top:0,behavior:'smooth'});}
-function showStep(n){document.querySelectorAll('.wstep').forEach(s=>s.classList.remove('active'));const s=document.getElementById('step'+n);if(s)s.classList.add('active');}
-function updProgress(active){
-  for(let i=1;i<=6;i++){
-    const dot=document.getElementById('pd'+i);
-    const line=document.getElementById('pl'+i);
-    const lbl=dot?.parentElement?.querySelector('.ps-label');
-    if(!dot)continue;
-    if(i<active){dot.classList.remove('active');dot.classList.add('done');dot.textContent='✓';if(line)line.classList.add('done');if(lbl)lbl.classList.remove('active');}
-    else if(i===active){dot.classList.remove('done');dot.classList.add('active');dot.textContent=i===6?'✓':i;if(lbl)lbl.classList.add('active');}
-    else{dot.classList.remove('active','done');dot.textContent=i===6?'✓':i;if(lbl)lbl.classList.remove('active');if(line)line.classList.remove('done');}
-  }
-}
-
-// LOADING then CALCULATE
-function runCalc(){
-  document.getElementById('wizardArea').style.display='none';
-  document.getElementById('progWrap').style.display='none';
-  document.getElementById('resultsOuter').style.display='block';
-  const fit=parseFloat(document.getElementById('fitN').value)||2.86;
-  const implIdx=parseInt(document.getElementById('implR').value);
-  const implInfo=IMPL[implIdx];
-  document.getElementById('resultsArea').innerHTML=`
-    <div class="loading">
-      <div class="load-emoji">🏛️</div>
-      <div class="load-title">Calculating Your Projection...</div>
-      <div class="load-msg">Processing ${implInfo?((implInfo.yr-2026)*12+(implInfo.mo-1)):0} months of salary data</div>
-      <div class="load-bar"><div class="load-fill"></div></div>
-      <div class="load-steps">
-        <div class="ls" style="animation-delay:0.3s"><span>✅</span> Reading your pay matrix position</div>
-        <div class="ls" style="animation-delay:0.8s"><span>✅</span> Calculating DA evolution month by month</div>
-        <div class="ls" style="animation-delay:1.2s"><span>✅</span> Applying ${fit.toFixed(2)}× fitment factor</div>
-        <div class="ls" style="animation-delay:1.6s"><span>💰</span> Estimating arrears and tax impact</div>
-        <div class="ls" style="animation-delay:2.0s"><span>🪙</span> Checking how much gold you can buy...</div>
-      </div>
-    </div>`;
-  updProgress(6);
-  setTimeout(()=>calculate(),2700);
-}
-
-// GLOW
-function setGlow(lv){if(lv<=glowState.lv)return;glowState.lv=lv;const r=document.documentElement;r.classList.remove('g1','g2','g3','g4');if(lv>0)r.classList.add('g'+lv);}
-
-
-function calculate(){
-  const lv=document.getElementById('payLevel').value,n=parseInt(lv)||9;
-  const basic=parseFloat(document.getElementById('basicPay').value)||53100;
-  const daP0=parseFloat(document.getElementById('daP').value)||60;
-  const city=document.getElementById('city').value,govtA=city==='0';
-  const licFee=govtA?(parseFloat(document.getElementById('licFee').value)||1000):0;
-  const grp=document.getElementById('grp').value;
-  const incrMo=parseInt(document.getElementById('incrMo').value);
-  const isPwBD=isOn('pwbd'),staffC=isOn('staffcar');
-  const npsOn=isOn('npsOn'),cghsOn=isOn('cghsOn'),cgegOn=isOn('cgegOn');
-  const specAll=parseFloat(document.getElementById('specAll').value)||0;
-  const fit=parseFloat(document.getElementById('fitN').value)||2.86;
-  const hraRevPct=govtA?0:(parseFloat(document.getElementById('hraN').value)||10);
-  const daHike=parseFloat(document.getElementById('daHN').value)||2;
-  const projYr=parseInt(document.getElementById('projN').value)||5;
-  const implIdx=parseInt(document.getElementById('implR').value);
-  const implInfo=IMPL[implIdx];
-  const goldPr=parseFloat(document.getElementById('goldN').value)||9500;
-  const desig=document.getElementById('desig').value.trim();
-
-  // TA base
-  let taBase=0;
-  if(staffC){taBase=0;}
+function getTABase(lv,city,pwd,car,lev14ta){
+  if(car) return 0;
+  const n=getLvN(lv);
+  const tpta=city==='X'||city==='Y';
+  if(lev14ta) return 15750;
+  let base;
+  if(n>=9) base=tpta?7200:3600;
+  else if(n>=3) base=tpta?3600:1800;
   else{
-    const ov=document.getElementById('taOv');
-    taBase=(ov.style.display!=='none'&&ov.value)?parseFloat(ov.value)||0:getTA(lv,city);
-    if(isPwBD&&taBase>0) taBase=taBase*2;
+    const bp=parseInt(document.getElementById('basicPay')?.value)||0;
+    if(bp>=24200) base=tpta?3600:1800;
+    else base=tpta?1350:900;
   }
-  // PwBD minimum function
-  function pwbdMin(daP){return isPwBD&&!staffC?Math.max(taBase,2250+2250*(daP/100)):taBase;}
+  if(pwd) base=Math.max(base*2,2250);
+  return base;
+}
 
-  const cghsAmt=cghsOn?(CGHS[lv]||CGHS[n]||650):0;
-  const cgegAmt=cgegOn?(CGEG[grp]||60):0;
-  const hraRateCurr=HRA_C[city]||0;
+function getHRApct(city,govt){
+  if(govt) return 0;
+  return city==='X'?0.30:city==='Y'?0.20:0.10;
+}
 
-  // Current base (Jan 2026)
-  const da0=basic*(daP0/100);
-  const hra0=govtA?0:basic*hraRateCurr;
-  const taEff0=pwbdMin(daP0);
-  const taDA0=taEff0*(daP0/100);
-  const grossCurr=basic+da0+hra0+taEff0+taDA0+specAll;
-  const npsCurr=npsOn?(basic+da0)*0.10:0;
-  const txC=calcTax(grossCurr*12);
-  const tdsCurr=Math.round(txC.total/12);
-  const totalDedC=npsCurr+cghsAmt+cgegAmt+tdsCurr+licFee;
-  const netCurr=grossCurr-totalDedC;
+function calcTax(annGross){
+  const taxable=annGross-75000;
+  if(taxable<=0) return 0;
+  const slabs=[[400000,0],[400000,.05],[400000,.10],[400000,.15],[400000,.20],[400000,.25],[Infinity,.30]];
+  let rem=taxable,tax=0;
+  for(const [s,r] of slabs){if(rem<=0) break;const c=Math.min(rem,s);tax+=c*r;rem-=c;}
+  if(taxable<=1200000) tax=0;
+  else if(taxable<1275000){const excess=taxable-1200000;if(tax>excess) tax=excess;}
+  return Math.round(tax*1.04);
+}
 
-  // Revised base (Jan 2026, DA=0)
-  const newBasic=basic*fit;
-  const newHRA=govtA?0:newBasic*(hraRevPct/100);
-  const newTA=taBase; // base unchanged
-  const grossRev0=newBasic+0+newHRA+newTA+0+specAll;
-  const npsRev0=npsOn?newBasic*0.10:0;
-  const txR0=calcTax(grossRev0*12);
-  const tdsRev0=Math.round(txR0.total/12);
-  const totalDedR=npsRev0+cghsAmt+cgegAmt+tdsRev0+licFee;
-  const netRev0=grossRev0-totalDedR;
+function getSlabs(taxable){
+  const defs=[[400000,'0 – ₹4,00,000',0],[400000,'₹4L – ₹8L',5],[400000,'₹8L – ₹12L',10],[400000,'₹12L – ₹16L',15],[400000,'₹16L – ₹20L',20],[400000,'₹20L – ₹24L',25],[Infinity,'Above ₹24L',30]];
+  let rem=taxable,rows=[];
+  for(const [sz,lbl,rate] of defs){
+    if(rem<=0){rows.push({lbl,rate,amt:0,tax:0,na:true});continue;}
+    const c=Math.min(rem,sz);
+    rows.push({lbl,rate,amt:c,tax:c*rate/100,na:false,partial:c<sz&&c>0});
+    rem-=c;
+  }
+  return rows;
+}
 
-  // ══ EVOLVING ARREARS ══
-  const mosDiff=Math.max(0,(implInfo.yr-2026)*12+(implInfo.mo-1));
-  let runBC=basic,runDAC=daP0,runDAR=0;
-  // Revised basic anchored on Jan 1 2026: basic × fitment, grows 3% every January
-  let runRB=newBasic; // tracks revised basic month by month
-  let cumGross=0;
-  let arrRows='';
+function getCellIdx(lv,basic){
+  const cells=PM[lv]||[];
+  if(!cells.length) return {idx:0,isMax:false};
+  let idx=0;
+  for(let i=0;i<cells.length;i++){if(cells[i]<=basic) idx=i; else break;}
+  return {idx,isMax:idx>=cells.length-1};
+}
 
-  for(let m=0;m<mosDiff;m++){
-    const d=new Date(2026,m,1);
-    const mo=d.getMonth()+1,yr=d.getFullYear();
-    const moLb=MN[d.getMonth()]+' '+yr;
-    let isIncr=false,isDACR=false,isDARev=false;
+// ══════════════════════════════════════
+// THEME
+// ══════════════════════════════════════
+function toggleTheme(){
+  const th=document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark';
+  document.documentElement.setAttribute('data-theme',th);
+  localStorage.setItem('mclass-theme',th);
+  document.getElementById('themeBtn').textContent=th==='dark'?'☀️ Light':'🌙 Dark';
+  // Redraw charts if exists
+  if(charts.comp) setTimeout(()=>{if(ST.calculated) redrawCharts();},100);
+}
+(function(){
+  const t=localStorage.getItem('mclass-theme')||'dark';
+  document.documentElement.setAttribute('data-theme',t);
+  document.getElementById('themeBtn').textContent=t==='dark'?'☀️ Light':'🌙 Dark';
+})();
 
-    // DA hike: January (mo=1) and July (mo=7), skip m=0 (Jan 2026 is base)
-    if(m>0){
-      if(mo===1||mo===7){
-        runDAC+=daHike; isDACR=true;
-        runDAR+=daHike; isDARev=true;
+// ══════════════════════════════════════
+// NAVIGATION
+// ══════════════════════════════════════
+function switchTab(tab){
+  ST.currentTab=tab;
+  ['basic','advanced','compare'].forEach(t=>{
+    document.getElementById('tab-'+t).classList.toggle('on',t===tab);
+  });
+  const isBA=tab==='basic'||tab==='advanced';
+  document.getElementById('tabBasicAdv').style.display=isBA?'block':'none';
+  document.getElementById('tabCompare').style.display=tab==='compare'?'block':'none';
+  if(tab==='advanced'){
+    document.getElementById('secPersonal').style.display='block';
+    document.getElementById('inpTitle').textContent='🏛️ Advanced Calculator';
+  } else if(tab==='basic'){
+    document.getElementById('secPersonal').style.display='none';
+    document.getElementById('inpTitle').textContent='🏛️ Basic Calculator';
+  }
+  if(ST.calculated && isBA){
+    document.getElementById('recalcBanner').classList.add('show');
+  }
+}
+
+function scrollToCalc(){document.getElementById('calcTop').scrollIntoView({behavior:'smooth'});}
+
+// ══════════════════════════════════════
+// INPUT HANDLERS
+// ══════════════════════════════════════
+function updFit(){document.getElementById('fitVal').textContent=(document.getElementById('fitSlider').value/100).toFixed(2)+'×';}
+function updDA(){document.getElementById('daVal').textContent=document.getElementById('daSlider').value+'%';updTA();}
+function updDARise(){document.getElementById('daRiseVal').textContent=document.getElementById('daRiseSlider').value+'%';}
+
+function setInc(m){
+  ST.inc=m;
+  document.getElementById('incJan').classList.toggle('on',m===1);
+  document.getElementById('incJul').classList.toggle('on',m===7);
+  markDirty();
+}
+function setCity(c){
+  ST.city=c;
+  ['X','Y','Z'].forEach(x=>document.getElementById('city'+x).classList.toggle('on',x===c));
+  updTA();markDirty();
+}
+function setGovt(v){
+  ST.govt=v;
+  document.getElementById('govtY').classList.toggle('on',v);
+  document.getElementById('govtN').classList.toggle('on',!v);
+  updTA();markDirty();
+}
+function setNPS(v){
+  ST.nps=v;
+  document.getElementById('npsY').classList.toggle('on',v);
+  document.getElementById('npsN').classList.toggle('on',!v);
+  markDirty();
+}
+
+function onLevelChange(){
+  const lv=document.getElementById('payLevel').value;
+  const cells=PM[lv]||[];
+  const n=getLvN(lv);
+  // Show level 14+ option
+  document.getElementById('rowLev14').style.display=n>=14?'flex':'none';
+  if(cells.length && !document.getElementById('basicPay').value){
+    document.getElementById('basicPay').value=cells[0];
+  }
+  onBasicChange();
+  updTA();
+}
+
+function onBasicChange(){
+  const lv=document.getElementById('payLevel').value;
+  const bp=parseInt(document.getElementById('basicPay').value)||0;
+  const cells=PM[lv]||[];
+  const ci=document.getElementById('cellInfo');
+  if(cells.length && bp){
+    let idx=0;
+    for(let i=0;i<cells.length;i++){if(cells[i]<=bp) idx=i; else break;}
+    const isMax=idx>=cells.length-1;
+    ci.style.display='block';
+    ci.textContent=isMax?`Level ${lv} · Cell ${idx+1} · ⚠️ Maximum cell (Stagnation)`:`Level ${lv} · Cell ${idx+1} · Next cell = ${rs(cells[idx+1])}`;
+    ci.style.color=isMax?'var(--go2)':'var(--gr2)';
+  } else {
+    ci.style.display='none';
+  }
+  updTA();
+}
+
+function updTA(){
+  const lv=document.getElementById('payLevel').value;
+  const pwd=document.getElementById('chkPwd').checked;
+  const car=document.getElementById('chkCar').checked;
+  const lev14=document.getElementById('chkLev14').checked;
+  const da=parseInt(document.getElementById('daSlider').value)||60;
+  const base=getTABase(lv,ST.city,pwd,car,lev14);
+  const total=Math.round(base+(base*da/100));
+  let txt;
+  if(car) txt='TA = Zero (Govt car provided)';
+  else if(lev14) txt=`₹15,750 + DA = ${rs(Math.round(15750+15750*da/100))} at ${da}% DA`;
+  else if(!lv) txt='Select level and city to see TA';
+  else{
+    const tpta=ST.city==='X'||ST.city==='Y';
+    txt=`${rs(base)} base (Level ${lv}, ${tpta?'TPTA':'Non-TPTA'})${pwd?' — PwD doubled':''} + DA = ${rs(total)} at ${da}% DA`;
+  }
+  document.getElementById('taVal').textContent=txt;
+}
+
+function markDirty(){
+  if(!ST.calculated) return;
+  ST.dirty=true;
+  document.getElementById('recalcBanner').classList.add('show');
+  document.getElementById('calcBtn').classList.add('dirty');
+}
+
+// ══════════════════════════════════════
+// VALIDATION
+// ══════════════════════════════════════
+function clearErrors(){
+  document.querySelectorAll('.f-err').forEach(e=>e.style.display='none');
+  document.querySelectorAll('.f input,.f select').forEach(e=>e.classList.remove('err'));
+}
+function showErr(id,inputId){
+  const el=document.getElementById(id);
+  if(el) el.style.display='block';
+  const inp=document.getElementById(inputId);
+  if(inp) inp.classList.add('err');
+}
+function validate(){
+  clearErrors();
+  let ok=true;
+  const lv=document.getElementById('payLevel').value;
+  const bp=parseInt(document.getElementById('basicPay').value)||0;
+  const im=parseInt(document.getElementById('implMonth').value);
+  const iy=parseInt(document.getElementById('implYear').value);
+  if(!lv){showErr('errLevel','payLevel');ok=false;}
+  if(!bp||bp<18000){showErr('errBasic','basicPay');ok=false;}
+  if(iy<2026||(iy===2026&&im===1)){showErr('errImpl','implMonth');ok=false;}
+  if(!ST.city){showErr('errCity','cityX');ok=false;}
+  if(!ok){
+    const firstErr=document.querySelector('.f-err[style*="block"]');
+    if(firstErr) firstErr.scrollIntoView({behavior:'smooth',block:'center'});
+  }
+  return ok;
+}
+
+// ══════════════════════════════════════
+// CORE CALCULATION
+// ══════════════════════════════════════
+function buildMonths(lv,basic,implM,implY,incM,da0,daRise,city,govt,nps,pwd,car,lev14ta){
+  const cells=PM[lv]||[];
+  let cellIdx=0;
+  for(let i=0;i<cells.length;i++){if(cells[i]<=basic) cellIdx=i; else break;}
+  let curBasic=cells[cellIdx]||basic;
+  let curDA=da0,curCellIdx=cellIdx;
+  const months=[];
+  const sy=2026,sm=1;
+  const ey=implM===1?implY-1:implY;
+  const em=implM===1?12:implM-1;
+  for(let y=sy;y<=ey;y++){
+    const ms=y===sy?sm:1;
+    const me=y===ey?em:12;
+    for(let m=ms;m<=me;m++){
+      const marks=[];
+      const isFirst=y===sy&&m===sm;
+      if(!isFirst){
+        if(m===incM){
+          if(curCellIdx<cells.length-1){curCellIdx++;curBasic=cells[curCellIdx];marks.push(`INCREMENT: ${rs(cells[curCellIdx-1])} → ${rs(curBasic)} (cell ${curCellIdx} → ${curCellIdx+1})`);}
+          else{marks.push('Stagnation — at maximum cell');}
+        }
+        if(m===1||m===7){curDA+=daRise;marks.push(`DA revised: ${curDA-daRise}% → ${curDA}%`);}
       }
-      // Revised basic grows 3% every January (8th CPC est. increment)
-      if(mo===1){
-        runRB=Math.round(runRB*1.03);
-      }
+      const daAmt=Math.round(curBasic*curDA/100);
+      const hraAmt=Math.round(curBasic*getHRApct(city,govt));
+      const taBase=getTABase(lv,city,pwd,car,lev14ta);
+      const taDa=Math.round(taBase*curDA/100);
+      const gross=curBasic+daAmt+hraAmt+taBase+taDa;
+      const npsAmt=nps?Math.round((curBasic+daAmt)*.10):0;
+      const tax=Math.round(calcTax(gross*12)/12);
+      const net=gross-npsAmt-tax;
+      months.push({y,m,basic:curBasic,da:curDA,daAmt,hraAmt,taBase,taDa,gross,npsAmt,tax,net,marks,cell:curCellIdx+1});
     }
-    // Current 7th CPC increment on selected month (skip m=0)
-    if(mo===incrMo&&m>0){runBC=nextCell(lv,runBC);isIncr=true;}
-
-    // Current gross this month (7th CPC)
-    const cDA=runBC*(runDAC/100);
-    const cHRA=govtA?0:runBC*hraRateCurr;
-    const cTA=pwbdMin(runDAC);
-    const cTADA=cTA*(runDAC/100);
-    const cGross=runBC+cDA+cHRA+cTA+cTADA+specAll;
-    const cNPS=npsOn?(runBC+cDA)*0.10:0;
-    const cTDS=Math.round(calcTax(cGross*12).total/12);
-    const cNet=cGross-cNPS-cghsAmt-cgegAmt-cTDS-licFee;
-
-    // Revised gross this month (8th CPC)
-    // runRB = basic×fitment anchored Jan 2026, grows 3% each January
-    let rBasic=runRB;
-    const rDA=rBasic*(runDAR/100);
-    const rHRA=govtA?0:rBasic*(hraRevPct/100);
-    const rTA=newTA;
-    const rTADA=rTA*(runDAR/100);
-    const rGross=rBasic+rDA+rHRA+rTA+rTADA+specAll;
-    const rNPS=npsOn?(rBasic+rDA)*0.10:0;
-    const rTDS=Math.round(calcTax(rGross*12).total/12);
-    const rNet=rGross-rNPS-cghsAmt-cgegAmt-rTDS-licFee;
-
-    const gDiff=rGross-cGross; // gross difference for arrears
-    const nDiff=rNet-cNet;     // net difference for reference
-    if(gDiff>0) cumGross+=gDiff;
-
-    const tags=[];
-    if(isIncr) tags.push(`<span style="color:var(--or)">🔺 Incr→${f(runBC)}</span>`);
-    if(isDACR) tags.push(`<span style="color:var(--go)">DA→${runDAC.toFixed(0)}%|${runDAR.toFixed(0)}%</span>`);
-
-    const rowClass=isIncr?'ir':isDACR?'dar':'';
-    arrRows+=`<tr class="${rowClass}">
-      <td class="tmo">${moLb}${tags.length?'<br><small>'+tags.join(' ')+'</small>':''}</td>
-      <td>${f(cGross)}</td><td style="color:var(--t3);font-size:10px">${runDAC.toFixed(0)}%</td>
-      <td>${f(rGross)}</td><td style="color:var(--t3);font-size:10px">${runDAR.toFixed(0)}%</td>
-      <td class="${gDiff>0?'tpos':'tneg'}">${gDiff>=0?'+':''}${f(gDiff)}</td>
-      <td>${f(cNet)}</td><td>${f(rNet)}</td>
-      <td class="${nDiff>0?'tpos':'tneg'}">${nDiff>=0?'+':''}${f(nDiff)}</td>
-      <td class="tcum">${fL(Math.max(0,cumGross))}</td>
-    </tr>`;
   }
+  return months;
+}
 
-  // Tax on arrears (gross arrears added to FY income)
-  // Use revised basic at implementation date for annual salary
-  // rpBStart computed in projection block — but we need it here first
-  // Compute implBasic = newBasic grown by Jan increments during arrears
-  let implBasic=newBasic;
-  for(let yy=0;yy<mosDiff;yy++){
-    const mm=new Date(2026,yy,1).getMonth()+1;
-    if(mm===1&&yy>0) implBasic=Math.round(implBasic*1.03);
-  }
-  const implHRA=govtA?0:implBasic*(hraRevPct/100);
-  const implTA=newTA, implTADA=implTA*(runDAR/100);
-  const implGross=implBasic+implBasic*(runDAR/100)+implHRA+implTA+implTADA+specAll;
-  const annRev=implGross*12;
-  const implFY=implInfo.mo<=3?implInfo.yr-1:implInfo.yr;
-  const totFY=annRev+cumGross;
-  const txWA=calcTax(totFY),txWO=calcTax(annRev);
-  const taxOnArr=Math.max(0,txWA.total-txWO.total);
-  const netArrTax=Math.max(0,cumGross-taxOnArr);
+function groupHalfYearly(months,revGross,revNet){
+  const groups=[];
+  let cur=null;
+  months.forEach(mo=>{
+    const hasChange=mo.marks.length>0;
+    const key=`${mo.basic}_${mo.da}`;
+    if(!cur||cur.key!==key||hasChange){
+      if(cur) groups.push(cur);
+      cur={key,mStart:`${MN[mo.m]} ${mo.y}`,mEnd:`${MN[mo.m]} ${mo.y}`,
+        gross:mo.gross,net:mo.net,count:1,marks:mo.marks.join(' + '),
+        grossArr:revGross-mo.gross,netArr:revNet-mo.net};
+    } else {
+      cur.mEnd=`${MN[mo.m]} ${mo.y}`;cur.count++;
+    }
+  });
+  if(cur) groups.push(cur);
+  return groups;
+}
 
-  // Year projection
-  // rpB = newBasic (Jan 2026 basic × fitment) grown by 3% for each full year to implementation
-  // yearsToImpl = number of full Januaries between Jan 2026 and implementation month
-  const yearsToImpl = implInfo.mo===1 ? implInfo.yr-2026 : implInfo.yr-2026+(implInfo.mo>1?0:0);
-  // Count Januaries from Jan 2026 to implDate (exclusive of Jan 2026, inclusive of Jan of impl year if impl is after Jan)
-  const fullYearsElapsed = implInfo.yr - 2026 + (implInfo.mo > 1 ? 0 : 0);
-  // Simpler: count how many January increments fired during arrears period
-  let rpBStart = newBasic;
-  for(let yy=0; yy<mosDiff; yy++){
-    const mm = new Date(2026, yy, 1).getMonth()+1;
-    if(mm===1 && yy>0) rpBStart = Math.round(rpBStart*1.03);
-  }
-  // rpBStart is now revised basic at implementation date
-  // DA at implementation = runDAR at end of arrears loop
-  const daAtImpl = runDAR; // DA% at implementation month
+function calcOne(lv,basic,fit,implM,implY,incM,da0,daRise,city,govt,nps,pwd,car,lev14ta){
+  const revBasic=Math.round(basic*fit/100)*100;
+  const revHRA=Math.round(revBasic*getHRApct(city,govt));
+  const taBase=getTABase(lv,city,pwd,car,lev14ta);
+  const revGross=revBasic+revHRA+taBase;
+  const revNps=nps?Math.round(revBasic*.10):0;
+  const revTax=Math.round(calcTax(revGross*12)/12);
+  const revNet=revGross-revNps-revTax;
+  const months=buildMonths(lv,basic,implM,implY,incM,da0,daRise,city,govt,nps,pwd,car,lev14ta);
+  const groups=groupHalfYearly(months,revGross,revNet);
+  let grossArr=0,netArr=0;
+  groups.forEach(g=>{grossArr+=g.grossArr*g.count;netArr+=g.netArr*g.count;});
+  const initM=months[0]||{gross:0,net:0,npsAmt:0,tax:0,daAmt:0,hraAmt:0,taBase:0,taDa:0,da:da0,basic};
+  return {lv,basic,fit,revBasic,implM,implY,incM,da0,daRise,city,govt,nps,pwd,car,lev14ta,
+    revHRA,taBase,revGross,revNps,revTax,revNet,months,groups,grossArr,netArr,
+    initM,moGain:revGross-initM.gross,moNetGain:revNet-initM.net,
+    annGross:revGross*12,annTax:calcTax(revGross*12),
+    currAnnGross:initM.gross*12,currAnnTax:calcTax(initM.gross*12)};
+}
 
-  let projRows='';
-  let rpB=rpBStart,rpDA=daAtImpl;
-  for(let y=1;y<=projYr;y++){
-    const yr=implInfo.yr+y;
-    rpB=Math.round(rpB*1.03); // annual increment every year post implementation
-    rpDA+=daHike*2; // two DA installments per year
-    const rpHRA=govtA?0:rpB*(hraRevPct/100);
-    const rpTA=newTA,rpTADA=rpTA*(rpDA/100);
-    const rpGross=rpB+rpB*(rpDA/100)+rpHRA+rpTA+rpTADA+specAll;
-    const rpNPS=npsOn?(rpB+rpB*(rpDA/100))*0.10:0;
-    const rpTDS=Math.round(calcTax(rpGross*12).total/12);
-    const rpNet=rpGross-rpNPS-cghsAmt-cgegAmt-rpTDS-licFee;
-    const rem=y===1?`Starting from revised basic at implementation (₹${f(rpBStart)}) · 3% est. increment (8th CPC matrix not notified)`:`Progressive 3% annual increment on revised basic · DA grows @${daHike}%/installment`;
-    projRows+=`<tr><td class="tyr">${yr}</td><td>${f(rpB)}</td><td>${rpDA.toFixed(0)}%</td><td>${govtA?'Nil':f(rpHRA)}</td><td>${f(rpGross)}</td><td class="tnet">${f(rpNet)}</td><td class="trem">${rem}</td></tr>`;
-  }
+// ══════════════════════════════════════
+// MAIN CALCULATE
+// ══════════════════════════════════════
+function calculate(){
+  if(!validate()) return;
+  const lv=document.getElementById('payLevel').value;
+  const basic=parseInt(document.getElementById('basicPay').value);
+  const fit=parseInt(document.getElementById('fitSlider').value)/100;
+  const implM=parseInt(document.getElementById('implMonth').value);
+  const implY=parseInt(document.getElementById('implYear').value);
+  const da0=parseInt(document.getElementById('daSlider').value)||60;
+  const daRise=ST.currentTab==='advanced'?parseInt(document.getElementById('daRiseSlider').value)||2:2;
+  const pwd=document.getElementById('chkPwd').checked;
+  const car=document.getElementById('chkCar').checked;
+  const lev14ta=document.getElementById('chkLev14').checked;
+  const name=document.getElementById('empName')?.value||'';
+  const desig=document.getElementById('empDesig')?.value||'';
+  const d=calcOne(lv,basic,fit,implM,implY,ST.inc,da0,daRise,ST.city,ST.govt,ST.nps,pwd,car,lev14ta);
+  d.name=name;d.desig=desig;
+  ST.calculated=true;ST.dirty=false;
+  document.getElementById('recalcBanner').classList.remove('show');
+  document.getElementById('calcBtn').classList.remove('dirty');
+  renderResults(d);
+  document.getElementById('resPanel').scrollIntoView({behavior:'smooth',block:'start'});
+  gtag('event','calc_used',{level:lv,fit,implY});
+}
 
-  // Investment calcs
-  const grams=Math.floor(cumGross/goldPr);
-  const coins=Math.floor(cumGross/(goldPr*8));
-  const sgb=Math.floor(cumGross/100); // SGB units ≈₹100/unit approx
-  const fd7=Math.round(cumGross*0.07);
-  const ppf=Math.round(cumGross*0.071);
-  const swiftDP=Math.round(cumGross*0.20); // 20% down payment
-  const sqft=Math.floor(cumGross/5000);
-  const plotKata=Math.floor(cumGross/200000); // ₹2L per kata (tier-2)
-  const sip=Math.round(cumGross*1.12); // 12% annualised return 1 year SIP equivalent
-  const elss=Math.round(cumGross*0.80); // after ELSS lock-in assumed value
-  const homeLoanSave=Math.round(cumGross*0.08*5); // interest saved on 8% loan over 5yr
-  const marriage=Math.floor(cumGross/300000);
-  const edu=Math.round(cumGross*0.07*10); // FD for kids edu 10yr
-  const trips=Math.floor(cumGross/150000);
-  const iphones=Math.floor(cumGross/130000);
+// ══════════════════════════════════════
+// RENDER RESULTS
+// ══════════════════════════════════════
+function destroyChart(id){if(charts[id]){charts[id].destroy();delete charts[id];}}
 
-  // Share text
-  const nm=desig||'Friend';
-  const shareText=`📊 My 8th Pay Commission Projection\n\n👤 ${desig||'Central Govt Employee'} | Level ${lv}\n💼 Current Net: ${f(netCurr)}/month\n🚀 Revised Net: ${f(netRev0)}/month (Fitment ${fit.toFixed(2)}×)\n📈 Monthly Gain: +${f(netRev0-netCurr)}\n💰 Gross Arrears: ${fL(cumGross)}\n🪙 That's ${grams} grams of Gold!\n\n👉 Calculate yours at [your-website.com]\n#8thPayCommission #GovtEmployees`;
-  window._shareText=shareText;
-  const waURL=`https://wa.me/?text=${encodeURIComponent(shareText)}`;
-  const twURL=`https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText.substring(0,280))}`;
-  const txR=calcTax(grossRev0*12);
-  const slbH=txR.slabs.map(s=>`<div class="tr2 slb"><span class="tn2">${f(s.lo)} – ${s.hi===Infinity?'Above':f(s.hi)} @ ${(s.rate*100).toFixed(0)}%<small>Slab amount: ${f(s.amt)}</small></span><span class="tv2">${f(s.t)}</span></div>`).join('');
+function renderResults(d){
+  const panel=document.getElementById('resPanel');
+  panel.innerHTML=buildHTML(d);
+  // Charts
+  setTimeout(()=>{
+    renderCompChart(d);
+    renderArrChart(d);
+    renderTaxChart(d);
+  },100);
+}
 
-  // Glow
-  const gPct=((netRev0-netCurr)/netCurr)*100;
-  if(gPct>50) setGlow(4); else if(gPct>35) setGlow(3); else if(gPct>20) setGlow(2); else setGlow(1);
-
-  // Likes
-  const BASE=23847;
-  const liked=localStorage.getItem('8cpc_lk')==='1';
-  const extra=parseInt(localStorage.getItem('8cpc_ex')||'0');
-  const lkCnt=BASE+extra;
-  const featureVotes=parseInt(localStorage.getItem('8cpc_fv')||'0')+2341;
-  const gMsg=gPct>50?'Fantastic news':gPct>30?'Great news':'Good news';
-
-  document.getElementById('resultsArea').innerHTML=`
-  <!-- VERDICT -->
-  <div class="verdict fu">
-    <div style="font-size:32px;margin-bottom:8px">🎉</div>
-    <div class="vmsg">${gMsg}, <span>${desig?desig.split(' ')[0]:'Friend'}!</span> Your salary jumps from <span>${f(netCurr)}</span> to <span>${f(netRev0)}</span>/month — a gain of <span>+${f(netRev0-netCurr)}</span> every month. Plus <span>${fL(cumGross)}</span> in gross arrears!</div>
-    <div class="vnums">
-      <div class="vn vc"><div class="vv">${f(netCurr)}</div><div class="vl">Current Net/Month</div></div>
-      <div class="vn vr"><div class="vv">${f(netRev0)}</div><div class="vl">Revised Net/Month</div></div>
-      <div class="vn vg"><div class="vv">+${f(netRev0-netCurr)}</div><div class="vl">Monthly Gain (+${gPct.toFixed(1)}%)</div></div>
-      <div class="vn va"><div class="vv">${fL(cumGross)}</div><div class="vl">Gross Arrears (est.)</div></div>
-    </div>
-    <button class="rbtn" onclick="revealAll(this)">👇 Show Me Full Analysis</button>
-  </div>
-
-  <div id="full" style="display:none">
-
-  <!-- STEP 1: SLIPS -->
-  <div class="step fu">
-    <div class="steplbl"><div class="stepn" style="background:rgba(255,107,0,.15);color:var(--or)">1</div><div class="stept">Side-by-Side Salary Comparison</div></div>
-    <div class="slips">
-      <div class="slip">
-        <div class="shd cur"><div class="stg">📋 Current — 7th Pay Commission</div><h3>${f(grossCurr)}</h3><p>Gross/month · DA ${daP0}% · ${city==='0'?'Govt. Accommodation':city+'-Class City'}</p></div>
-        <div class="ssec">▲ Earnings</div>
-        <div class="sr ern"><span class="sn">Basic Pay<small>Level ${lv}</small></span><span class="sv">${f(basic)}</span></div>
-        <div class="sr ern"><span class="sn">DA on Basic Pay<small>${daP0}% of Basic</small></span><span class="sv">${f(da0)}</span></div>
-        ${!govtA?`<div class="sr ern"><span class="sn">HRA<small>${(hraRateCurr*100).toFixed(0)}% of Basic · ${city}-Class</small></span><span class="sv">${f(hra0)}</span></div>`:''}
-        <div class="sr ern"><span class="sn">Transport Allowance${isPwBD?' [PwBD×2]':''}<small>Base + DA (${daP0}%)</small></span><span class="sv">${f(taEff0+taDA0)}</span></div>
-        ${specAll>0?`<div class="sr ern"><span class="sn">Special Allowance</span><span class="sv">${f(specAll)}</span></div>`:''}
-        <div class="sr grs"><span class="sn">Gross Salary</span><span class="sv">${f(grossCurr)}</span></div>
-        <div class="ssec">▼ Deductions</div>
-        ${npsOn?`<div class="sr ded"><span class="sn">NPS 10% of (Basic+DA)<small>${f(basic+da0)} × 10%</small></span><span class="sv">−${f(npsCurr)}</span></div>`:''}
-        ${cghsOn?`<div class="sr ded"><span class="sn">CGHS<small>${CGHS[lv]||CGHS[n]||650}/mo</small></span><span class="sv">−${f(cghsAmt)}</span></div>`:''}
-        ${cgegOn?`<div class="sr ded"><span class="sn">CGEGIS Group ${grp}</span><span class="sv">−${f(cgegAmt)}</span></div>`:''}
-        ${tdsCurr>0?`<div class="sr ded"><span class="sn">Income Tax TDS<small>New Regime · est.</small></span><span class="sv">−${f(tdsCurr)}</span></div>`:''}
-        ${govtA?`<div class="sr ded"><span class="sn">License Fee CPWD</span><span class="sv">−${f(licFee)}</span></div>`:''}
-        <div class="sr ddt"><span class="sn">Total Deductions</span><span class="sv">−${f(totalDedC)}</span></div>
-        <div class="sr net"><span class="sn">Net In-Hand</span><span class="sv">${f(netCurr)}</span></div>
-      </div>
-      <div class="slip">
-        <div class="shd rev"><div class="stg">🚀 Revised — 8th CPC · Fitment ${fit.toFixed(2)}×</div><h3>${f(grossRev0)}</h3><p>Gross/month · DA=0% on implementation · Jan 1, 2026</p></div>
-        <div class="ssec">▲ Earnings</div>
-        <div class="sr ern"><span class="sn">Revised Basic Pay<small>${f(basic)} × ${fit.toFixed(2)}</small></span><span class="sv">${f(newBasic)}</span></div>
-        <div class="sr nil"><span class="sn">DA on Basic Pay<small>0% — Reset on implementation</small></span><span class="sv">₹0</span></div>
-        ${!govtA?`<div class="sr ern"><span class="sn">HRA<small>${hraRevPct}% of Revised Basic (est.)</small></span><span class="sv">${f(newHRA)}</span></div>`:''}
-        <div class="sr ern"><span class="sn">Transport Allowance${isPwBD?' [PwBD×2]':''}<small>Base unchanged · DA=0</small></span><span class="sv">${f(newTA)}</span></div>
-        ${specAll>0?`<div class="sr ern"><span class="sn">Special Allowance</span><span class="sv">${f(specAll)}</span></div>`:''}
-        <div class="sr grs"><span class="sn">Gross Salary</span><span class="sv">${f(grossRev0)}</span></div>
-        <div class="ssec">▼ Deductions</div>
-        ${npsOn?`<div class="sr ded"><span class="sn">NPS 10% of Revised Basic<small>DA=0 at implementation</small></span><span class="sv">−${f(npsRev0)}</span></div>`:''}
-        ${cghsOn?`<div class="sr ded"><span class="sn">CGHS (unchanged)</span><span class="sv">−${f(cghsAmt)}</span></div>`:''}
-        ${cgegOn?`<div class="sr ded"><span class="sn">CGEGIS Group ${grp}</span><span class="sv">−${f(cgegAmt)}</span></div>`:''}
-        ${tdsRev0>0?`<div class="sr ded"><span class="sn">Income Tax TDS<small>New Regime · est.</small></span><span class="sv">−${f(tdsRev0)}</span></div>`:''}
-        ${govtA?`<div class="sr ded"><span class="sn">License Fee CPWD</span><span class="sv">−${f(licFee)}</span></div>`:''}
-        <div class="sr ddt"><span class="sn">Total Deductions</span><span class="sv">−${f(totalDedR)}</span></div>
-        <div class="sr net"><span class="sn">Net In-Hand</span><span class="sv">${f(netRev0)}</span></div>
+function buildHTML(d){
+  const prevM=d.months.length;
+  const ey=d.implM===1?d.implY-1:d.implY;
+  const em=d.implM===1?12:d.implM-1;
+  return `
+  <!-- S1: INPUTS -->
+  <div class="rcard always-open">
+    <div class="rc-head"><h4><span class="sn">1</span> Inputs used for this calculation</h4></div>
+    <div class="rc-body show">
+      <div class="inp-grid">
+        ${d.name?`<div class="ig-item ig-full"><div class="ig-lbl">Prepared for</div><div class="ig-val info">${d.name}${d.desig?' — '+d.desig:''}</div></div>`:''}
+        <div class="ig-item"><div class="ig-lbl">Pay Level</div><div class="ig-val">Level ${d.lv}</div></div>
+        <div class="ig-item"><div class="ig-lbl">Current Basic</div><div class="ig-val">${rs(d.basic)}</div></div>
+        <div class="ig-item"><div class="ig-lbl">Fitment Factor</div><div class="ig-val info">${d.fit.toFixed(2)}×</div></div>
+        <div class="ig-item"><div class="ig-lbl">Revised Basic</div><div class="ig-val info">${rs(d.revBasic)}</div></div>
+        <div class="ig-item"><div class="ig-lbl">Implementation</div><div class="ig-val warn">${MN[d.implM]} ${d.implY} (assumed)</div></div>
+        <div class="ig-item"><div class="ig-lbl">Arrears Period</div><div class="ig-val">${MN[1]} 2026 – ${MN[em]} ${ey} (${prevM} mo)</div></div>
+        <div class="ig-item"><div class="ig-lbl">Increment Month</div><div class="ig-val">${d.incM===1?'January':'July'}</div></div>
+        <div class="ig-item"><div class="ig-lbl">DA at Jan 2026</div><div class="ig-val">${d.da0}%</div></div>
+        <div class="ig-item"><div class="ig-lbl">DA Rise</div><div class="ig-val">${d.daRise}% / half year</div></div>
+        <div class="ig-item"><div class="ig-lbl">City Type</div><div class="ig-val">${d.city} City</div></div>
+        <div class="ig-item"><div class="ig-lbl">HRA</div><div class="ig-val">${d.govt?'NIL — Govt accomm.':d.city==='X'?'30%':d.city==='Y'?'20%':'10%'}</div></div>
+        <div class="ig-item"><div class="ig-lbl">TA Base (7th CPC)</div><div class="ig-val">${d.car?'Zero (Govt car)':rs(d.taBase)+'/mo'}</div></div>
+        <div class="ig-item"><div class="ig-lbl">PwD / Govt Car / NPS</div><div class="ig-val">${d.pwd?'PwD · ':''} ${d.car?'Car · ':''} ${d.nps?'NPS Yes':'OPS'}</div></div>
+        <div class="ig-item"><div class="ig-lbl">Tax Regime</div><div class="ig-val">New regime FY 2025-26</div></div>
       </div>
     </div>
   </div>
 
-  <!-- STEP 2: ARREARS -->
-  <div class="step fu">
-    <div class="steplbl"><div class="stepn" style="background:rgba(200,150,10,.15);color:var(--go)">2</div><div class="stept">Month-wise Arrears — Jan 2026 to ${implInfo.lb}</div></div>
-    <div class="da-note">📊 <strong>Both salaries evolve:</strong> Current 7th CPC — DA hikes every Jul &amp; Jan by ${daHike}%, basic moves to next pay matrix cell on ${incrMo===1?'January':'July'} increment. Revised 8th CPC — DA starts at 0%, grows every Jul &amp; Jan by ${daHike}%. <strong>Gross Diff</strong> used for arrears &amp; tax computation. Net Diff shown for reference.</div>
-    <div class="twrap">
-      <div class="thdr"><h3 style="color:var(--go)">💰 Arrears · ${mosDiff} months</h3><span style="font-size:12px;color:var(--t3)">Cumulative Gross: <strong style="color:var(--go)">${fL(cumGross)}</strong></span></div>
-      <div style="overflow-x:auto">
+  <!-- S2: MONTHLY COMPARISON -->
+  <div class="rcard always-open">
+    <div class="rc-head"><h4><span class="sn">2</span> Monthly salary — current vs revised</h4></div>
+    <div class="rc-body show">
+      <div class="big2">
+        <div class="bm bm-g">
+          <div class="bm-lbl">Monthly Gross Gain</div>
+          <div class="bm-big">+${rs(d.moGain)}</div>
+          <div class="bm-net">Net gain: +${rs(d.moNetGain)} / month</div>
+          <div class="bm-sub">From ${MN[d.implM]} ${d.implY} onwards</div>
+        </div>
+        <div class="bm bm-o">
+          <div class="bm-lbl">Total Gross Arrears</div>
+          <div class="bm-big">${rs(d.grossArr)}</div>
+          <div class="bm-net">Net arrears: ${rs(d.netArr)}</div>
+          <div class="bm-sub">${MN[1]} 2026 – ${MN[em]} ${ey} · ${prevM} months</div>
+        </div>
+      </div>
+      <div class="tbl-wrap">
         <table class="tbl">
-          <thead><tr>
-            <th style="text-align:left">Month</th>
-            <th>Current Gross</th><th>Old DA%</th>
-            <th>Revised Gross</th><th>New DA%</th>
-            <th>Gross Diff</th>
-            <th>Current Net</th><th>Revised Net</th><th>Net Diff</th>
-            <th>Cum. Arrears</th>
-          </tr></thead>
-          <tbody>${arrRows||'<tr><td colspan="10" style="text-align:center;padding:20px;color:var(--t3)">Select a future implementation date to see arrears</td></tr>'}</tbody>
+          <thead><tr><th>Component</th><th>Current (₹)</th><th>Revised (₹)</th><th>Change (₹)</th><th>Remarks</th></tr></thead>
+          <tbody>
+            <tr><td>Basic pay</td><td>${fmt(d.basic)}</td><td class="info">${fmt(d.revBasic)}</td><td class="gain">+${fmt(d.revBasic-d.basic)}</td><td style="font-size:10px;color:var(--t3);">× ${d.fit.toFixed(2)} fitment</td></tr>
+            <tr><td>Dearness allowance</td><td>${fmt(d.initM.daAmt)}</td><td style="color:var(--t3);">0 (merged)</td><td class="loss">−${fmt(d.initM.daAmt)}</td><td style="font-size:10px;color:var(--t3);">DA resets on implementation</td></tr>
+            <tr><td>House rent allowance</td><td>${fmt(d.initM.hraAmt)}</td><td class="${d.revHRA>=d.initM.hraAmt?'info':'loss'}">${fmt(d.revHRA)}</td><td class="${d.revHRA>=d.initM.hraAmt?'gain':'loss'}">${d.revHRA>=d.initM.hraAmt?'+':'−'}${fmt(Math.abs(d.revHRA-d.initM.hraAmt))}</td><td style="font-size:10px;color:var(--t3);">${d.govt?'NIL — Govt accommodation':d.city+' city'}</td></tr>
+            <tr><td>Transport allowance base</td><td>${fmt(d.initM.taBase)}</td><td class="info">${fmt(d.taBase)}</td><td>0</td><td style="font-size:10px;color:var(--t3);">7th CPC base unchanged</td></tr>
+            <tr><td>DA on TA</td><td>${fmt(d.initM.taDa)}</td><td style="color:var(--t3);">0</td><td class="loss">−${fmt(d.initM.taDa)}</td><td style="font-size:10px;color:var(--t3);">DA 0% after implementation</td></tr>
+            <tr class="tot"><td>Gross salary</td><td>${fmt(d.initM.gross)}</td><td class="info">${fmt(d.revGross)}</td><td class="gain">+${fmt(d.moGain)}</td><td style="font-size:10px;color:var(--t3);">Monthly gross gain</td></tr>
+            <tr><td>NPS — employee 10%</td><td class="loss">${d.nps?'−'+fmt(d.initM.npsAmt):'—'}</td><td class="loss">${d.nps?'−'+fmt(d.revNps):'—'}</td><td class="loss">${d.nps?'−'+fmt(d.revNps-d.initM.npsAmt):'—'}</td><td style="font-size:10px;color:var(--t3);">10% of (Basic+DA)</td></tr>
+            <tr><td>Income tax — monthly</td><td class="loss">−${fmt(d.initM.tax)}</td><td class="loss">−${fmt(d.revTax)}</td><td class="loss">−${fmt(d.revTax-d.initM.tax)}</td><td style="font-size:10px;color:var(--t3);">See Section 6 for details</td></tr>
+            <tr class="grand"><td>Net take-home pay</td><td>${fmt(d.initM.net)}</td><td class="gain">${fmt(d.revNet)}</td><td class="gain">+${fmt(d.moNetGain)}</td><td style="font-size:10px;color:var(--t3);">Monthly net gain</td></tr>
+          </tbody>
         </table>
       </div>
-      <div style="padding:8px 14px;font-size:10px;color:var(--t3);background:var(--b2);line-height:1.8">
-        🔺 <strong style="color:var(--or)">Orange rows</strong> = Increment month (basic → next pay matrix cell) &nbsp;|&nbsp;
-        🟡 <strong style="color:var(--go)">Gold rows</strong> = DA hike month (both old &amp; new DA revised) &nbsp;|&nbsp;
-        Gross Diff = basis for arrears payment &amp; tax calculation
+      <div class="chart-wrap"><canvas id="chartComp"></canvas></div>
+    </div>
+  </div>
+
+  <!-- S3: PROJECTION (grouped) -->
+  <div class="rcard">
+    <div class="rc-head" onclick="toggleCard(this)"><h4><span class="sn">3</span> Month-by-month projection (grouped)</h4><span class="rc-tog">▼</span></div>
+    <div class="rc-body">
+      <div style="font-size:11px;color:var(--t3);margin-bottom:10px;">Current salary changes with each increment and DA revision. Periods grouped by salary change points.</div>
+      <div class="tbl-wrap">
+        <table class="tbl">
+          <thead><tr><th>Period</th><th>Basic (₹)</th><th>DA%</th><th>DA amt (₹)</th><th>HRA (₹)</th><th>TA base</th><th>DA on TA</th><th>Gross (₹)</th><th>NPS (₹)</th><th>Tax/mo (₹)</th><th>Net (₹)</th></tr></thead>
+          <tbody>
+            ${d.months.map(mo=>{
+              let rows='';
+              if(mo.marks.length>0) rows+=`<tr class="mk"><td colspan="11">📌 ${MN[mo.m]} ${mo.y} — ${mo.marks.join(' · ')}</td></tr>`;
+              rows+=`<tr><td>${MN[mo.m]} ${mo.y}</td><td>${fmt(mo.basic)}</td><td>${mo.da}%</td><td>${fmt(mo.daAmt)}</td><td>${fmt(mo.hraAmt)}</td><td>${fmt(mo.taBase)}</td><td>${fmt(mo.taDa)}</td><td style="font-weight:600;">${fmt(mo.gross)}</td><td class="loss">${mo.npsAmt>0?fmt(mo.npsAmt):'—'}</td><td class="loss">${fmt(mo.tax)}</td><td class="gain">${fmt(mo.net)}</td></tr>`;
+              return rows;
+            }).join('')}
+            <tr class="impl"><td colspan="11">✅ ${MN[d.implM]} ${d.implY} — 8th CPC implemented · Revised salary: Gross ${rs(d.revGross)} · Net ${rs(d.revNet)} / month</td></tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </div>
 
-  <!-- STEP 3: TAX -->
-  <div class="step fu">
-    <div class="steplbl"><div class="stepn" style="background:rgba(41,128,185,.15);color:#5aafdf">3</div><div class="stept">Income Tax — New Regime Breakup</div></div>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
-      <div class="taxcard">
-        <div class="taxhdr"><h3>📐 Revised Salary Tax Calculation</h3></div>
-        <div class="tr2"><span class="tn2">Annual Gross (₹${f(grossRev0)} × 12)</span><span class="tv2">${f(grossRev0*12)}</span></div>
-        <div class="tr2"><span class="tn2">Less: Standard Deduction</span><span class="tv2" style="color:var(--gr)">−₹75,000</span></div>
-        <div class="tr2" style="background:rgba(41,128,185,.05)"><span class="tn2" style="font-weight:700">Net Taxable Income</span><span class="tv2" style="color:#5aafdf;font-weight:800">${f(txR.taxable)}</span></div>
-        ${txR.taxable<=1275000?`<div class="tr2"><span class="tn2">Rebate u/s 87A (≤₹12.75L)</span><span class="tv2" style="color:var(--gr)">Full Rebate</span></div>`:''}
-        ${slbH}
-        ${txR.tax>0?`<div class="tr2 ttot"><span class="tn2">Tax before cess</span><span class="tv2">${f(txR.tax)}</span></div>
-        <div class="tr2"><span class="tn2">Health &amp; Education Cess (4%)</span><span class="tv2">${f(txR.cess)}</span></div>
-        <div class="tr2 ttot"><span class="tn2">Annual Tax Liability</span><span class="tv2">${f(txR.total)}</span></div>
-        <div class="tr2"><span class="tn2">Monthly TDS</span><span class="tv2" style="color:var(--rd)">${f(tdsRev0)}</span></div>`:`<div class="tr2"><span class="tn2" style="color:var(--gr)">✅ No tax — Rebate u/s 87A applies</span><span class="tv2">₹0</span></div>`}
+  <!-- S4: ARREARS -->
+  <div class="rcard always-open">
+    <div class="rc-head"><h4><span class="sn">4</span> Arrears statement — ${MN[1]} 2026 to ${MN[em]} ${ey}</h4></div>
+    <div class="rc-body show">
+      <div style="font-size:11px;color:var(--t3);margin-bottom:12px;">Periods grouped by salary change events. Net arrears = sum of monthly net gains — NPS and tax already included.</div>
+      <div class="tbl-wrap">
+        <table class="tbl">
+          <thead><tr><th>Period</th><th>Months</th><th>Curr gross (₹)</th><th>Rev gross (₹)</th><th>Gross diff/mo (₹)</th><th>Curr net (₹)</th><th>Rev net (₹)</th><th>Net gain/mo (₹)</th><th>Period gross arrear (₹)</th><th>Period net arrear (₹)</th></tr></thead>
+          <tbody>
+            ${d.groups.map(g=>{
+              let rows='';
+              if(g.marks) rows+=`<tr class="mk"><td colspan="10">📌 ${g.marks}</td></tr>`;
+              rows+=`<tr><td><strong>${g.mStart}${g.mStart!==g.mEnd?' – '+g.mEnd:''}</strong></td><td style="font-weight:600;">${g.count}</td><td>${fmt(g.gross)}</td><td class="info">${fmt(d.revGross)}</td><td class="gain">+${fmt(g.grossArr)}</td><td>${fmt(g.net)}</td><td class="info">${fmt(d.revNet)}</td><td class="gain">+${fmt(g.netArr)}</td><td class="warn">${rs(g.grossArr*g.count)}</td><td class="gain">${rs(g.netArr*g.count)}</td></tr>`;
+              return rows;
+            }).join('')}
+            <tr class="grand"><td><strong>Total arrears</strong></td><td><strong>${prevM} months</strong></td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td style="color:var(--or);font-size:14px;font-weight:800;">${rs(d.grossArr)}</td><td style="color:var(--gr2);font-size:14px;font-weight:800;">${rs(d.netArr)}</td></tr>
+          </tbody>
+        </table>
       </div>
-      <div class="taxcard">
-        <div class="taxhdr"><h3>🏛️ Tax on Gross Arrears</h3></div>
-        <div class="tr2"><span class="tn2">Gross Arrears (Jan 2026–${implInfo.lb})<small>Added to FY ${implFY}–${(implFY+1).toString().slice(2)} income</small></span><span class="tv2" style="color:var(--go)">${fL(cumGross)}</span></div>
-        <div class="tr2"><span class="tn2">Annual Revised Salary</span><span class="tv2">${f(annRev)}</span></div>
-        <div class="tr2" style="background:rgba(200,150,10,.06)"><span class="tn2" style="font-weight:700">Total FY ${implFY}–${(implFY+1).toString().slice(2)} Income</span><span class="tv2" style="color:var(--go);font-weight:800">${f(totFY)}</span></div>
-        <div class="tr2 tart"><span class="tn2">Additional Tax on Gross Arrears<small>Marginal tax on arrear portion</small></span><span class="tv2">−${f(taxOnArr)}</span></div>
-        <div class="tr2" style="background:rgba(45,158,80,.08)"><span class="tn2" style="font-weight:800;color:var(--gr)">Net Arrears After Tax</span><span class="tv2" style="color:var(--gr);font-weight:800;font-size:15px">${fL(netArrTax)}</span></div>
-        <div class="anote">ℹ️ Gross arrears received in ${implInfo.lb} taxed in FY ${implFY}–${(implFY+1).toString().slice(2)}. Claim <strong>relief u/s 89(1)</strong> via Form 10E before ITR filing to reduce tax burden on lump-sum arrears.</div>
-      </div>
+      <div class="chart-wrap"><canvas id="chartArr"></canvas></div>
+      <div class="note note-g">Net arrears ${rs(d.netArr)} = sum of all monthly net gains over ${prevM} months. NPS and income tax impact already accounted for in each month — no double counting.</div>
+      <div class="note note-o">Arrears paid as lump sum may attract additional income tax in year of receipt. Section 89(1) relief available — file Form 10E before ITR. Consult your DDO for exact computation.</div>
     </div>
   </div>
 
-  <!-- STEP 4: INVESTMENT SUGGESTIONS -->
-  <div class="step fu">
-    <div class="steplbl"><div class="stepn" style="background:rgba(200,150,10,.15);color:var(--go)">4</div><div class="stept">💡 What to Do with Your Arrears of ${fL(cumGross)}?</div></div>
-    <div class="twrap" style="padding:20px">
-      <div class="itabs">
-        <button class="itab act" onclick="showTab('safe',this)">🛡️ Safe &amp; Secure</button>
-        <button class="itab" onclick="showTab('realty',this)">🏠 Real Estate</button>
-        <button class="itab" onclick="showTab('growth',this)">📈 Growth</button>
-        <button class="itab" onclick="showTab('life',this)">🎉 Life Events</button>
-        <button class="itab" onclick="showTab('enjoy',this)">😊 Enjoy!</button>
+  <!-- S5: NPS -->
+  <div class="rcard">
+    <div class="rc-head" onclick="toggleCard(this)"><h4><span class="sn">5</span> NPS contribution details</h4><span class="rc-tog">▼</span></div>
+    <div class="rc-body">
+      <div class="tbl-wrap">
+        <table class="tbl">
+          <thead><tr><th>Item</th><th>Current (₹)</th><th>Revised (₹)</th><th>Change (₹)</th><th>Remarks</th></tr></thead>
+          <tbody>
+            <tr><td>NPS base (Basic + DA)</td><td>${fmt(d.basic+d.initM.daAmt)}</td><td class="info">${fmt(d.revBasic)}</td><td>—</td><td style="font-size:10px;color:var(--t3);">DA merged in revised salary</td></tr>
+            <tr><td>Employee NPS (10%)</td><td class="loss">${d.nps?fmt(d.initM.npsAmt)+'/mo':'Not applicable'}</td><td class="loss">${d.nps?fmt(d.revNps)+'/mo':'—'}</td><td class="loss">${d.nps?'+'+fmt(d.revNps-d.initM.npsAmt)+'/mo':'—'}</td><td style="font-size:10px;color:var(--t3);">Deducted from salary</td></tr>
+            <tr><td>Employer NPS (14%)</td><td>${d.nps?fmt(Math.round((d.basic+d.initM.daAmt)*.14))+'/mo':'—'}</td><td>${d.nps?fmt(Math.round(d.revBasic*.14))+'/mo':'—'}</td><td>—</td><td style="font-size:10px;color:var(--t3);">Not deducted from salary</td></tr>
+            <tr class="tot"><td>Total NPS corpus/month</td><td>${d.nps?fmt(d.initM.npsAmt+Math.round((d.basic+d.initM.daAmt)*.14)):'—'}</td><td class="gain">${d.nps?fmt(d.revNps+Math.round(d.revBasic*.14)):'—'}</td><td class="gain">${d.nps?'+'+fmt((d.revNps+Math.round(d.revBasic*.14))-(d.initM.npsAmt+Math.round((d.basic+d.initM.daAmt)*.14))):'—'}</td><td style="font-size:10px;color:var(--t3);">Employee + Employer</td></tr>
+            <tr><td>Annual NPS corpus (revised)</td><td>—</td><td class="gain">${d.nps?rs((d.revNps+Math.round(d.revBasic*.14))*12):'—'}</td><td>—</td><td style="font-size:10px;color:var(--t3);">Full year projection</td></tr>
+          </tbody>
+        </table>
       </div>
-      <div class="ipane act" id="pane-safe">
-        <div class="igrid">
-          <div class="ic"><div class="ici">🥇</div><div class="icl">Physical Gold</div><div class="icv">${grams.toLocaleString('en-IN')} grams</div><div class="ics">@ ₹${goldPr.toLocaleString('en-IN')}/gram · ${coins} coins (8g each)</div></div>
-          <div class="ic"><div class="ici">📜</div><div class="icl">Sovereign Gold Bond</div><div class="icv">${Math.floor(cumGross/7300)} units</div><div class="ics">SGB earns 2.5% interest + gold appreciation. Better than physical gold!</div></div>
-          <div class="ic"><div class="ici">🏦</div><div class="icl">Bank FD (7%)</div><div class="icv">${f(fd7)}/year</div><div class="ics">Annual interest income on full arrears at 7% FD rate</div></div>
-          <div class="ic"><div class="ici">📮</div><div class="icl">Post Office NSC</div><div class="icv">${f(Math.round(cumGross*0.077))}/year</div><div class="ics">NSC @ 7.7% p.a. · Tax saving u/s 80C · Guaranteed returns</div></div>
-          <div class="ic"><div class="ici">💚</div><div class="icl">PPF Top-up</div><div class="icv">${f(Math.round(cumGross*0.071))}/year</div><div class="ics">PPF @ 7.1% · Tax-free returns · Invest ₹1.5L/year max</div></div>
-          <div class="ic"><div class="ici">👴</div><div class="icl">NPS Extra (Tier-2)</div><div class="icv">Flexible</div><div class="ics">Additional NPS Tier-2 contribution · Flexible withdrawal · Market-linked</div></div>
+      <div class="note note-go">Employer NPS (14%) is Government's additional contribution to your NPS corpus — NOT deducted from your take-home salary.</div>
+    </div>
+  </div>
+
+  <!-- S6: TAX -->
+  <div class="rcard">
+    <div class="rc-head" onclick="toggleCard(this)"><h4><span class="sn">6</span> Income tax calculation — current vs revised</h4><span class="rc-tog">▼</span></div>
+    <div class="rc-body">
+      ${renderTaxHTML(d)}
+    </div>
+  </div>
+
+  <!-- S7: SHARE -->
+  <div class="rcard always-open">
+    <div class="rc-head"><h4><span class="sn">7</span> Shareable result card</h4></div>
+    <div class="rc-body show">
+      <div class="share-card" id="shareCard">
+        <div class="sc-head">
+          <div>
+            <div class="sc-logo">m<em>class</em>.in — 8th CPC Result</div>
+            <div class="sc-sub">${d.name?d.name+(d.desig?' · '+d.desig:''):''} Level ${d.lv} · Basic ${rs(d.basic)} · ${d.city} City${d.govt?' · Govt accommodation':''}</div>
+          </div>
+          <div class="sc-warn">⚠️ Assumed: ${MN[d.implM]} ${d.implY} · Fitment ${d.fit.toFixed(2)}×</div>
         </div>
-        <div class="inote">💡 <strong>Recommended:</strong> Split between SGB (40%) + FD (40%) + PPF (20%). This gives gold appreciation + guaranteed returns + tax-free income. Safe, government-backed, no risk.</div>
-      </div>
-      <div class="ipane" id="pane-realty">
-        <div class="igrid">
-          <div class="ic"><div class="ici">🏗️</div><div class="icl">Construction</div><div class="icv">${sqft.toLocaleString('en-IN')} sq.ft</div><div class="ics">@ ₹5,000/sqft in Tier-2 city · Basic construction cost</div></div>
-          <div class="ic"><div class="ici">🌳</div><div class="icl">Plot / Land</div><div class="icv">${plotKata} kata</div><div class="ics">@ ₹2L/kata in Tier-2 · Land appreciates 10–15%/year</div></div>
-          <div class="ic"><div class="ici">🏠</div><div class="icl">Home Loan Down Payment</div><div class="icv">${f(swiftDP)}</div><div class="ics">20% down payment freed up · Rest from home loan</div></div>
-          <div class="ic"><div class="ici">💸</div><div class="icl">Loan Prepayment Saves</div><div class="icv">${f(homeLoanSave)}</div><div class="ics">Interest saved on 8% home loan over 5 years by prepaying arrears</div></div>
-          <div class="ic"><div class="ici">🔧</div><div class="icl">Home Renovation</div><div class="icv">Full budget</div><div class="ics">Modular kitchen, flooring, painting — complete home makeover</div></div>
-          <div class="ic"><div class="ici">🏢</div><div class="icl">Rent Advance</div><div class="icv">${Math.floor(cumGross/30000)} months</div><div class="ics">Security deposit coverage @ ₹30,000 per month rent</div></div>
+        <div class="sc-grid">
+          <div class="sc-item"><div class="sc-lbl">Current gross / net</div><div class="sc-val o">${rs(d.initM.gross)} / ${rs(d.initM.net)} per month</div></div>
+          <div class="sc-item"><div class="sc-lbl">Revised gross / net</div><div class="sc-val o">${rs(d.revGross)} / ${rs(d.revNet)} per month</div></div>
+          <div class="sc-item"><div class="sc-lbl">Monthly gross gain</div><div class="sc-val g">+${rs(d.moGain)} per month</div></div>
+          <div class="sc-item"><div class="sc-lbl">Monthly net gain</div><div class="sc-val g">+${rs(d.moNetGain)} per month</div></div>
+          <div class="sc-item"><div class="sc-lbl">Gross arrears (${prevM} months)</div><div class="sc-val o">${rs(d.grossArr)}</div></div>
+          <div class="sc-item"><div class="sc-lbl">Net arrears (${prevM} months)</div><div class="sc-val g">${rs(d.netArr)}</div></div>
         </div>
-        <div class="inote">💡 <strong>Best move:</strong> If you have a home loan, prepay this amount. It saves 2–3× in interest over the loan tenure. Land in Tier-2 cities near infrastructure projects is also an excellent long-term bet.</div>
-      </div>
-      <div class="ipane" id="pane-growth">
-        <div class="igrid">
-          <div class="ic"><div class="ici">📈</div><div class="icl">Lump Sum SIP</div><div class="icv">${f(Math.round(cumGross*1.15))}</div><div class="ics">Est. value after 1 year @ 15% equity mutual fund return</div></div>
-          <div class="ic"><div class="ici">💹</div><div class="icl">ELSS Tax Saver</div><div class="icv">${f(Math.round(cumGross*1.12))}</div><div class="ics">3-year lock-in · 80C deduction up to ₹1.5L · Avg 12% returns</div></div>
-          <div class="ic"><div class="ici">🏭</div><div class="icl">Index Funds</div><div class="icv">Low risk growth</div><div class="ics">Nifty 50 index fund · Historical 12–14% CAGR · Low cost</div></div>
-          <div class="ic"><div class="ici">📊</div><div class="icl">Stocks (Blue Chip)</div><div class="icv">Market-linked</div><div class="ics">TCS, Infosys, HDFC, Reliance — blue chip portfolio</div></div>
-          <div class="ic"><div class="ici">🌐</div><div class="icl">US ETF / Nasdaq</div><div class="icv">Global exposure</div><div class="ics">International diversification · USD appreciation benefit</div></div>
-          <div class="ic"><div class="ici">⚠️</div><div class="icl">Risk Warning</div><div class="icv">Assess first</div><div class="ics">Equity investments are subject to market risk. Invest only if you have 5+ year horizon.</div></div>
+        <div class="sc-disc">Assumed implementation ${MN[d.implM]} ${d.implY}. Fitment ${d.fit.toFixed(2)}× (user scenario — not official). The 8th Pay Commission has not submitted its final report. All figures are estimates. Calculate yours free at www.mclass.in</div>
+        <div class="sc-btns">
+          <button class="sc-btn prime" onclick="shareWA(${JSON.stringify({lv:d.lv,basic:d.basic,fit:d.fit,implM:d.implM,implY:d.implY,initGross:d.initM.gross,initNet:d.initM.net,revGross:d.revGross,revNet:d.revNet,moGain:d.moGain,moNetGain:d.moNetGain,grossArr:d.grossArr,netArr:d.netArr,months:prevM,name:d.name}).replace(/"/g,"'")})">📱 Share on WhatsApp</button>
+          <button class="sc-btn" onclick="copyCard()">📋 Copy Text</button>
+          <button class="sc-btn" onclick="window.print()">🖨️ Print / PDF</button>
         </div>
-        <div class="inote">⚠️ <strong>Caution:</strong> Market investments carry risk. For government employees with stable income, allocating 20–30% of arrears to equity is reasonable. Never invest emergency fund in markets.</div>
-      </div>
-      <div class="ipane" id="pane-life">
-        <div class="igrid">
-          <div class="ic"><div class="ici">💍</div><div class="icl">Marriage Fund</div><div class="icv">${marriage||'Partial'} wedding</div><div class="ics">@ ₹3L budget wedding · Simple, memorable ceremony</div></div>
-          <div class="ic"><div class="ici">🎓</div><div class="icl">Children's Education</div><div class="icv">${f(edu)}</div><div class="ics">Invested in FD @ 7% for 10 years — powerful education corpus</div></div>
-          <div class="ic"><div class="ici">🏥</div><div class="icl">Health Emergency Fund</div><div class="icv">6 months covered</div><div class="ics">Keep in liquid FD or savings account — ready for medical emergencies</div></div>
-          <div class="ic"><div class="ici">👴</div><div class="icl">Retirement Boost</div><div class="icv">${f(Math.round(cumGross*2.5))}</div><div class="ics">Arrears invested @ 8% for 15 years becomes this corpus</div></div>
-          <div class="ic"><div class="ici">🙏</div><div class="icl">Pilgrimage / Dharma</div><div class="icv">${Math.floor(cumGross/50000)} pilgrimages</div><div class="ics">Char Dham, Tirupati, Varanasi — spiritual fulfillment @ ₹50K each</div></div>
-          <div class="ic"><div class="ici">🎁</div><div class="icl">Family Gifting</div><div class="icv">Gold &amp; joy</div><div class="ics">Gift gold coins to family members — auspicious and appreciating</div></div>
-        </div>
-        <div class="inote">💡 <strong>Life priority:</strong> If you have children, education corpus is the most impactful use. ₹${fL(cumGross)} invested in Sukanya Samriddhi (for daughters) or PPF earns tax-free returns for their future.</div>
-      </div>
-      <div class="ipane" id="pane-enjoy">
-        <div class="igrid">
-          <div class="ic"><div class="ici">✈️</div><div class="icl">International Trip</div><div class="icv">${trips||'Plan ahead'} trips</div><div class="ics">Family trip to Thailand, Singapore, Dubai @ ₹1.5L each</div></div>
-          <div class="ic"><div class="ici">🚗</div><div class="icl">New Vehicle</div><div class="icv">Down payment</div><div class="ics">Maruti Swift @ ₹8L — cover 20% down payment + first year EMIs</div></div>
-          <div class="ic"><div class="ici">📱</div><div class="icl">Premium Gadgets</div><div class="icv">${iphones} iPhones</div><div class="ics">iPhone 15 @ ₹1.3L · Or upgrade entire family's phones!</div></div>
-          <div class="ic"><div class="ici">🛋️</div><div class="icl">Home Makeover</div><div class="icv">New furniture</div><div class="ics">New sofa, TV, AC, refrigerator — complete home refresh</div></div>
-          <div class="ic"><div class="ici">🍽️</div><div class="icl">Family Celebration</div><div class="icv">Grand event</div><div class="ics">Grand family dinner, anniversary celebration, reunion party</div></div>
-          <div class="ic"><div class="ici">🌴</div><div class="icl">Kerala / Goa Trip</div><div class="icv">${Math.floor(cumGross/40000)} trips</div><div class="ics">Family backwater cruise + beach holiday @ ₹40K/trip</div></div>
-        </div>
-        <div class="inote">😊 <strong>You deserve it!</strong> After years of dedicated service, it's okay to enjoy your arrears. But balance enjoyment with savings — 70% invest, 30% enjoy is a healthy ratio!</div>
       </div>
     </div>
-  </div>
+  </div>`;
+}
 
-  <!-- STEP 5: YEAR PROJECTION -->
-  <div class="step fu">
-    <div class="steplbl"><div class="stepn" style="background:rgba(45,158,80,.15);color:var(--gr)">5</div><div class="stept">Year-wise Salary Projection (Post Implementation)</div></div>
-    <div class="twrap">
-      <div class="thdr"><h3>📈 ${projYr}-Year Salary Growth Map</h3><span style="font-size:11px;color:var(--t3)">3% annual increment est. · DA @${daHike}%/installment · Jan &amp; Jul</span></div>
-      <div style="overflow-x:auto">
-        <table class="tbl"><thead><tr><th>Year</th><th>Basic Pay</th><th>DA %</th><th>HRA</th><th>Gross</th><th>Net In-Hand</th><th style="text-align:left">Remark</th></tr></thead>
-        <tbody>${projRows}</tbody></table>
+function renderTaxHTML(d){
+  const cT=d.currAnnTax,rT=d.annTax;
+  const cTax=cT,rTax=rT;
+  const cSlabs=getSlabs(d.currAnnGross-75000);
+  const rSlabs=getSlabs(d.annGross-75000);
+  const taxCard=(title,fy,annG,tax,moTax,slabs)=>`
+    <div class="tc">
+      <div class="tc-head"><h5>${title}</h5><span class="fy ${fy==='c'?'fy-c':'fy-r'}">${fy==='c'?'FY 2025-26':'FY '+d.implY+'–'+(d.implY+1-2000) }</span></div>
+      <div class="tc-body">
+        <div class="tx"><span class="tx-l">Annual gross</span><span class="tx-v">${rs(annG)}</span></div>
+        <div class="tx"><span class="tx-l">Less standard deduction</span><span class="tx-v red">−₹75,000</span></div>
+        <div class="tx tot"><span class="tx-l">Taxable income</span><span class="tx-v" style="font-weight:700;">${rs(annG-75000)}</span></div>
+        <table class="slab-t">
+          <thead><tr><th style="text-align:left;">Slab</th><th>Rate</th><th>Amt (₹)</th><th>Tax (₹)</th></tr></thead>
+          <tbody>${slabs.map(s=>`<tr class="${s.na?'sl-na':s.amt>0&&s.rate>0&&s.partial?'sl-act':s.amt>0&&s.rate>0?'sl-tax':'sl-nil'}"><td>${s.lbl}</td><td>${s.rate}%</td><td>${s.na?'—':fmt(s.amt)}</td><td>${s.na?'—':s.tax>0?fmt(s.tax):'NIL'}</td></tr>`).join('')}</tbody>
+        </table>
+        <div class="tx"><span class="tx-l">Sub-total tax</span><span class="tx-v">${rs(tax/1.04)}</span></div>
+        <div class="tx"><span class="tx-l">Health & education cess 4%</span><span class="tx-v red">+${rs(tax-tax/1.04)}</span></div>
+        <div class="tx grand"><span class="tx-l">Annual income tax</span><span class="tx-v red" style="font-weight:700;">${rs(tax)}</span></div>
+        <div class="tx"><span class="tx-l">Monthly tax deduction</span><span class="tx-v red" style="font-weight:700;">${rs(moTax)}</span></div>
+        ${(annG-75000)<=1200000?`<div class="note note-g" style="margin-top:8px;font-size:10px;">Section 87A rebate applied — zero tax payable.</div>`:`<div style="font-size:10px;color:var(--rd2);margin-top:5px;">87A rebate not applicable — taxable income exceeds ₹12,00,000</div>`}
+        <div class="eff-wrap"><div class="eff-lbl">Effective tax rate: ${((tax/annG)*100).toFixed(2)}% of annual gross</div><div class="eff-track"><div class="eff-fill" style="width:${Math.min((tax/annG)*100*4,100)}%"></div></div></div>
+      </div>
+    </div>`;
+  return `
+    <div class="tax2">
+      ${taxCard('Current salary tax','c',d.currAnnGross,cTax,d.initM.tax,cSlabs)}
+      ${taxCard('Revised salary tax','r',d.annGross,rTax,d.revTax,rSlabs)}
+    </div>
+    <div style="margin-top:14px;background:var(--bg3);border-radius:9px;padding:14px 16px;transition:background .3s;">
+      <div style="font-size:12px;font-weight:700;color:var(--t1);margin-bottom:10px;">Tax impact summary</div>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:12px;">
+        ${[['Current annual tax',rs(cTax),'red'],['Revised annual tax',rs(rTax),'red'],['Extra tax per year',rs(rTax-cTax),'red'],['Extra tax per month',rs(d.revTax-d.initM.tax),'red']].map(([l,v,c])=>`<div style="background:var(--bg4);border-radius:8px;padding:8px;text-align:center;"><div style="font-size:9px;color:var(--t3);text-transform:uppercase;margin-bottom:3px;">${l}</div><div style="font-size:13px;font-weight:700;color:var(--${c}2);">${v}</div></div>`).join('')}
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;font-size:12px;">
+        ${[['Monthly gross gain','g','+'+rs(d.moGain)],['Less extra NPS/month','rd','−'+rs(d.revNps-d.initM.npsAmt)],['Less extra tax/month','rd','−'+rs(d.revTax-d.initM.tax)],['Monthly net gain','g','+'+rs(d.moNetGain)]].map(([l,c,v])=>`<div><div style="font-size:10px;color:var(--t3);margin-bottom:2px;">${l}</div><div style="font-weight:700;color:var(--${c}2);">${v}</div></div>`).join('')}
       </div>
     </div>
-  </div>
-
-  <!-- DETAILED ANALYSIS TEASER -->
-  <div class="da-teaser fu">
-    <h3>🔍 Detailed Month-wise Salary Analysis</h3>
-    <p>Want to see every month's complete salary breakup — Basic, DA, HRA, TA, all deductions, net pay — from joining to retirement?<br>This powerful feature is <strong style="color:#b06ae0">coming soon</strong>. If you want it, give a 👍 below!</p>
-    <button class="thumbup-btn" id="featureBtn" onclick="voteFeature()">
-      👍 Yes, I want this! &nbsp;<span id="featureCnt">${featureVotes.toLocaleString('en-IN')}</span> employees already voted
-    </button>
-  </div>
-
-  <!-- STEP 6: LIKE & SHARE -->
-  <div class="step fu">
-    <div class="steplbl"><div class="stepn" style="background:rgba(255,107,0,.15);color:var(--or)">6</div><div class="stept">Like, Share &amp; Download</div></div>
-    <div class="likesec">
-      <div class="liketitle">Did this calculator help you? 🙏</div>
-      <div class="likesub">Join ${lkCnt.toLocaleString('en-IN')} government employees who loved this tool!</div>
-      <button class="likebtn ${liked?'liked':''}" id="likeBtn" onclick="doLike()">❤️</button>
-      <div class="likecnt" id="likeCnt">${lkCnt.toLocaleString('en-IN')}</div>
-      <div class="likelbl">employees liked this calculator</div>
-      <div class="abar">
-        <a href="${waURL}" target="_blank" style="text-decoration:none"><button class="abtn bwa">📱 WhatsApp</button></a>
-        <a href="${twURL}" target="_blank" style="text-decoration:none"><button class="abtn btw">🐦 Twitter / X</button></a>
-        <button class="abtn bpdf" onclick="window.print()">📄 Download PDF</button>
-        <button class="abtn bcp" onclick="window._copyShare()">📋 Copy</button>
-      </div>
-      <div class="disc">⚠️ Disclaimer: This is an estimated projection only. The 8th Pay Commission has not yet submitted its final report. Actual fitment factor, HRA rates, and implementation date will be officially notified by the Government of India. Tax calculations are approximate estimates under the new tax regime. Consult a qualified tax/financial advisor before making financial decisions based on these projections.</div>
-    </div>
-  </div>
-
-  <!-- COMING SOON -->
-  <div class="cs-section fu">
-    <div class="cs-title">🚀 What's Coming Next</div>
-    <div class="cs-sub">More powerful tools for Central Government employees — coming soon!</div>
-    <div class="cs-grid">
-      <div class="cs-card">
-        <div class="cs-icon">👷</div>
-        <div class="cs-name">GDS Salary Estimator</div>
-        <div class="cs-badge">🔒 Coming Soon</div>
-        <div class="cs-desc">TRCA-based salary calculator for Gramin Dak Sevaks — BPM, ABPM, Dak Sevak. Point-based DA, deductions, arrears projection.</div>
-        <button class="notify-btn" onclick="notifyMe(this,'gds')">🔔 Notify Me When Live</button>
-      </div>
-      <div class="cs-card">
-        <div class="cs-icon">📊</div>
-        <div class="cs-name">Career Progression Simulator</div>
-        <div class="cs-badge">🔒 Coming Soon</div>
-        <div class="cs-desc">Simulate your entire government career — joining level, promotions, MACP upgradations, NPS corpus growth, retirement pension estimate.</div>
-        <button class="notify-btn" onclick="notifyMe(this,'career')">🔔 Notify Me When Live</button>
-      </div>
-      <div class="cs-card">
-        <div class="cs-icon">🗺️</div>
-        <div class="cs-name">Salary Dependency Charts</div>
-        <div class="cs-badge">🔒 Coming Soon</div>
-        <div class="cs-desc">Interactive charts showing how city class and pay level affect your salary. See how much you gain or lose with each promotion or transfer.</div>
-        <button class="notify-btn" onclick="notifyMe(this,'charts')">🔔 Notify Me When Live</button>
-      </div>
-    </div>
-  </div>
-
-  </div><!-- end full -->
-  `;
+    <div class="note note-o" style="margin-top:10px;">Tax on arrears lump sum not included above. Section 89(1) relief available — file Form 10E before ITR. Consult your DDO.</div>
+    <div class="chart-wrap"><canvas id="chartTax"></canvas></div>`;
 }
 
-function showTab(name,btn){
-  document.querySelectorAll('.ipane').forEach(p=>p.classList.remove('act'));
-  document.querySelectorAll('.itab').forEach(b=>b.classList.remove('act'));
-  document.getElementById('pane-'+name).classList.add('act');
-  btn.classList.add('act');
+// ══════════════════════════════════════
+// CHARTS
+// ══════════════════════════════════════
+function getChartColors(){
+  const dark=document.documentElement.getAttribute('data-theme')==='dark';
+  return{grid:dark?'rgba(255,255,255,0.06)':'rgba(0,0,0,0.08)',text:dark?'#6a5e50':'#9a7860'};
 }
 
-function revealAll(btn){
-  const f=document.getElementById('full');
-  f.style.display='block';btn.style.display='none';
-  setTimeout(()=>f.scrollIntoView({behavior:'smooth',block:'start'}),100);
+function renderCompChart(d){
+  destroyChart('comp');
+  const ctx=document.getElementById('chartComp');
+  if(!ctx) return;
+  const c=getChartColors();
+  charts.comp=new Chart(ctx,{type:'bar',
+    data:{labels:['Basic','HRA','TA+DA','Gross','Net'],
+      datasets:[
+        {label:'Current',data:[d.basic,d.initM.hraAmt,d.initM.taBase+d.initM.taDa,d.initM.gross,d.initM.net],backgroundColor:'rgba(29,111,187,0.6)',borderRadius:4},
+        {label:'Revised',data:[d.revBasic,d.revHRA,d.taBase,d.revGross,d.revNet],backgroundColor:'rgba(255,98,0,0.7)',borderRadius:4}
+      ]},
+    options:{responsive:true,plugins:{legend:{labels:{color:c.text,font:{family:'Sora',size:11}}},tooltip:{callbacks:{label:ctx=>'₹'+fmt(ctx.raw)}}},
+      scales:{x:{ticks:{color:c.text,font:{family:'Sora',size:10}},grid:{color:c.grid}},y:{ticks:{color:c.text,font:{family:'Sora',size:10},callback:v=>'₹'+fmt(v)},grid:{color:c.grid}}}}});
 }
 
-function doLike(){
-  const btn=document.getElementById('likeBtn');
-  if(btn.classList.contains('liked')) return;
-  btn.classList.add('liked');
-  localStorage.setItem('8cpc_lk','1');
-  const cur=parseInt(document.getElementById('likeCnt').textContent.replace(/,/g,''))||23847;
-  localStorage.setItem('8cpc_ex',cur+1-23847);
-  document.getElementById('likeCnt').textContent=(cur+1).toLocaleString('en-IN');
-  confetti();
+function renderArrChart(d){
+  destroyChart('arr');
+  const ctx=document.getElementById('chartArr');
+  if(!ctx) return;
+  const c=getChartColors();
+  const labels=d.groups.map(g=>g.mStart+(g.mStart!==g.mEnd?' – '+g.mEnd:''));
+  const gross=d.groups.map(g=>g.grossArr*g.count);
+  const net=d.groups.map(g=>g.netArr*g.count);
+  charts.arr=new Chart(ctx,{type:'bar',
+    data:{labels,datasets:[
+      {label:'Gross arrear',data:gross,backgroundColor:'rgba(255,98,0,0.6)',borderRadius:4},
+      {label:'Net arrear',data:net,backgroundColor:'rgba(22,163,74,0.6)',borderRadius:4}
+    ]},
+    options:{responsive:true,plugins:{legend:{labels:{color:c.text,font:{family:'Sora',size:11}}},tooltip:{callbacks:{label:ctx=>'₹'+fmt(ctx.raw)}}},
+      scales:{x:{ticks:{color:c.text,font:{family:'Sora',size:9}},grid:{color:c.grid}},y:{ticks:{color:c.text,font:{family:'Sora',size:10},callback:v=>'₹'+fmt(v)},grid:{color:c.grid}}}}});
 }
 
-function voteFeature(){
-  const btn=document.getElementById('featureBtn');
-  if(btn.classList.contains('voted')) return;
-  btn.classList.add('voted');
-  localStorage.setItem('8cpc_fv',parseInt(localStorage.getItem('8cpc_fv')||'0')+1);
-  const cnt=document.getElementById('featureCnt');
-  cnt.textContent=(parseInt(cnt.textContent.replace(/,/g,''))+1).toLocaleString('en-IN');
-  btn.innerHTML='✅ Vote counted! We\'ll build it soon — '+cnt.textContent+' voted';
+function renderTaxChart(d){
+  destroyChart('tax');
+  const ctx=document.getElementById('chartTax');
+  if(!ctx) return;
+  const c=getChartColors();
+  charts.tax=new Chart(ctx,{type:'bar',
+    data:{labels:['Annual Gross','Taxable Income','Annual Tax','Monthly Tax'],
+      datasets:[
+        {label:'Current',data:[d.currAnnGross,d.currAnnGross-75000,d.currAnnTax,d.initM.tax],backgroundColor:'rgba(29,111,187,0.6)',borderRadius:4},
+        {label:'Revised',data:[d.annGross,d.annGross-75000,d.annTax,d.revTax],backgroundColor:'rgba(220,38,38,0.6)',borderRadius:4}
+      ]},
+    options:{responsive:true,plugins:{legend:{labels:{color:c.text,font:{family:'Sora',size:11}}},tooltip:{callbacks:{label:ctx=>'₹'+fmt(ctx.raw)}}},
+      scales:{x:{ticks:{color:c.text,font:{family:'Sora',size:10}},grid:{color:c.grid}},y:{ticks:{color:c.text,font:{family:'Sora',size:10},callback:v=>'₹'+fmt(v)},grid:{color:c.grid}}}}});
 }
 
-function notifyMe(btn,tool){
-  localStorage.setItem('notify_'+tool,'1');
-  btn.classList.add('notified');
-  btn.textContent='✅ You\'ll be notified!';
+function redrawCharts(){
+  Object.values(charts).forEach(c=>{c.options.scales.x.ticks.color=getChartColors().text;c.options.scales.y.ticks.color=getChartColors().text;c.options.scales.x.grid.color=getChartColors().grid;c.options.scales.y.grid.color=getChartColors().grid;c.update();});
 }
 
-function confetti(){
-  const cols=['#ff6600','#ffd000','#ff9933','#138808','#ff0000','#ffffff'];
-  for(let i=0;i<60;i++){
-    const el=document.createElement('div');el.className='cp';
-    el.style.cssText=`left:${Math.random()*100}vw;top:0;background:${cols[Math.floor(Math.random()*cols.length)]};animation-delay:${Math.random()*1.5}s;animation-duration:${2+Math.random()*1.5}s;transform:rotate(${Math.random()*360}deg)`;
-    document.body.appendChild(el);setTimeout(()=>el.remove(),4000);
+// ══════════════════════════════════════
+// TOGGLE COLLAPSE
+// ══════════════════════════════════════
+function toggleCard(head){
+  const body=head.nextElementSibling;
+  const tog=head.querySelector('.rc-tog');
+  const open=body.classList.toggle('show');
+  if(tog) tog.classList.toggle('open',open);
+}
+
+// ══════════════════════════════════════
+// SHARE
+// ══════════════════════════════════════
+function shareWA(d){
+  const t=`🇮🇳 *8th Pay Commission — My Salary Result*\n\nmclass.in Calculator\n\nLevel ${d.lv}${d.name?' · '+d.name:''}\nFitment: ${d.fit.toFixed(2)}× | Assumed: ${MN[d.implM]} ${d.implY}\n\nCurrent Net: ₹${fmt(d.initNet)}/month\n*New Net: ₹${fmt(d.revNet)}/month*\n\n💰 *Monthly Gross Gain: +₹${fmt(d.moGain)}*\n💚 *Monthly Net Gain: +₹${fmt(d.moNetGain)}*\n📅 *Gross Arrears: ₹${fmt(d.grossArr)} (${d.months} months)*\n📅 *Net Arrears: ₹${fmt(d.netArr)}*\n\nCalculate yours FREE 👇\nwww.mclass.in/8th-pay-commission-calculator.html\n\n_Estimated projection. Official figures may differ._`;
+  window.open('https://wa.me/?text='+encodeURIComponent(t),'_blank');
+}
+function copyCard(){
+  const el=document.getElementById('shareCard');
+  if(el) navigator.clipboard?.writeText(el.innerText).then(()=>alert('Copied!')).catch(()=>alert('Please copy manually.'));
+}
+
+// ══════════════════════════════════════
+// RESET
+// ══════════════════════════════════════
+let resetType='tab';
+function showReset(type){
+  resetType=type;
+  document.getElementById('dlgTitle').textContent=type==='all'?'Reset everything?':'Reset this tab?';
+  document.getElementById('dlgMsg').textContent=type==='all'?'This will clear all entered data across all tabs and remove results.':'This will clear all fields in the current tab and remove results.';
+  document.getElementById('overlay').classList.add('show');
+  document.getElementById('dlgConfirm').onclick=()=>{doReset(type);closeDialog();};
+}
+function closeDialog(){document.getElementById('overlay').classList.remove('show');}
+function doReset(type){
+  if(type==='all'||type==='tab'){
+    document.getElementById('payLevel').value='';
+    document.getElementById('basicPay').value='';
+    document.getElementById('fitSlider').value=286;updFit();
+    document.getElementById('implMonth').value=5;
+    document.getElementById('implYear').value=2028;
+    setInc(7);setCity('Z');setGovt(false);setNPS(true);
+    document.getElementById('daSlider').value=60;updDA();
+    document.getElementById('daRiseSlider').value=2;updDARise();
+    document.getElementById('chkPwd').checked=false;
+    document.getElementById('chkCar').checked=false;
+    document.getElementById('chkLev14').checked=false;
+    document.getElementById('cellInfo').style.display='none';
+    if(document.getElementById('empName')) document.getElementById('empName').value='';
+    if(document.getElementById('empDesig')) document.getElementById('empDesig').value='';
   }
+  document.getElementById('resPanel').innerHTML=`<div class="empty-state" id="emptyState"><div class="es-icon">🏛️</div><div class="es-title">Your results will appear here</div><div class="es-sub">Fill your details on the left and click Calculate</div></div>`;
+  ST.calculated=false;ST.dirty=false;
+  document.getElementById('recalcBanner').classList.remove('show');
+  document.getElementById('calcBtn').classList.remove('dirty');
+  Object.keys(charts).forEach(k=>{if(charts[k]) charts[k].destroy();});charts={};
 }
 
-function _copyShare(){if(window._shareText)doCopy(window._shareText);}
-function doCopy(t){navigator.clipboard.writeText(t).then(()=>alert('Copied! Share with your colleagues 👍'));}
+// ══════════════════════════════════════
+// COMPARE TAB
+// ══════════════════════════════════════
+(function initCmpLevels(){
+  const opts=['<option value="">— Select —</option>',...Object.keys(PM).map(k=>`<option value="${k}">Level ${k} — Basic from ₹${PM[k][0].toLocaleString('en-IN')}</option>`)].join('');
+  ['c1Level','c2Level'].forEach(id=>{const el=document.getElementById(id);if(el) el.innerHTML=opts;});
+})();
 
-// POST-RENDER HELPERS
+function setCmpCity(emp,c){
+  cmpST['e'+emp].city=c;
+  ['X','Y','Z'].forEach(x=>document.getElementById('c'+emp+x).classList.toggle('on',x===c));
+}
+function setCmpGovt(emp,v){
+  cmpST['e'+emp].govt=v;
+  document.getElementById('c'+emp+'GY').classList.toggle('on',v);
+  document.getElementById('c'+emp+'GN').classList.toggle('on',!v);
+}
+function setCmpNPS(emp,v){
+  cmpST['e'+emp].nps=v;
+  document.getElementById('c'+emp+'NY').classList.toggle('on',v);
+  document.getElementById('c'+emp+'NN').classList.toggle('on',!v);
+}
+function cmpTA(emp){}
 
-function resetWizard(){curStep=1;glowState.lv=0;document.documentElement.classList.remove('g1','g2','g3','g4');document.getElementById('wizardArea').style.display='block';document.getElementById('progWrap').style.display='block';document.getElementById('resultsOuter').style.display='none';showStep(1);updProgress(1);window.scrollTo({top:0,behavior:'smooth'});}
+function compareCalc(){
+  const e1={lv:document.getElementById('c1Level').value,basic:parseInt(document.getElementById('c1Basic').value)||0,fit:parseInt(document.getElementById('c1Fit').value)/100,city:cmpST.e1.city,govt:cmpST.e1.govt,nps:cmpST.e1.nps,implM:parseInt(document.getElementById('c1IM').value),implY:parseInt(document.getElementById('c1IY').value)};
+  const e2={lv:document.getElementById('c2Level').value,basic:parseInt(document.getElementById('c2Basic').value)||0,fit:parseInt(document.getElementById('c2Fit').value)/100,city:cmpST.e2.city,govt:cmpST.e2.govt,nps:cmpST.e2.nps,implM:parseInt(document.getElementById('c2IM').value),implY:parseInt(document.getElementById('c2IY').value)};
+  if(!e1.lv||!e1.basic){alert('Please fill Employee 1 details');return;}
+  if(!e2.lv||!e2.basic){alert('Please fill Employee 2 details');return;}
+  const r1=calcOne(e1.lv,e1.basic,e1.fit,e1.implM,e1.implY,7,60,2,e1.city,e1.govt,e1.nps,false,false,false);
+  const r2=calcOne(e2.lv,e2.basic,e2.fit,e2.implM,e2.implY,7,60,2,e2.city,e2.govt,e2.nps,false,false,false);
+  const w=r1.moGain>r2.moGain?1:2;
+  const rows=[
+    ['Pay Level',`Level ${r1.lv}`,`Level ${r2.lv}`],
+    ['Current Basic',rs(r1.basic),rs(r2.basic)],
+    ['Fitment Factor',r1.fit.toFixed(2)+'×',r2.fit.toFixed(2)+'×'],
+    ['Revised Basic',rs(r1.revBasic),rs(r2.revBasic)],
+    ['City / HRA',r1.city+' City',r2.city+' City'],
+    ['Current Gross/month',rs(r1.initM.gross),rs(r2.initM.gross)],
+    ['Revised Gross/month',rs(r1.revGross),rs(r2.revGross)],
+    ['Monthly Gross Gain','+'+rs(r1.moGain),'+'+rs(r2.moGain)],
+    ['Monthly Net Gain','+'+rs(r1.moNetGain),'+'+rs(r2.moNetGain)],
+    ['Gross Arrears',rs(r1.grossArr),rs(r2.grossArr)],
+    ['Net Arrears',rs(r1.netArr),rs(r2.netArr)],
+    ['NPS/month',r1.nps?rs(r1.revNps):'No NPS',r2.nps?rs(r2.revNps):'No NPS'],
+    ['Tax/month',rs(r1.revTax),rs(r2.revTax)],
+    ['Net Take-Home',rs(r1.revNet),rs(r2.revNet)],
+  ];
+  const html=`
+    <div style="background:var(--gr3);border:1px solid rgba(22,163,74,.2);border-radius:9px;padding:12px 16px;margin-bottom:14px;font-size:13px;color:var(--gr2);">
+      🏆 <strong>Employee ${w} wins</strong> — gains ${rs(w===1?r1.moGain-r2.moGain:r2.moGain-r1.moGain)} more per month (gross)
+    </div>
+    <div class="tbl-wrap">
+      <table class="cmp-table">
+        <thead><tr><th>Parameter</th><th style="color:var(--bl2);text-align:right;">Employee 1${w===1?' 🏆':''}</th><th style="color:var(--pu2);text-align:right;">Employee 2${w===2?' 🏆':''}</th></tr></thead>
+        <tbody>${rows.map(([l,v1,v2],i)=>{
+          const isTot=i>=7&&i<=10;
+          return `<tr class="${isTot?'cmp-tot':''}"><td>${l}</td><td style="text-align:right;font-weight:${isTot?700:400};color:${isTot?'var(--bl2)':'var(--t1)'};">${v1}</td><td style="text-align:right;font-weight:${isTot?700:400};color:${isTot?'var(--pu2)':'var(--t1)'};">${v2}</td></tr>`;
+        }).join('')}</tbody>
+      </table>
+    </div>
+    <div class="note note-go" style="margin-top:10px;">Comparison uses July as increment month and 2% DA rise per half year. DA at Jan 2026 = 60%. For detailed analysis use Advanced Calculator for each employee.</div>`;
+  document.getElementById('cmpResultBody').innerHTML=html;
+  document.getElementById('cmpResult').style.display='block';
+  document.getElementById('cmpResult').scrollIntoView({behavior:'smooth'});
+}
 
+// ══════════════════════════════════════
+// SCROLL TO TOP
+// ══════════════════════════════════════
+window.addEventListener('scroll',()=>{
+  document.getElementById('sttBtn').classList.toggle('show',window.scrollY>400);
+});
 
-
+// INIT
+updTA();
 </script>
 </body>
 </html>
